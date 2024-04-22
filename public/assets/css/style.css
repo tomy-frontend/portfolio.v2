@@ -129,3 +129,17 @@ a {
 	color: inherit;
 }
 
+.l-inner {
+	margin: 0 auto;
+	width: calc(100% - 32px);
+}
+
+@media screen and (min-width: 900px) {
+
+.l-inner {
+	max-width: 1180px;
+	width: calc(100% - 260px);
+}
+
+}
+
