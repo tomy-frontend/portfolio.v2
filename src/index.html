@@ -3,26 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>サイトタイトル</title>
-    <meta name="description" content="サイトの説明" />
-    <!-- 検索結果に非表示にする、実案件の場合は必ず削除 -->
-    <meta name="robots" content="noindex" />
+    <title>Tomy Portfolio</title>
+    <meta
+      name="description"
+      content="webエンジニア富田真光のポートフォリオサイトです。"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta property="og:title" content="サイトタイトル" />
+    <meta property="og:title" content="Tomy Portfolio" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="サイトURL" />
     <meta
       property="og:image"
       content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg"
     />
-    <meta property="og:description" content="サイト説明" />
-    <meta property="og:site_name" content="サイトタイトル" />
+    <meta
+      property="og:description"
+      content="webエンジニア富田真光のポートフォリオサイトです。"
+    />
+    <meta property="og:site_name" content="Tomy Portfolios" />
 
     <!-- twitter-card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@twitter_user_name" />
-    <meta name="twitter:title" content="サイトタイトル" />
-    <meta name="twitter:description" content="サイト説明" />
+    <meta name="twitter:site" content="@minichua_dax" />
+    <meta name="twitter:title" content="Tomy Portfolios" />
+    <meta
+      name="twitter:description"
+      content="webエンジニア富田真光のポートフォリオサイトです。"
+    />
     <meta
       name="twitter:image"
       content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg"
@@ -32,21 +39,63 @@
     <!-- ogpとfaviconはimgの中にogp/faviconとしてフォルダ作成し、その中に画像を格納 -->
 
     <!-- Googleフォント読み込み -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css読み込み -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header>header</header>
-    <main>main</main>
-    <footer>footer</footer>
+    <header class="p-header">
+      <div class="p-header__inner">
+        <!-- p-header__logo -->
+        <h1 class="p-header__logo">
+          <a href="/"
+            ><span class="p-header__logo-text">Web Engineer</span>
+            <span class="p-header__logo-title">Tomy Portfolio</span></a
+          >
+        </h1>
+        <!-- p-header__logo -->
+
+        <!-- p-global-nav -->
+        <nav class="p-global-nav">
+          <ul class="p-global-nav__list">
+            <li class="p-global-nav__item">
+              <a href="#work" class="p-global-nav__link">Works</a>
+            </li>
+            <li class="p-global-nav__item">
+              <a href="#AboutMe" class="p-global-nav__link">AboutMe</a>
+            </li>
+            <li class="p-global-nav__item">
+              <a href="#Service" class="p-global-nav__link">Service</a>
+            </li>
+            <li class="p-global-nav__item">
+              <a href="#WorkFlow" class="p-global-nav__link">WorkFlow</a>
+            </li>
+            <li class="p-global-nav__item">
+              <a href="#Contact" class="p-global-nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- p-global-nav -->
+      </div>
+      <!-- p-header__inner -->
+    </header>
+
+    <main></main>
+    <footer></footer>
     <!-- jsファイル読み込み -->
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       defer
     ></script>
-    <script src="./assets/js/lib/swiper-bundle.min.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
   </body>
 </html>

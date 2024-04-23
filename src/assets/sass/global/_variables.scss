@@ -1,14 +1,25 @@
 //色
-$main-color: #1391e6;
-$sub-color-01: #0060a0;
-$text-color-black: #393939;
+$accent-color: linear-gradient(
+  94deg,
+  rgba(230, 172, 250, 0.2) 1.82%,
+  rgba(255, 231, 251, 0.2) 99.36%
+);
+$bg-color: linear-gradient(177deg, #f6ebff 0.45%, #fefbdf 99.38%);
+$text-color-black: #000000;
 $text-color-white: #ffffff;
 
 // フォント
-$ff-base: "M PLUS Rounded 1c", sans-serif;
+$ff-base: "Noto Sans JP", sans-serif;
+$ff-en: "Crimson Text", serif;
 $fz-base: 1rem; // ベースフォントサイズ 16px
-$fw-base: 500; // ベースフォントウェイト
+$fw-base: 400; // ベースフォントウェイト
+$fw-large: 700; // 大きいフォントウェイト
 $lh-base: normal; // ベース行間
+
+// rem計算
+@function rem($font-size-px) {
+  @return calc($font-size-px / 16 * 1rem);
+}
 
 // レイアウト
 $sp-contents-width: 335px;

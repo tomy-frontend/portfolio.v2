@@ -113,10 +113,10 @@ i {
 }
 
 body {
-	color: #393939;
-	font-family: "M PLUS Rounded 1c", sans-serif;
+	color: #000000;
+	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
-	font-weight: 500;
+	font-weight: 400;
 	line-height: normal;
 }
 
@@ -131,14 +131,111 @@ a {
 
 .l-inner {
 	margin: 0 auto;
-	width: calc(100% - 32px);
+	width: calc(100% - 40px);
+}
+
+.p-header__inner {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: calc(100% - 40px);
+}
+
+.p-header__logo {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	display: flex;
+	flex-direction: column;
+	height: 60px;
+	padding: 6px 20px;
+	transition: all 0.3s ease;
+	width: 206px;
+}
+
+.p-header__logo:hover {
+	opacity: 0.5;
+}
+
+.p-header__logo-text {
+	display: block;
+	font-family: "Crimson Text", serif;
+	font-size: 0.875rem;
+}
+
+.p-header__logo-title {
+	display: block;
+	font-family: "Crimson Text", serif;
+	font-size: 1.5rem;
+}
+
+.p-global-nav {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	display: none;
+	padding: 20px 35px;
+}
+
+.p-global-nav__list {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.p-global-nav__item {
+	font-family: "Crimson Text", serif;
+}
+
+.p-global-nav__link {
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.p-global-nav__link::after {
+	background: #000000;
+	bottom: -5px;
+	content: "";
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scale(0);
+	transition: all 0.3s ease;
+	width: 100%;
+}
+
+.p-global-nav__link:hover {
+	opacity: 0.5;
+}
+
+.p-global-nav__link:hover::after {
+	opacity: 0.5;
+	transform: scale(1);
+}
+
+@media screen and (min-width: 768px) {
+
+.p-global-nav {
+	display: block;
+}
+
 }
 
 @media screen and (min-width: 900px) {
 
 .l-inner {
-	max-width: 1180px;
-	width: calc(100% - 260px);
+	max-width: 335px;
+	width: calc(100% - 120px);
+}
+
+.p-header__inner {
+	max-width: 1160px;
+	width: calc(100% - 120px);
 }
 
 }

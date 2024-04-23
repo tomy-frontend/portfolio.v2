@@ -1,11 +1,11 @@
 @use "../global" as global;
 
 .l-inner {
-  width: calc(100% - 16px * 2); //16pxはpaddingの値
+  width: calc(100% - 20px * 2);
   margin: 0 auto;
 
   @include global.mq(lg) {
-    width: calc(100% - 130px * 2); //130pxはpaddingの値
-    max-width: 1180px; //コンテンツの最大幅
+    width: calc(100% - 60px * 2);
+    max-width: global.$sp-contents-width; //メインコンテンツの最大幅
   }
 }
