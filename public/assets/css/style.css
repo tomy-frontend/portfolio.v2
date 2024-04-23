@@ -198,14 +198,15 @@ a {
 }
 
 .p-global-nav__link::after {
-	background: #000000;
+	background: currentColor;
 	bottom: -5px;
 	content: "";
 	height: 1px;
 	left: 0;
 	position: absolute;
-	transform: scale(0);
-	transition: all 0.3s ease;
+	transform: scaleX(0);
+	transform-origin: right; /* 基点を右側に設定 */
+	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
 	width: 100%;
 }
 
@@ -215,7 +216,9 @@ a {
 
 .p-global-nav__link:hover::after {
 	opacity: 0.5;
-	transform: scale(1);
+	transform: scaleX(1);
+	transform-origin: left; /* hover時は基点を左側に */
+	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
 }
 
 @media screen and (min-width: 768px) {
