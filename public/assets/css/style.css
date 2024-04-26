@@ -237,6 +237,7 @@ a {
 	letter-spacing: 2px;
 	padding: 7px 13px;
 	transition: all 0.5s ease;
+	width: 65px;
 }
 
 .p-menu-button.is-open {
