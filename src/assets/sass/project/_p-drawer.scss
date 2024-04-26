@@ -1,0 +1,90 @@
+@use "../global" as global;
+
+.p-drawer {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* 0.5秒後にvisibilityが変更されるように設定 */
+  z-index: global.z-index(drawer);
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0s; /* 即座にvisibilityがvisibleになるように設定 */
+  }
+}
+
+.p-drawer__nav {
+  width: calc(100% - 10px * 2);
+  height: 100%;
+  margin: 0 auto;
+  background: gray; //視認しやすいように色をつけています
+  //   background: global.$text-color-white;
+  border-radius: 12px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.p-drawer__inner {
+  width: calc(100% - 50px * 2);
+  margin: 0 auto;
+
+  //   375px以下の時のスタイル
+  @include global.mq(sm) {
+    width: calc(100% - 20px * 2);
+  }
+}
+
+.p-drawer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid global.$text-color-black;
+}
+
+// .p-drawer__item {
+// }
+
+.p-drawer__link {
+  font-size: global.rem(24);
+}
+
+.p-drawer__link-en {
+  margin-right: 10px;
+}
+
+.p-drawer__link-ja {
+  font-size: global.rem(10);
+}
+
+.p-drawer__sns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 30px;
+}
+.p-drawer__sns-text {
+  color: global.$text-color-black;
+  font-size: global.rem(14);
+}
+
+.p-drawer__sns__list {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+// .p-drawer__sns__item {
+// }
+
+.p-drawer__sns__link {
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}

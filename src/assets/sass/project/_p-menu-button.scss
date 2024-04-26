@@ -1,0 +1,22 @@
+@use "../global" as global;
+
+.p-menu-button {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  color: global.$text-color-black;
+  font-family: global.$ff-en;
+  font-size: global.rem(15);
+  padding: 7px 13px;
+  letter-spacing: 2px;
+  transition: global.$transition-default;
+
+  @include global.mq(md) {
+    display: none;
+  }
+
+  &.is-open {
+    background-color: global.$text-color-black;
+    color: global.$text-color-white;
+  }
+}

@@ -1,6 +1,11 @@
 @use "../global" as global;
 
 .p-header {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: global.z-index(header);
 }
 
 .p-header__inner {
@@ -9,11 +14,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20px;
+  align-items: center;
 
   @include global.mq(lg) {
     width: calc(100% - 60px * 2);
-    max-width: 1160px; //ヘッダーコンテンツの最大幅
   }
 }
 
@@ -21,8 +25,6 @@
 .p-header__logo {
   display: flex;
   flex-direction: column;
-  width: 206px;
-  height: 60px;
   padding: 6px 20px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.8);

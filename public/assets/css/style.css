@@ -134,12 +134,20 @@ a {
 	width: calc(100% - 40px);
 }
 
+.p-header {
+	left: 0;
+	position: fixed;
+	top: 20px;
+	width: 100%;
+	z-index: 30;
+}
+
 .p-header__inner {
+	align-items: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 0 auto;
-	padding-top: 20px;
 	width: calc(100% - 40px);
 }
 
@@ -149,10 +157,8 @@ a {
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-direction: column;
-	height: 60px;
 	padding: 6px 20px;
-	transition: all 0.3s ease;
-	width: 206px;
+	transition: all 0.5s ease;
 }
 
 .p-header__logo:hover {
@@ -193,7 +199,7 @@ a {
 	position: relative;
 	-webkit-user-select: none;
 	-moz-user-select: none;
-	transition: all 0.3s ease;
+	transition: all 0.5s ease;
 	user-select: none;
 }
 
@@ -221,10 +227,111 @@ a {
 	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
 }
 
+.p-menu-button {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	color: #000000;
+	font-family: "Crimson Text", serif;
+	font-size: 0.9375rem;
+	letter-spacing: 2px;
+	padding: 7px 13px;
+	transition: all 0.5s ease;
+}
+
+.p-menu-button.is-open {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.p-drawer {
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 10px;
+	transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* 0.5秒後にvisibilityが変更されるように設定 */
+	visibility: hidden;
+	width: 100%;
+	z-index: 20;
+}
+
+.p-drawer.is-open {
+	opacity: 1;
+	transition: opacity 0.5s ease, visibility 0s; /* 即座にvisibilityがvisibleになるように設定 */
+	visibility: visible;
+}
+
+.p-drawer__nav {
+	background: gray;
+	border-radius: 12px;
+	height: 100%;
+	margin: 0 auto;
+	padding-bottom: 50px;
+	padding-top: 120px;
+	width: calc(100% - 20px);
+}
+
+.p-drawer__inner {
+	margin: 0 auto;
+	width: calc(100% - 100px);
+}
+
+.p-drawer__list {
+	border-bottom: 1px solid #000000;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-bottom: 50px;
+}
+
+.p-drawer__link {
+	font-size: 1.5rem;
+}
+
+.p-drawer__link-en {
+	margin-right: 10px;
+}
+
+.p-drawer__link-ja {
+	font-size: 0.625rem;
+}
+
+.p-drawer__sns {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.p-drawer__sns-text {
+	color: #000000;
+	font-size: 0.875rem;
+}
+
+.p-drawer__sns__list {
+	display: flex;
+	flex-direction: row;
+	gap: 18px;
+}
+
+.p-drawer__sns__link img {
+	height: 16px;
+	width: 16px;
+}
+
+.u-is-fixed {
+	overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
 
 .p-global-nav {
 	display: block;
+}
+
+.p-menu-button {
+	display: none;
 }
 
 }
@@ -237,8 +344,15 @@ a {
 }
 
 .p-header__inner {
-	max-width: 1160px;
 	width: calc(100% - 120px);
+}
+
+}
+
+@media screen and (max-width: 375px) {
+
+.p-drawer__inner {
+	width: calc(100% - 40px);
 }
 
 }
