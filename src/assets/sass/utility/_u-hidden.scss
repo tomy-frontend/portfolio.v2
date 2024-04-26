@@ -1,0 +1,17 @@
+@use "../global" as global;
+
+// pcの時非表示
+.u-hidden-pc {
+  @include global.mq(md) {
+    display: none;
+  }
+}
+
+// スマホの時非表示
+.u-hidden-sp {
+  display: none;
+
+  @include global.mq(md) {
+    display: block;
+  }
+}

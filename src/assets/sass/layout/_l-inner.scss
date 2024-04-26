@@ -6,6 +6,6 @@
 
   @include global.mq(lg) {
     width: calc(100% - 60px * 2);
-    max-width: global.$sp-contents-width; //メインコンテンツの最大幅
+    max-width: global.$pc-contents-width; //メインコンテンツの最大幅
   }
 }

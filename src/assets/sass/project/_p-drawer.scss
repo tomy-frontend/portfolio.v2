@@ -55,10 +55,12 @@
 
 .p-drawer__link-en {
   margin-right: 10px;
+  display: inline;
 }
 
 .p-drawer__link-ja {
   font-size: global.rem(10);
+  display: inline;
 }
 
 .p-drawer__sns {
@@ -70,7 +72,9 @@
 }
 .p-drawer__sns-text {
   color: global.$text-color-black;
+  font-family: global.$ff-en;
   font-size: global.rem(14);
+  font-weight: global.$fw-large;
 }
 
 .p-drawer__sns__list {
