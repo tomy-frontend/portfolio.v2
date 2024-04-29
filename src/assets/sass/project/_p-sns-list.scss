@@ -1,0 +1,27 @@
+@use "../global" as global;
+
+.p-sns-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.p-sns-list-text {
+  color: global.$text-color-black;
+  font-family: global.$ff-en;
+  font-size: global.rem(14);
+  font-weight: global.$fw-large;
+}
+
+.p-sns-list__list {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.p-sns-list__link {
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}

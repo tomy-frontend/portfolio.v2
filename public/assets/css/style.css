@@ -381,27 +381,30 @@ a {
 }
 
 .p-drawer__sns {
+	margin-top: 30px;
+}
+
+.p-sns-list {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 	justify-content: center;
-	padding-top: 30px;
 }
 
-.p-drawer__sns-text {
+.p-sns-list-text {
 	color: #000000;
 	font-family: "Crimson Text", serif;
 	font-size: 0.875rem;
 	font-weight: 700;
 }
 
-.p-drawer__sns__list {
+.p-sns-list__list {
 	display: flex;
 	flex-direction: row;
 	gap: 18px;
 }
 
-.p-drawer__sns__link img {
+.p-sns-list__link img {
 	height: 16px;
 	width: 16px;
 }
