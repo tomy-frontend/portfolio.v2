@@ -422,6 +422,11 @@ a {
 	width: 16px;
 }
 
+.p-section-bg {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 60px;
+}
+
 .p-fv {
 	margin-top: 200px;
 }
@@ -542,9 +547,13 @@ a {
 	width: 300%; /* 要素の数×100% */
 }
 
-.p-section-bg {
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 60px;
+.p-message__title {
+	font-weight: 700;
+	margin-top: 40px;
+}
+
+.p-message__text {
+	margin-top: 43px;
 }
 
 .p-footer {
