@@ -2,6 +2,7 @@
 
 .c-btn {
   position: relative;
+  display: block;
   inline-size: fit-content;
   border-radius: 16px;
   border: 2px solid global.$text-color-black;

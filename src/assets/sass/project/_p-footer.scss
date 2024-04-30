@@ -1,0 +1,63 @@
+@use "../global" as global;
+
+.p-footer {
+  background: gray; //一時的に色付け
+}
+.p-footer__inner {
+  width: calc(100% - 20px * 2);
+  margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 25px;
+
+  @include global.mq(md) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include global.mq(lg) {
+    width: calc(100% - 60px * 2);
+  }
+}
+
+.p-footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-footer__logo {
+  display: flex;
+  flex-direction: column;
+  transition: global.$transition-default;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+.p-footer__logo-text {
+  display: block;
+  font-family: global.$ff-en;
+  font-size: global.rem(14);
+}
+.p-footer__logo-title {
+  display: block;
+  font-family: global.$ff-en;
+  font-size: global.rem(24);
+}
+
+.p-footer__right {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.p-footer__sns {
+}
+
+.p-footer__copyright {
+  font-size: global.rem(10);
+}
+
+.p-footer__copyright--sp {
+  margin-top: 15px;
+  text-align: center;
+}
