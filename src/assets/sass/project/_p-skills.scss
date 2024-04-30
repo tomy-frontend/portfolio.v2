@@ -1,0 +1,71 @@
+@use "../global" as global;
+
+.p-skills {
+  margin-top: 60px;
+}
+
+.p-skills__inner {
+}
+
+.p-skills__heading {
+  display: inline-block;
+}
+.p-skills__heading-en {
+  font-family: global.$ff-en;
+  font-size: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem); //最大40px,30px
+  display: inline;
+  margin-right: 5px;
+}
+
+.p-skills__heading-ja {
+  display: inline;
+  font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem); //最大16px,10px
+}
+.p-skills__container {
+  margin-top: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.25);
+
+  @include global.mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-skills__box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid #dbdbdb;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @include global.mq(md) {
+    padding-right: 26px;
+    padding-left: 26px;
+    border-bottom: none;
+    border-right: 1px solid #dbdbdb;
+
+    &:first-child {
+      padding-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+      padding-right: none;
+    }
+  }
+}
+
+.p-skills__title {
+  font-size: global.rem(20);
+}
+.p-skills__text {
+}
