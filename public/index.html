@@ -34,6 +34,9 @@
 </head>
 
 <body>
+	<!-- オリジナルマウスカーソル -->
+	<div id="cursor" class="cursor"></div>
+
 	<header class="p-header">
 		<div class="p-header__inner">
 			<!-- p-header__logo -->
@@ -47,19 +50,19 @@
 			<nav class="p-global-nav">
 				<ul class="p-global-nav__list">
 					<li class="p-global-nav__item">
-						<a href="#work" class="p-global-nav__link">Works</a>
+						<a href="#works" class="p-global-nav__link">Works</a>
 					</li>
 					<li class="p-global-nav__item">
-						<a href="#AboutMe" class="p-global-nav__link">AboutMe</a>
+						<a href="#aboutme" class="p-global-nav__link">AboutMe</a>
 					</li>
 					<li class="p-global-nav__item">
-						<a href="#Service" class="p-global-nav__link">Service</a>
+						<a href="#service" class="p-global-nav__link">Service</a>
 					</li>
 					<li class="p-global-nav__item">
-						<a href="#WorkFlow" class="p-global-nav__link">WorkFlow</a>
+						<a href="#workflow" class="p-global-nav__link">WorkFlow</a>
 					</li>
 					<li class="p-global-nav__item">
-						<a href="#Contact" class="p-global-nav__link">Contact</a>
+						<a href="#contact" class="p-global-nav__link">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -80,31 +83,31 @@
 			<div class="p-drawer__inner">
 				<ul class="p-drawer__list">
 					<li class="p-drawer__item">
-						<a href="#work" class="p-drawer__link">
+						<a href="#works" class="p-drawer__link">
 							<p class="p-drawer__link-en">Works</p>
 							<p class="p-drawer__link-ja">制作実績</p>
 						</a>
 					</li>
 					<li class="p-drawer__item">
-						<a href="#AboutMe" class="p-drawer__link">
+						<a href="#aboutme" class="p-drawer__link">
 							<p class="p-drawer__link-en">AboutMe</p>
 							<p class="p-drawer__link-ja">私について</p>
 						</a>
 					</li>
 					<li class="p-drawer__item">
-						<a href="#Service" class="p-drawer__link">
+						<a href="#service" class="p-drawer__link">
 							<p class="p-drawer__link-en">Service</p>
 							<p class="p-drawer__link-ja">提供しているサービス</p>
 						</a>
 					</li>
 					<li class="p-drawer__item">
-						<a href="#WorkFlow" class="p-drawer__link">
+						<a href="#workflow" class="p-drawer__link">
 							<p class="p-drawer__link-en">WorkFlow</p>
 							<p class="p-drawer__link-ja">制作の流れ</p>
 						</a>
 					</li>
 					<li class="p-drawer__item">
-						<a href="#Contact" class="p-drawer__link">
+						<a href="#contact" class="p-drawer__link">
 							<p class="p-drawer__link-en">Contact</p>
 							<p class="p-drawer__link-ja">お問い合わせ</p>
 						</a>
@@ -139,8 +142,9 @@
 		<!-- p-fv -->
 
 		<!-- works -->
-		<section #="works" class="p-works">
+		<section id="works" class="p-works l-section-padding p-section-bg">
 			<div class="p-works__inner l-inner">
+				<!-- p-works__content -->
 				<div class="p-works__content">
 					<!-- c-section-heading -->
 					<div class="c-section-heading">
@@ -148,58 +152,169 @@
 						<p class="c-section-heading__ja">制作実績</p>
 					</div>
 					<!-- c-section-heading -->
-					<div class="p-works__text-box">
-						<p>
-							私の過去制作実績でございます。<br />
-							作品ページでは制作に関して工夫したポイント・苦労したポイント、
-							また、制作期間・費用感について記載させていただいておりますので、
-							ぜひご参照ください。 当サイトも自らデザイン・
-							コーディングをしておりますので、
-							実績の一つとしてご査収ください。
-						</p>
+					<div class="p-works__flex">
+						<!-- p-works__text-box -->
+						<div class="p-works__text-box">
+							<p class="p-works__text">
+								私の過去制作実績でございます。<br /><br />
+								作品ページでは制作に関して工夫したポイント・苦労したポイント、
+								また、制作期間・費用感について記載させていただいておりますので、
+								ぜひご参照ください。 当サイトも自らデザイン・
+								コーディングをしておりますので、
+								実績の一つとしてご査収ください。
+							</p>
+							<div class="p-works__btn u-hidden-sp">
+								<a href="/" class="c-btn">All Works</a>
+							</div>
+						</div>
+						<!-- p-works__text-box -->
+						<!-- p-works__container -->
+						<div class="p-works__container js-wrapper">
+							<!-- p-portfolio-card__card -->
+							<div class="p-portfolio-card js-scroll">
+								<div class="p-portfolio-card__inner">
+									<a href="/" class="p-portfolio-card__img">
+										<img src="./assets/img/portfolio2.jpeg" alt="ポートフォリオの画像" width="2822" height="1434" />
+									</a>
+									<h3 class="p-portfolio-card__title">
+										みなみ歯科クリニック様(架空サイト)
+									</h3>
+									<div class="p-portfolio-card__category">
+										<a href="/" class="p-portfolio-card__tag">自主制作</a>
+										<a href="/" class="p-portfolio-card__tag">LP</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">wordpress</a>
+									</div>
+								</div>
+							</div>
+							<!-- p-portfolio-card__card -->
+							<div class="p-portfolio-card js-scroll">
+								<div class="p-portfolio-card__inner">
+									<a href="/" class="p-portfolio-card__img">
+										<img src="./assets/img/portfolio2.jpeg" alt="ポートフォリオの画像" width="2822" height="1434" />
+									</a>
+									<h3 class="p-portfolio-card__title">
+										みなみ歯科クリニック様(架空サイト)
+									</h3>
+									<div class="p-portfolio-card__category">
+										<a href="/" class="p-portfolio-card__tag">自主制作</a>
+										<a href="/" class="p-portfolio-card__tag">LP</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">wordpress</a>
+									</div>
+								</div>
+							</div>
+							<!-- p-portfolio-card__card -->
+							<div class="p-portfolio-card js-scroll">
+								<div class="p-portfolio-card__inner">
+									<a href="/" class="p-portfolio-card__img">
+										<img src="./assets/img/portfolio2.jpeg" alt="ポートフォリオの画像" width="2822" height="1434" />
+									</a>
+									<h3 class="p-portfolio-card__title">
+										みなみ歯科クリニック様(架空サイト)
+									</h3>
+									<div class="p-portfolio-card__category">
+										<a href="/" class="p-portfolio-card__tag">自主制作</a>
+										<a href="/" class="p-portfolio-card__tag">LP</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+										<a href="/" class="p-portfolio-card__tag">wordpress</a>
+									</div>
+								</div>
+							</div>
+							<!-- p-portfolio-card__card -->
+						</div>
+						<!-- p-works__container -->
 					</div>
-					<div class="works__btn">
+					<div class="p-works__btn u-hidden-pc">
 						<a href="/" class="c-btn">All Works</a>
 					</div>
 				</div>
+				<!-- p-works__content -->
 			</div>
 		</section>
 		<!-- works -->
 
-		<!-- c-section-heading -->
-		<div class="c-section-heading">
-			<h2 class="c-section-heading__en">Message</h2>
-			<p class="c-section-heading__ja">仕事にかける想い</p>
-		</div>
-		<!-- c-section-heading -->
-		<!-- c-section-heading -->
-		<div class="c-section-heading">
-			<h2 class="c-section-heading__en">AboutMe</h2>
-			<p class="c-section-heading__ja">私について</p>
-		</div>
-		<!-- c-section-heading -->
-		<!-- c-section-heading -->
-		<div class="c-section-heading">
-			<h2 class="c-section-heading__en">Service</h2>
-			<p class="c-section-heading__ja">提供しているサービス</p>
-		</div>
-		<!-- c-section-heading -->
-		<!-- c-section-heading -->
-		<div class="c-section-heading">
-			<h2 class="c-section-heading__en">WorkFlow</h2>
-			<p class="c-section-heading__ja">制作の流れ</p>
-		</div>
-		<!-- c-section-heading -->
-		<!-- c-section-heading -->
-		<div class="c-section-heading">
-			<h2 class="c-section-heading__en">Contact</h2>
-			<p class="c-section-heading__ja">お問い合わせ</p>
-		</div>
-		<!-- c-section-heading -->
+		<!-- message -->
+		<section id="message" class="p-message l-section-padding">
+			<div class="p-message__inner l-inner">
+				<div class="p-message__content">
+					<!-- c-section-heading -->
+					<div class="c-section-heading">
+						<h2 class="c-section-heading__en">Message</h2>
+						<p class="c-section-heading__ja">仕事にかける想い</p>
+					</div>
+					<!-- c-section-heading -->
+				</div>
+			</div>
+		</section>
+		<!-- message -->
 
-		<div class="contact__btn">
-			<a href="/" class="c-btn">Contact Form</a>
-		</div>
+		<!-- aboutme -->
+		<section id="aboutme" class="p-about l-section-padding p-section-bg">
+			<div class="p-about__inner l-inner">
+				<div class="p-about__content">
+					<!-- c-section-heading -->
+					<div class="c-section-heading">
+						<h2 class="c-section-heading__en">AboutMe</h2>
+						<p class="c-section-heading__ja">私について</p>
+					</div>
+					<!-- c-section-heading -->
+				</div>
+			</div>
+		</section>
+		<!-- aboutme -->
+
+		<!-- service -->
+		<section id="service" class="p-service l-section-padding">
+			<div class="p-service__inner l-inner">
+				<div class="p-service__content">
+					<!-- c-section-heading -->
+					<div class="c-section-heading">
+						<h2 class="c-section-heading__en">Service</h2>
+						<p class="c-section-heading__ja">提供しているサービス</p>
+					</div>
+					<!-- c-section-heading -->
+				</div>
+			</div>
+		</section>
+		<!-- service -->
+
+		<!-- workflow -->
+		<section id="workflow" class="p-workflow l-section-padding p-section-bg">
+			<div class="p-workflow__inner l-inner">
+				<div class="p-workflow__content">
+					<!-- c-section-heading -->
+					<div class="c-section-heading">
+						<h2 class="c-section-heading__en">WorkFlow</h2>
+						<p class="c-section-heading__ja">制作の流れ</p>
+					</div>
+					<!-- c-section-heading -->
+				</div>
+			</div>
+		</section>
+		<!-- workflow -->
+
+		<!-- contact -->
+		<section id="contact" class="p-contact l-section-padding">
+			<div class="p-contact__inner l-inner">
+				<div class="p-contact__content">
+					<!-- c-section-heading -->
+					<div class="c-section-heading">
+						<h2 class="c-section-heading__en">Contact</h2>
+						<p class="c-section-heading__ja">お問い合わせ</p>
+					</div>
+					<!-- c-section-heading -->
+
+					<div class="contact__btn">
+						<a href="/" class="c-btn">Contact Form</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- contact -->
 	</main>
 	<!-- p-footer -->
 	<footer class="p-footer">
@@ -236,10 +351,10 @@
 		</div>
 	</footer>
 	<!-- p-footer -->
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.x/gsap.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.x/TextPlugin.min.js" defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
 	<script src="./assets/js/script.js" defer></script>
 </body>
 

@@ -1,0 +1,44 @@
+@use "../global" as global;
+
+.p-works {
+  overflow: hidden;
+}
+
+.p-works__inner {
+}
+
+.p-works__content {
+}
+
+.p-works__flex {
+  @include global.mq(md) {
+    // display: flex;
+  }
+}
+.p-works__text-box {
+  margin-top: 36px;
+}
+.p-works__text {
+}
+.p-works__btn {
+  margin-top: 36px;
+  text-align: center;
+
+  .c-btn {
+    display: inline-block;
+  }
+
+  &.u-hidden-sp {
+    text-align-last: left;
+  }
+}
+
+// 水平スクロール要素
+.p-works__container {
+  margin-top: 36px;
+  width: 300%; /* 要素の数×100% */
+  //   height: 100vh; //大事
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}

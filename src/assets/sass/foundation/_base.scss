@@ -1,11 +1,16 @@
 @use "../global" as global;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: global.$text-color-black;
   font-family: global.$ff-base;
   font-size: global.$fz-base;
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
+  background: url(../img/body.bg.jpg); //一時的
 }
 
 img {

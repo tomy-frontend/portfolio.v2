@@ -66,3 +66,46 @@ document.addEventListener("DOMContentLoaded", function () {
   // スクリプト読み込み時に一度、メディアクエリに基づいてmatchMediaを実行します。
   handleMediaChange(matchMedia);
 });
+
+// カーソル用のdivタグを取得してcursorに格納
+var cursor = document.getElementById("cursor");
+
+// カーソル用のdivタグをマウスに追従させる
+document.addEventListener("mousemove", function (e) {
+  cursor.style.transform =
+    "translate(" + e.clientX + "px, " + e.clientY + "px)";
+});
+
+// リンクにホバーした時にクラス追加、離れたらクラス削除
+var link = document.querySelectorAll("a, button");
+for (var i = 0; i < link.length; i++) {
+  link[i].addEventListener("mouseover", function (e) {
+    cursor.classList.add("cursor--hover");
+  });
+  link[i].addEventListener("mouseout", function (e) {
+    cursor.classList.remove("cursor--hover");
+  });
+}
+
+// p-worksの水平スクロール
+// コンテナ要素とスライド要素を取得
+const wrapper = document.querySelector(".js-wrapper");
+const slides = gsap.utils.toArray(".js-scroll");
+
+// コンテナの幅を取得
+const wrapperWidth = wrapper.offsetWidth;
+
+// 横スクロールアニメーションの設定
+gsap.to(slides, {
+  xPercent: -100 * (slides.length - 1), // -X軸方向に移動
+  ease: "none", // アニメーションのイージング(noneは定速)
+  scrollTrigger: {
+    trigger: wrapper, // アニメーション開始のトリガー要素
+    pin: true, // 要素を固定
+    scrub: 1, // スクロール量に合わせてアニメーション
+    start: "top top", // アニメーションが始まる位置
+    end: `+=${wrapperWidth}`, // アニメーションが終わる位置
+    anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
+    invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
+  },
+});

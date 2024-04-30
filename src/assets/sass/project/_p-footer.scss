@@ -1,7 +1,7 @@
 @use "../global" as global;
 
 .p-footer {
-  background: gray; //一時的に色付け
+  background: rgba(255, 255, 255, 0.8);
 }
 .p-footer__inner {
   width: calc(100% - 20px * 2);
