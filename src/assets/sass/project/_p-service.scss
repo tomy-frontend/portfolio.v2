@@ -1,0 +1,23 @@
+@use "../global" as global;
+
+.p-service {
+  margin-top: 60px;
+}
+
+.p-service__inner {
+}
+
+.p-service__content {
+}
+
+.p-service__container {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+
+  @include global.mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}

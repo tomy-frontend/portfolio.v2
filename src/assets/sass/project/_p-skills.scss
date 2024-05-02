@@ -12,7 +12,7 @@
 }
 .p-skills__heading-en {
   font-family: global.$ff-en;
-  font-size: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem); //最大40px,30px
+  font-size: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem); //最大40px,30px
   display: inline;
   margin-right: 5px;
 }
@@ -31,7 +31,8 @@
   box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.25);
 
   @include global.mq(md) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

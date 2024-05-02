@@ -1,0 +1,37 @@
+@use "../global" as global;
+
+.p-workflow {
+  margin-top: 100px;
+}
+
+.p-workflow__inner {
+}
+
+.p-workflow__content {
+}
+
+.p-workflow__text {
+  margin-top: 35px;
+}
+.p-workflow__container {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include global.mq(md) {
+    margin-top: 80px;
+    width: calc(100% - 20px * 2);
+
+    .p-workflow-card {
+      flex-direction: row;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse; //偶数個目のカードは逆方向に
+      }
+    }
+  }
+}

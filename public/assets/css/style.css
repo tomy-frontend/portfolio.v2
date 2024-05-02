@@ -159,6 +159,11 @@ a {
 	padding-top: 70px;
 }
 
+.l-section-padding--lg {
+	padding-bottom: 150px;
+	padding-top: 150px;
+}
+
 .c-section-heading {
 	display: inline-block;
 	position: relative;
@@ -428,7 +433,8 @@ a {
 }
 
 .p-fv {
-	margin-top: 200px;
+	padding-bottom: 140px;
+	padding-top: 260px;
 }
 
 .p-fv__lead {
@@ -438,7 +444,7 @@ a {
 
 .p-fv__title {
 	font-family: "Crimson Text", serif;
-	font-size: 3rem;
+	font-size: 4rem;
 }
 
 .p-portfolio-card {
@@ -659,7 +665,7 @@ a {
 .p-skills__heading-en {
 	display: inline;
 	font-family: "Crimson Text", serif;
-	font-size: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
+	font-size: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem);
 	margin-right: 5px;
 }
 
@@ -695,11 +701,109 @@ a {
 	font-size: 1.25rem;
 }
 
+.p-service {
+	margin-top: 60px;
+}
+
+.p-service__container {
+	display: grid;
+	gap: 40px;
+	grid-template-columns: 1fr;
+	margin-top: 35px;
+}
+
+.p-service-card {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 50px 0px;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.p-service-card__inner {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 40px;
+	text-align: center;
+}
+
+.p-service-card__text-box {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+.p-service-card__title {
+	font-size: 1.25rem;
+}
+
+.p-service-card__text {
+	text-align: left;
+}
+
 .p-contact__content {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
 	gap: 46px;
+}
+
+.p-workflow {
+	margin-top: 100px;
+}
+
+.p-workflow__text {
+	margin-top: 35px;
+}
+
+.p-workflow__container {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 1000px;
+	width: 100%;
+}
+
+.p-workflow-card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.p-workflow-card__img {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+	width: 100%;
+}
+
+.p-workflow-card__img img {
+	width: 100%;
+}
+
+.p-workflow-card__text-box {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.p-workflow-card__head {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+}
+
+.p-workflow-card__tag {
+	background: #ffffff;
+	border: 1px solid #000000;
+	border-radius: 16px;
+	font-family: "Crimson Text", serif;
+	font-size: 0.875rem;
+	padding: 5px 15px;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.p-workflow-card__title {
+	font-size: 1.25rem;
 }
 
 .p-footer {
@@ -779,7 +883,7 @@ a {
 }
 
 .p-fv__title {
-	font-size: 4rem;
+	font-size: 5rem;
 }
 
 .p-about__container {
@@ -801,7 +905,8 @@ a {
 }
 
 .p-skills__container {
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .p-skills__box {
@@ -818,6 +923,33 @@ a {
 .p-skills__box:last-child {
 	border-right: none;
 	padding-right: none;
+}
+
+.p-service__container {
+	gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.p-workflow__container {
+	margin-top: 80px;
+	width: calc(100% - 40px);
+}
+
+.p-workflow__container .p-workflow-card {
+	flex-direction: row;
+}
+
+.p-workflow__container .p-workflow-card:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.p-workflow-card__img {
+	width: 40%;
+}
+
+.p-workflow-card__text-box {
+	margin-top: 30px;
+	width: 60%;
 }
 
 .p-footer__inner {

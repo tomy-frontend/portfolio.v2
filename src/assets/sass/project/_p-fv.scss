@@ -1,7 +1,8 @@
 @use "../global" as global;
 
 .p-fv {
-  margin-top: 200px; //一時的に
+  padding-top: 260px;
+  padding-bottom: 140px;
 }
 
 .p-fv__lead {
@@ -15,9 +16,9 @@
 
 .p-fv__title {
   font-family: global.$ff-en;
-  font-size: global.rem(48);
+  font-size: global.rem(64);
 
   @include global.mq(md) {
-    font-size: global.rem(64);
+    font-size: global.rem(80);
   }
 }
