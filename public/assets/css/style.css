@@ -237,10 +237,11 @@ a {
 .c-btn-top a {
 	display: inline-block;
 	position: relative;
+	transition: all 0.5s ease;
 }
 
 .c-btn-top a::before {
-	animation: rotate2 15s linear infinite;
+	animation: rotate2 10s linear infinite;
 	background: url(../img/icon/top-btn-deco.svg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -250,7 +251,18 @@ a {
 	left: 0;
 	position: absolute;
 	top: 0;
+	transition: all 0.5s ease;
 	width: 68px;
+}
+
+.c-btn-top a:hover,
+.c-btn-top a:focus {
+	transform: scale(1.2);
+}
+
+.c-btn-top a:hover::before,
+.c-btn-top a:focus::before {
+	animation: rotate2-reverse 8s linear infinite;
 }
 
 .p-header {
@@ -1039,6 +1051,18 @@ a {
 
 100% {
 	transform: translate(-30%, -30%) rotate(360deg);
+}
+
+}
+
+@keyframes rotate2-reverse {
+
+0% {
+	transform: translate(-30%, -30%) rotate(360deg);
+}
+
+100% {
+	transform: translate(-30%, -30%) rotate(0deg);
 }
 
 }

@@ -6,6 +6,7 @@
   a {
     position: relative;
     display: inline-block;
+    transition: global.$transition-default;
 
     &::before {
       position: absolute;
@@ -18,17 +19,36 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      animation: rotate2 15s linear infinite;
+      animation: rotate2 10s linear infinite;
+      transition: global.$transition-default;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+
+      &::before {
+        animation: rotate2-reverse 8s linear infinite;
+      }
     }
   }
-}
 
-// 無限回転
-@keyframes rotate2 {
-  0% {
-    transform: translate(-30%, -30%) rotate(0deg);
+  // 無限回転
+  @keyframes rotate2 {
+    0% {
+      transform: translate(-30%, -30%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-30%, -30%) rotate(360deg);
+    }
   }
-  100% {
-    transform: translate(-30%, -30%) rotate(360deg);
+
+  @keyframes rotate2-reverse {
+    0% {
+      transform: translate(-30%, -30%) rotate(360deg);
+    }
+    100% {
+      transform: translate(-30%, -30%) rotate(0deg);
+    }
   }
 }
