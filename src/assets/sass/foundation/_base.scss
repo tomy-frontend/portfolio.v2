@@ -1,9 +1,5 @@
 @use "../global" as global;
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   color: global.$text-color-black;
   font-family: global.$ff-base;

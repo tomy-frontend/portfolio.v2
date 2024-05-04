@@ -127,10 +127,6 @@ i {
 	font-style: normal;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 body {
 	background: url(../img/body.bg.jpg);
 	color: #000000;

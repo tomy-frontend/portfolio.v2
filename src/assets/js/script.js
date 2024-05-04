@@ -109,3 +109,20 @@ gsap.to(slides, {
     invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
   },
 });
+
+// ヘッダー高さの可変を考慮したスムーススクロール
+jQuery('a[href^="#"]').on("click", function (e) {
+  const speed = 300;
+  const id = jQuery(this).attr("href");
+  const target = jQuery("#" === id ? "html" : id);
+  const position =
+    jQuery(target).offset().top + (window.innerWidth < 768 ? -86 : -86);
+
+  jQuery("html, body").animate(
+    {
+      scrollTop: position,
+    },
+    speed,
+    "swing"
+  );
+});
