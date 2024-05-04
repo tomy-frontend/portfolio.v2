@@ -37,3 +37,42 @@
     }
   }
 }
+
+// coming-soon用の非アクティブなボタン
+.c-btn__disable {
+  user-select: none;
+  position: relative;
+  display: block;
+  inline-size: fit-content;
+  border-radius: 16px;
+  border: 2px solid global.$text-color-black;
+  padding: 9px 50px 9px 23px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: url(../img/icon/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 25%;
+    left: calc(100% - 36px);
+    width: 20px;
+    height: 20px;
+  }
+
+  //coming-soonのリボン
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 175.295px;
+    height: 31.365px;
+    transform: translate(-8%, -50%) rotate(-10.066deg);
+    background: url(../img/ComingSoonRibbon.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+  }
+}

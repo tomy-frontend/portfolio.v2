@@ -88,7 +88,6 @@ for (var i = 0; i < link.length; i++) {
 }
 
 // p-worksの水平スクロール
-// コンテナ要素とスライド要素を取得
 const wrapper = document.querySelector(".js-wrapper");
 const slides = gsap.utils.toArray(".js-scroll");
 
@@ -126,3 +125,7 @@ jQuery('a[href^="#"]').on("click", function (e) {
     "swing"
   );
 });
+
+////////////////////////////////
+
+////////////////////////////////

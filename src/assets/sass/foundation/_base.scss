@@ -6,7 +6,8 @@ body {
   font-size: global.$fz-base;
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
-  background: url(../img/body.bg.jpg); //一時的
+  // background: url(../img/body.bg.jpg); //一時的
+  background: gray;
 }
 
 img {
