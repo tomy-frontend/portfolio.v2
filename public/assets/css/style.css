@@ -233,6 +233,30 @@ a {
 
 /*デフォルトのマウスカーソルを非表示にする*/
 
+.c-btn-top {
+	width: -moz-fit-content;
+	width: fit-content;
+}
+
+.c-btn-top a {
+	display: inline-block;
+	position: relative;
+}
+
+.c-btn-top a::before {
+	animation: rotate2 15s linear infinite;
+	background: url(../img/icon/top-btn-deco.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 68px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 68px;
+}
+
 .p-header {
 	left: 0;
 	position: fixed;
@@ -808,6 +832,13 @@ a {
 
 .p-footer {
 	background: rgba(255, 255, 255, 0.8);
+	position: relative;
+}
+
+.p-footer__top-btn {
+	position: absolute;
+	right: 8%;
+	top: -10%;
 }
 
 .p-footer__inner {
@@ -952,6 +983,10 @@ a {
 	width: 60%;
 }
 
+.p-footer__top-btn {
+	right: 5%;
+}
+
 .p-footer__inner {
 	padding-bottom: 35px;
 	padding-top: 35px;
@@ -996,6 +1031,18 @@ a {
 
 .p-drawer__inner {
 	width: calc(100% - 40px);
+}
+
+}
+
+@keyframes rotate2 {
+
+0% {
+	transform: translate(-30%, -30%) rotate(0deg);
+}
+
+100% {
+	transform: translate(-30%, -30%) rotate(360deg);
 }
 
 }

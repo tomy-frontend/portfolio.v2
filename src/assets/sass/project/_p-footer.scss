@@ -1,7 +1,18 @@
 @use "../global" as global;
 
 .p-footer {
+  position: relative; //p-footer__top-btnのため
   background: rgba(255, 255, 255, 0.8);
+}
+
+.p-footer__top-btn {
+  position: absolute;
+  right: 8%;
+  top: -10%;
+
+  @include global.mq(md) {
+    right: 5%;
+  }
 }
 .p-footer__inner {
   width: calc(100% - 20px * 2);
