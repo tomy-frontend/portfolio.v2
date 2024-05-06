@@ -1,0 +1,58 @@
+@use "../global" as global;
+
+.p-page-work {
+}
+
+.p-page-work__inner {
+}
+
+.p-page-work__content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include global.mq(md) {
+    gap: 50px;
+  }
+}
+
+.p-page-work__head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p-page-work__title {
+  font-size: global.rem(30);
+}
+
+.p-page-work__category {
+}
+
+.p-page-work__img {
+  width: 100%;
+  height: 100vh;
+  max-height: 1200px;
+  overflow: hidden;
+}
+
+.p-page-work__description {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.p-page-work__box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include global.mq(md) {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+}
+.p-page-work__question {
+  font-weight: global.$fw-large;
+}
+.p-page-work__answer {
+}

@@ -524,6 +524,10 @@ a {
 	font-size: 4rem;
 }
 
+.p-fv--page {
+	height: 60vh !important;
+}
+
 .p-portfolio-card {
 	background: #ffffff;
 	border-radius: 12px;
@@ -889,6 +893,45 @@ a {
 	font-size: 1.25rem;
 }
 
+.p-page-work__content {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.p-page-work__head {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.p-page-work__title {
+	font-size: 1.875rem;
+}
+
+.p-page-work__img {
+	height: 100vh;
+	max-height: 1200px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.p-page-work__description {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.p-page-work__box {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.p-page-work__question {
+	font-weight: 700;
+}
+
 .p-page-contact__section-heading {
 	margin-top: 80px;
 }
@@ -1199,6 +1242,15 @@ a {
 .p-workflow-card__text-box {
 	margin-top: 30px;
 	width: 60%;
+}
+
+.p-page-work__content {
+	gap: 50px;
+}
+
+.p-page-work__box {
+	display: grid;
+	grid-template-columns: 30% 70%;
 }
 
 .p-form__field {
