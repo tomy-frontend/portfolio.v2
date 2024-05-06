@@ -160,6 +160,10 @@ a {
 	padding-top: 150px;
 }
 
+.l-mb-md {
+	margin-bottom: 150px;
+}
+
 .c-section-heading {
 	display: inline-block;
 	position: relative;
@@ -885,6 +889,157 @@ a {
 	font-size: 1.25rem;
 }
 
+.p-page-contact__section-heading {
+	margin-top: 80px;
+}
+
+.p-page-contact__text-box {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.p-page-contact__lead {
+	font-size: 1.625rem;
+}
+
+.p-form {
+	margin-top: 40px;
+}
+
+.p-form__field {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.p-form__field--flex {
+	flex-direction: column !important;
+}
+
+.p-form__field--flex textarea {
+	width: 100%;
+}
+
+.p-form__field-head {
+	border-bottom: 1px solid #bdbdbd;
+	height: -moz-fit-content;
+	height: fit-content;
+	min-width: 140px;
+	padding-bottom: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
+	width: 100%;
+}
+
+.p-form__field-label__emphasize {
+	color: #f00;
+	margin-left: 2px;
+}
+
+.p-form__field-item {
+	border-bottom: 1px solid #bdbdbd;
+	width: 100%;
+}
+
+.p-form__field-item select {
+	font-size: 16px;
+	padding-bottom: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
+	width: 100%;
+}
+
+.p-form__field-item input,
+.p-form__field-item textarea {
+	background: none;
+}
+
+.p-form__field-item input {
+	padding-bottom: 16px;
+	padding-right: 16px;
+	padding-top: 16px;
+}
+
+.p-form__field-item textarea {
+	border: 1px solid #bdbdbd;
+	border-radius: 12px;
+	padding: 16px;
+}
+
+.p-form__field-item input.wpcf7-email,
+.p-form__field-item input.wpcf7-text {
+	width: 100%;
+}
+
+.p-form__field-item--bordernone {
+	border-bottom: none;
+}
+
+.p-form__privacy {
+	border: 1px solid #bdbdbd;
+	border-radius: 12px;
+	padding: 20px;
+}
+
+.p-form__field--tac {
+	text-align: center;
+}
+
+.p-form__field--tac .wpcf7-list-item {
+	font-size: 0.875rem;
+}
+
+.p-form__field--tac .wpcf7-checkbox {
+	justify-content: center;
+}
+
+.p-form__field input[type=checkbox],
+.p-form__field--tac input[type=checkbox] {
+	margin-right: 8px;
+}
+
+.wpcf7-form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	margin-left: auto;
+	max-width: 900px;
+}
+
+.wpcf7-checkbox {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.wpcf7-submit {
+	border: 2px solid #000000;
+	border-radius: 16px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	padding: 9px 50px 9px 50px;
+	transition: all 0.5s ease;
+}
+
+.wpcf7-submit:hover,
+.wpcf7-submit:focus {
+	background-color: #000000;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+.wpcf7-spinner {
+	height: 0 !important;
+	margin: 0 !important;
+	width: 0 !important;
+}
+
+.wpcf7-list-item {
+	margin: 0 !important;
+}
+
 .p-footer {
 	background: rgba(255, 255, 255, 0.8);
 	position: relative;
@@ -1040,6 +1195,22 @@ a {
 .p-workflow-card__text-box {
 	margin-top: 30px;
 	width: 60%;
+}
+
+.p-form__field {
+	flex-direction: row;
+}
+
+.p-form__field--flex {
+	flex-direction: row !important;
+}
+
+.p-form__field-head {
+	width: 30%;
+}
+
+.p-form__field-item {
+	width: 70%;
 }
 
 .p-footer__top-btn {

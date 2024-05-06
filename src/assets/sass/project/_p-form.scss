@@ -1,0 +1,164 @@
+@use "../global" as global;
+
+.p-form {
+  margin-top: 40px;
+}
+
+.p-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include global.mq(md) {
+    flex-direction: row;
+  }
+}
+
+// checkboxとtextareaのflex用
+.p-form__field--flex {
+  flex-direction: column !important;
+
+  @include global.mq(md) {
+    flex-direction: row !important;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+.p-form__field-head {
+  //   width: 30%; //比率保持用
+  width: 100%;
+  height: fit-content;
+  min-width: 140px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid global.$gray;
+
+  @include global.mq(md) {
+    width: 30%;
+  }
+}
+
+.p-form__field-label__emphasize {
+  color: global.$red;
+  margin-left: 2px;
+}
+
+.p-form__field-item {
+  //   width: 70%; //比率保持用
+  width: 100%;
+  border-bottom: 1px solid global.$gray;
+
+  @include global.mq(md) {
+    width: 70%;
+  }
+
+  select {
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+  }
+
+  input,
+  textarea {
+    background: none;
+  }
+
+  input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+  }
+
+  textarea {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid global.$gray;
+  }
+
+  input.wpcf7-email,
+  input.wpcf7-text {
+    width: 100%;
+  }
+}
+
+// checkboxとtextareaのborder打ち消し用
+.p-form__field-item--bordernone {
+  border-bottom: none;
+}
+
+.p-form__privacy {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid global.$gray;
+}
+
+.p-form__field--tac {
+  text-align: center;
+
+  .wpcf7-list-item {
+    font-size: global.rem(14);
+  }
+
+  .wpcf7-checkbox {
+    justify-content: center;
+  }
+}
+
+// checkboxのmargin調整用
+.p-form__field input[type="checkbox"],
+.p-form__field--tac input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+////////////////////////////////////
+// contact-form7全体
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin-left: auto;
+}
+
+// checkbox部分
+.wpcf7-checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.wpcf7-list-item {
+}
+
+// submitボタンのスタイル
+.wpcf7-submit {
+  inline-size: fit-content;
+  border-radius: 16px;
+  border: 2px solid global.$text-color-black;
+  padding: 9px 50px 9px 50px;
+  box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.25));
+  transition: global.$transition-default;
+
+  &:hover,
+  &:focus {
+    color: global.$text-color-white;
+    background-color: global.$text-color-black;
+    box-shadow: none;
+  }
+}
+
+// スピナーの打ち消し
+.wpcf7-spinner {
+  margin: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.wpcf7-list-item {
+  margin: 0 !important;
+}

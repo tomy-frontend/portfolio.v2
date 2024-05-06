@@ -1,0 +1,20 @@
+@use "../global" as global;
+
+.p-page-contact {
+}
+
+.p-page-contact__inner {
+}
+.p-page-contact__section-heading {
+  margin-top: 80px;
+}
+.p-page-contact__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.p-page-contact__lead {
+  font-size: global.rem(26);
+}
+.p-page-contact__text {
+}

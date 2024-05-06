@@ -1,12 +1,8 @@
 //色
-$accent-color: linear-gradient(
-  94deg,
-  rgba(230, 172, 250, 0.2) 1.82%,
-  rgba(255, 231, 251, 0.2) 99.36%
-);
-$bg-color: linear-gradient(177deg, #f6ebff 0.45%, #fefbdf 99.38%);
 $text-color-black: #000000;
 $text-color-white: #ffffff;
+$gray: #bdbdbd;
+$red: #f00;
 
 // フォント
 $ff-base: "Noto Sans JP", sans-serif;
@@ -31,7 +27,7 @@ $z-indexes: (
   @return map-get($z-indexes, $key);
 }
 
-// レイアウト
+// コンテンツ最大幅
 $sp-contents-width: 335px;
 $pc-contents-width: 1200px;
 

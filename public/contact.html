@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tomy Portfolio</title>
+	<meta name="description" content="webエンジニア富田真光のポートフォリオサイトです。" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta property="og:title" content="Tomy Portfolio" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="サイトURL" />
+	<meta property="og:image" content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg" />
+	<meta property="og:description" content="webエンジニア富田真光のポートフォリオサイトです。" />
+	<meta property="og:site_name" content="Tomy Portfolios" />
+
+	<!-- twitter-card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@minichua_dax" />
+	<meta name="twitter:title" content="Tomy Portfolios" />
+	<meta name="twitter:description" content="webエンジニア富田真光のポートフォリオサイトです。" />
+	<meta name="twitter:image" content="https://アップデータ先のドメイン/public/assets/img/ogp/OGP.jpg" />
+
+	<!-- favicon画像設定 -->
+	<!-- ogpとfaviconはimgの中にogp/faviconとしてフォルダ作成し、その中に画像を格納 -->
+
+	<!-- Googleフォント読み込み -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+	<!-- css読み込み -->
+	<link rel="stylesheet" href="./assets/css/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.x/TextPlugin.min.js" defer></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+	<script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+	<!-- オリジナルマウスカーソル -->
+	<div id="cursor" class="cursor"></div>
+	<!-- オリジナルマウスカーソル -->
+
+	<!-- p-header -->
+	<header class="p-header">
+		<div class="p-header__inner">
+			<!-- p-header__logo -->
+			<h1 class="p-header__logo">
+				<a href="/"><span class="p-header__logo-text">Web Engineer</span>
+					<span class="p-header__logo-title">Tomy Portfolio</span></a>
+			</h1>
+			<!-- p-header__logo -->
+
+			<!-- p-global-nav -->
+			<nav class="p-global-nav">
+				<ul class="p-global-nav__list">
+					<li class="p-global-nav__item">
+						<a href="#works" class="p-global-nav__link">Works</a>
+					</li>
+					<li class="p-global-nav__item">
+						<a href="#aboutme" class="p-global-nav__link">AboutMe</a>
+					</li>
+					<li class="p-global-nav__item">
+						<a href="#service" class="p-global-nav__link">Service</a>
+					</li>
+					<li class="p-global-nav__item">
+						<a href="#workflow" class="p-global-nav__link">WorkFlow</a>
+					</li>
+					<li class="p-global-nav__item">
+						<a href="#contact" class="p-global-nav__link">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- p-global-nav -->
+
+			<!-- p-menu-button -->
+			<button class="p-menu-button js-menu-button">
+				<span class="text-content">menu</span>
+			</button>
+			<!-- p-menu-button -->
+		</div>
+		<!-- p-header__inner -->
+	</header>
+	<!-- p-header -->
+
+	<!-- p-drawer -->
+	<div class="p-drawer js-drawer">
+		<nav class="p-drawer__nav">
+			<div class="p-drawer__inner">
+				<ul class="p-drawer__list">
+					<li class="p-drawer__item">
+						<a href="#works" class="p-drawer__link">
+							<p class="p-drawer__link-en">Works</p>
+							<p class="p-drawer__link-ja">制作実績</p>
+						</a>
+					</li>
+					<li class="p-drawer__item">
+						<a href="#aboutme" class="p-drawer__link">
+							<p class="p-drawer__link-en">AboutMe</p>
+							<p class="p-drawer__link-ja">私について</p>
+						</a>
+					</li>
+					<li class="p-drawer__item">
+						<a href="#service" class="p-drawer__link">
+							<p class="p-drawer__link-en">Service</p>
+							<p class="p-drawer__link-ja">提供しているサービス</p>
+						</a>
+					</li>
+					<li class="p-drawer__item">
+						<a href="#workflow" class="p-drawer__link">
+							<p class="p-drawer__link-en">WorkFlow</p>
+							<p class="p-drawer__link-ja">制作の流れ</p>
+						</a>
+					</li>
+					<li class="p-drawer__item">
+						<a href="#contact" class="p-drawer__link">
+							<p class="p-drawer__link-en">Contact</p>
+							<p class="p-drawer__link-ja">お問い合わせ</p>
+						</a>
+					</li>
+				</ul>
+				<div class="p-sns-list p-drawer__sns">
+					<p class="p-sns-list-text">Follow me</p>
+					<ul class="p-sns-list__list">
+						<li class="p-sns-list__item">
+							<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="富田真光のxアカウント" width="16" height="16" /></a>
+						</li>
+						<li class="p-sns-list__item">
+							<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="富田真光のnoteアカウント" width="16" height="16" /></a>
+						</li>
+						<li class="p-sns-list__item">
+							<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="富田真光のwantedlyアカウント" width="16" height="16" /></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- p-drawer -->
+
+	<main>
+		<!-- p-fv -->
+		<div class="p-fv l-inner">
+			<!-- <p class="p-fv__lead">Welcome to</p> -->
+			<p class="p-fv__lead">お問い合わせ</p>
+			<h2 class="p-fv__title">Contact</h2>
+		</div>
+		<!-- p-fv -->
+		<section class="p-page-contact l-section-padding p-section-bg l-mb-md">
+			<div class="p-page-contact__inner l-inner">
+				<div class="p-page-contact__text-box">
+					<p class="p-page-contact__lead">
+						ご興味をお持ちいただきありがとうございます。
+					</p>
+					<p class="p-page-contact__text">
+						下記フォームに入力していただき「送信する」ボタンを押してください。
+						<br />お問い合わせ内容の確認後、ご連絡させていただきます。
+					</p>
+				</div>
+				<div class="c-section-heading p-page-contact__section-heading">
+					<h2 class="c-section-heading__en">Contact Form</h2>
+					<p class="c-section-heading__ja">お問い合わせフォーム</p>
+				</div>
+				<div class="p-form">
+					<!-- contact-form -->
+					<form method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+						<!-- 事業形態 -->
+						<div class="p-form__field">
+							<div class="p-form__field-head">
+								<label class="p-form__field-label" for="select-option">事業形態</label>
+							</div>
+							<div class="p-form__field-item">
+								<span class="wpcf7-form-control-wrap" data-name="dropdown">
+									<select class="wpcf7-form-control wpcf7-select" aria-invalid="false" name="dropdown" id="select-option">
+										<option value="制作会社様">制作会社様</option>
+										<option value="個人事業主様">個人事業主様</option>
+										<option value="その他">その他</option>
+									</select>
+								</span>
+							</div>
+						</div>
+						<!-- 事業形態 -->
+						<!-- 会社名 -->
+						<div class="p-form__field">
+							<div class="p-form__field-head">
+								<label for="corporate-name" class="p-form__field-label">会社名</label>
+							</div>
+							<div class="p-form__field-item">
+								<span class="wpcf7-form-control-wrap" data-name="corporate-name"><input size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="株式会社サンプル" value="" type="text" name="corporate-name" id="corporate-name" /></span>
+							</div>
+						</div>
+						<!-- 会社名 -->
+
+						<!-- お名前 -->
+						<div class="p-form__field">
+							<div class="p-form__field-head">
+								<label for="your-name" class="p-form__field-label">お名前<span class="p-form__field-label__emphasize">*</span></label>
+							</div>
+
+							<div class="p-form__field-item">
+								<span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="山田 太郎" value="" type="text" name="your-name" id="your-name" /></span>
+							</div>
+						</div>
+						<!-- お名前 -->
+						<!-- メールアドレス -->
+						<div class="p-form__field">
+							<div class="p-form__field-head">
+								<label for="your-email" class="p-form__field-label">メールアドレス<span class="p-form__field-label__emphasize">*</span></label>
+							</div>
+
+							<div class="p-form__field-item">
+								<span class="wpcf7-form-control-wrap" data-name="your-email"><input size="40" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="sample.@example.com" value="" type="email" name="your-email" id="your-email" /></span>
+							</div>
+						</div>
+						<!-- メールアドレス -->
+						<!-- ご依頼内容 -->
+						<div class="p-form__field p-form__field--flex">
+							<div class="p-form__field-head">
+								<label for="your-order" class="p-form__field-label">ご依頼内容<span class="p-form__field-label__emphasize">*</span></label>
+							</div>
+							<div class="p-form__field-item p-form__field-item--bordernone">
+								<span class="wpcf7-form-control-wrap" data-name="your-order"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item first"><label><input type="checkbox" name="your-order[]" value="デザインカンプからのコーディング" /><span class="wpcf7-list-item-label">デザインカンプからのコーディング</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="your-order[]" value="WordPress構築" /><span class="wpcf7-list-item-label">WordPress構築</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="your-order[]" value="サイトの修正" /><span class="wpcf7-list-item-label">サイトの修正</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="your-order[]" value="お見積もり" /><span class="wpcf7-list-item-label">お見積もり</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="your-order[]" value="ご相談" /><span class="wpcf7-list-item-label">ご相談</span></label></span><span class="wpcf7-list-item last"><label><input type="checkbox" name="your-order[]" value="その他" /><span class="wpcf7-list-item-label">その他</span></label></span></span></span>
+							</div>
+						</div>
+						<!-- ご依頼内容 -->
+						<!-- ご依頼内容詳細 -->
+						<div class="p-form__field p-form__field--flex">
+							<div class="p-form__field-head">
+								<label for="your-message" class="p-form__field-label">ご依頼内容詳細<span class="p-form__field-label__emphasize">*</span></label>
+							</div>
+							<div class="p-form__field-item p-form__field-item--bordernone">
+								<span class="wpcf7-form-control-wrap" data-name="your-message">
+									<textarea cols="35" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="お問い合わせ内容をご入力ください。" name="your-message" id="your-message"></textarea>
+								</span>
+							</div>
+						</div>
+						<!-- ご依頼内容詳細 -->
+
+						<!-- プライバシーポリシー -->
+						<div class="p-form__privacy">
+							<p>
+								個人情報に関する注意事項<br /><br />
+								お客様からお預かりした個人情報は、ご依頼に関するやり取りのみに使用いたします。また、お預かりした個人情報は適切に管理し、次のいずれかに該当する場合を除き個人情報を第三者に提供しません。
+							</p>
+							<br />
+							<ul>
+								<li>・お客様の同意がある場合</li>
+								<li>・法令に基づき開示することが必要である場合</li>
+							</ul>
+						</div>
+						<!-- プライバシーポリシー -->
+
+						<!-- プライバシーポリシーに同意する -->
+						<div class="p-form__field--tac">
+							<span class="wpcf7-form-control-wrap" data-name="your-check"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="your-check[]" value="上記の入力事項及び注意事項を確認しました。" /><span class="wpcf7-list-item-label">上記の入力事項及び注意事項を確認しました。</span></label></span></span></span>
+						</div>
+						<!-- プライバシーポリシーに同意する -->
+						<!-- 送信する -->
+						<div class="p-form__field--tac">
+							<input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit" value="送信する" /><span class="wpcf7-spinner"></span>
+						</div>
+						<!-- 送信する -->
+					</form>
+					<!-- contact-form -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- p-footer -->
+	<footer class="p-footer">
+		<!-- c-btn-top -->
+		<div class="c-btn-top p-footer__top-btn">
+			<a href="#"><img src="./assets/img/icon/top-btn.svg" alt="トップへ戻るボタン" width="30" height="30" /></a>
+		</div>
+		<!-- c-btn-top -->
+
+		<div class="p-footer__inner">
+			<div class="p-footer__content">
+				<div class="p-footer__logo">
+					<a href="/"><span class="p-footer__logo-text">Web Engineer</span>
+						<span class="p-footer__logo-title">Tomy Portfolio</span></a>
+				</div>
+				<div class="p-footer__right">
+					<!-- p-footer__sns -->
+					<div class="p-sns-list p-footer__sns">
+						<ul class="p-sns-list__list">
+							<li class="p-sns-list__item">
+								<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="富田真光のxアカウント" width="16" height="16" /></a>
+							</li>
+							<li class="p-sns-list__item">
+								<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="富田真光のnoteアカウント" width="16" height="16" /></a>
+							</li>
+							<li class="p-sns-list__item">
+								<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="富田真光のwantedlyアカウント" width="16" height="16" /></a>
+							</li>
+						</ul>
+					</div>
+					<!-- p-footer__sns -->
+					<small class="p-footer__copyright u-hidden-sp">&copy; 2024 Tomy Portfolio</small>
+				</div>
+			</div>
+			<!-- スマホ時のみ表示 -->
+			<div class="p-footer__copyright--sp u-hidden-pc">
+				<small class="p-footer__copyright">&copy; 2024 Tomy Portfolio</small>
+			</div>
+			<!-- スマホ時のみ表示 -->
+		</div>
+	</footer>
+	<!-- p-footer -->
+</body>
+
+</html>
