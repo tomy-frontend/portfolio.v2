@@ -1,8 +1,9 @@
 @use "../global" as global;
 
 .p-fv {
-  padding-top: 260px;
-  padding-bottom: 140px;
+  display: grid;
+  align-items: center;
+  height: 90vh;
 }
 
 .p-fv__lead {

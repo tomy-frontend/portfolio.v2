@@ -509,8 +509,9 @@ a {
 }
 
 .p-fv {
-	padding-bottom: 140px;
-	padding-top: 260px;
+	align-items: center;
+	display: grid;
+	height: 90vh;
 }
 
 .p-fv__lead {
@@ -537,10 +538,9 @@ a {
 
 .p-portfolio-card__img {
 	border-radius: 12px;
-	height: 420px;
+	height: 55vh;
 	overflow: hidden;
 	position: relative;
-	width: 100%;
 }
 
 .p-portfolio-card__img img {
@@ -1125,6 +1125,10 @@ a {
 
 .p-fv__title {
 	font-size: 5rem;
+}
+
+.p-portfolio-card__img {
+	height: 60vh;
 }
 
 .p-works__container {
