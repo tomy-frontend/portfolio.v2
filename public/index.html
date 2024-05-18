@@ -31,12 +31,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
 	<!-- css読み込み -->
 	<link rel="stylesheet" href="./assets/css/style.css" />
+	<!-- JS読み込み -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.x/TextPlugin.min.js" defer></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+	<script src="./assets/js/ityped.js" defer></script>
 	<script src="./assets/js/script.js" defer></script>
+	<script src="./assets/js/animation.js" defer></script>
 </head>
 
 <body>
@@ -45,7 +49,7 @@
 	<!-- オリジナルマウスカーソル -->
 
 	<!-- p-header -->
-	<header class="p-header">
+	<header class="p-header JsHeader">
 		<div class="p-header__inner">
 			<!-- p-header__logo -->
 			<h1 class="p-header__logo">
@@ -145,9 +149,9 @@
 		<!-- p-fv -->
 		<div class="p-fv l-inner">
 			<div class="p-fv__wrapper">
-				<p class="p-fv__lead">Welcome to</p>
-				<p class="p-fv__lead">Free-lance Web Engineer</p>
-				<h2 class="p-fv__title">Masamitsu Tomita</h2>
+				<p class="p-fv__lead JsLead1">Welcome to</p>
+				<p class="p-fv__lead JsLead2">Free-lance Web Engineer</p>
+				<h2 class="p-fv__title JsTitle">Masamitsu Tomita</h2>
 			</div>
 		</div>
 		<!-- p-fv -->
@@ -158,15 +162,16 @@
 				<!-- p-works__content -->
 				<div class="p-works__content">
 					<!-- c-section-heading -->
-					<div class="c-section-heading">
+					<div class="c-section-heading jsfadeInLeft">
 						<h2 class="c-section-heading__en">Works</h2>
 						<p class="c-section-heading__ja">制作実績</p>
+						<span class="js-line-animation"></span>
 					</div>
 					<!-- c-section-heading -->
 					<div class="p-works__flex">
 						<!-- p-works__text-box -->
 						<div class="p-works__text-box">
-							<p class="p-works__text">
+							<p class="p-works__text jsfadeInLeft">
 								私の過去制作実績でございます。<br /><br />
 								作品ページでは制作に関して工夫したポイント・苦労したポイント、
 								また、制作期間・費用感について記載させていただいておりますので、
@@ -174,13 +179,13 @@
 								コーディングをしておりますので、
 								実績の一つとしてご査収ください。
 							</p>
-							<div class="p-works__btn u-hidden-sp">
+							<div class="p-works__btn u-hidden-sp jsfadeInLeft">
 								<a href="/" class="c-btn">All Works</a>
 							</div>
 						</div>
 						<!-- p-works__text-box -->
 						<!-- p-works__container -->
-						<div class="p-works__container js-wrapper">
+						<div class="p-works__container js-wrapper jsfadeIn">
 							<!-- p-portfolio-card__card -->
 							<div class="p-portfolio-card js-scroll">
 								<div class="p-portfolio-card__inner">
@@ -239,7 +244,7 @@
 						</div>
 						<!-- p-works__container -->
 					</div>
-					<div class="p-works__btn u-hidden-pc">
+					<div class="p-works__btn u-hidden-pc jsfadeIn">
 						<a href="/" class="c-btn">All Works</a>
 					</div>
 				</div>
@@ -253,15 +258,16 @@
 			<div class="p-message__inner l-inner">
 				<div class="p-message__content">
 					<!-- c-section-heading -->
-					<div class="c-section-heading">
+					<div class="c-section-heading jsfadeInLeft">
 						<h2 class="c-section-heading__en">Message</h2>
 						<p class="c-section-heading__ja">仕事にかける想い</p>
+						<span class="js-line-animation"></span>
 					</div>
 					<!-- c-section-heading -->
-					<h3 class="p-message__title">
+					<h3 class="p-message__title jsfadeInLeft">
 						自分の好奇心・成長意欲でビジネスを支える
 					</h3>
-					<p class="p-message__text">
+					<p class="p-message__text jsfadeInLeft">
 						せっかく仕事をするならとことん自分の技術を高めて成長していきたい。<br />
 						せっかく技術を高めるなら見える形でモノ・サービスを作り上げたい。<br />
 						せっかく勉強をするならとことん誰かの役に立ちたい。<br /><br />
@@ -281,20 +287,21 @@
 				<!-- p-about__content -->
 				<div class="p-about__content">
 					<!-- c-section-heading -->
-					<div class="c-section-heading">
+					<div class="c-section-heading jsfadeInLeft">
 						<h2 class="c-section-heading__en">AboutMe</h2>
 						<p class="c-section-heading__ja">私について</p>
+						<span class="js-line-animation"></span>
 					</div>
 					<!-- c-section-heading -->
 
 					<!-- p-about__container -->
 					<div class="p-about__container">
 						<div class="p-about__img">
-							<img src="./assets/img/my-photo.png" alt="富田真光のイメージ画像" width="670" height="766" />
+							<img class="jsScale" src="./assets/img/my-photo.png" alt="富田真光のイメージ画像" width="670" height="766" />
 						</div>
 						<!-- p-about__text-box -->
 						<div class="p-about__text-box">
-							<div class="p-about__name-box">
+							<div class="p-about__name-box jsfadeInLeft">
 								<div class="p-about__name-flex">
 									<span class="p-about__job">Web Engineer</span>
 									<h3 class="p-about__name-ja">富田真光</h3>
@@ -302,21 +309,21 @@
 								<p class="p-about__name-en">Masamitsu Tomita</p>
 							</div>
 
-							<p class="p-about__text p-about__text--emphasis">
+							<p class="p-about__text p-about__text--emphasis jsfadeInLeft">
 								元製造業・IT企業マネージャーを経てWEB制作業界へ<br />
 								自分の技術でビジネスを支える。
 							</p>
 
-							<p class="p-about__text">
+							<p class="p-about__text jsfadeInLeft">
 								1996年12月生まれ香川県出身。<br />
 								作ること・文章を書くのが好きで自身でブログを更新していました。その際にHTMLとCSSに触れたのがきっかけでプログラミングが好きになり独学で学習を開始。
 							</p>
 
-							<p class="p-about__text">
+							<p class="p-about__text jsfadeInLeft">
 								自分の書いたコードがWEBページで形になっていく面白さに魅了され、一生かけてこのスキルを突き詰めたいという思いでデイトラで本格的にWEB制作の学習を開始、デイトラ卒業後の現在はWEB制作フリーランスとして神戸を拠点に全国で活動中
 							</p>
 
-							<ul class="p-about__list">
+							<ul class="p-about__list jsfadeInLeft">
 								<li class="p-about__item">
 									趣味:サウナ・旅行・ビジネス書を読むこと
 								</li>
@@ -327,7 +334,7 @@
 							</ul>
 
 							<!-- about.html完成するまでcoming-soon設置 -->
-							<div class="p-about__btn">
+							<div class="p-about__btn jsfadeInLeft">
 								<div class="c-btn__disable">View More</div>
 							</div>
 						</div>
@@ -339,12 +346,12 @@
 				<!-- p-skills -->
 				<div class="p-skills">
 					<div class="p-skills__inner">
-						<div class="p-skills-heading">
+						<div class="p-skills-heading jsfadeInRight">
 							<h3 class="p-skills__heading-en">Skills</h3>
 							<p class="p-skills__heading-ja">できること</p>
 						</div>
 						<!-- p-skills__container -->
-						<div class="p-skills__container">
+						<div class="p-skills__container jsfadeInLeft">
 							<!-- p-skills__box -->
 							<div class="p-skills__box">
 								<p class="p-skills__title">技術スタック</p>
@@ -383,14 +390,15 @@
 					<div class="p-service__inner">
 						<div class="p-service__content">
 							<!-- c-section-heading -->
-							<div class="c-section-heading">
+							<div class="c-section-heading jsfadeInLeft">
 								<h2 class="c-section-heading__en">Service</h2>
 								<p class="c-section-heading__ja">提供しているサービス</p>
+								<span class="js-line-animation"></span>
 							</div>
 							<!-- c-section-heading -->
 
 							<!-- p-service__container -->
-							<div class="p-service__container">
+							<div class="p-service__container jsfadeInRight">
 								<!-- p-service-card -->
 								<div class="p-service-card">
 									<div class="p-service-card__inner">
@@ -453,13 +461,14 @@
 			<div class="p-workflow__inner l-inner">
 				<div class="p-workflow__content">
 					<!-- c-section-heading -->
-					<div class="c-section-heading">
+					<div class="c-section-heading jsfadeInLeft">
 						<h2 class="c-section-heading__en">WorkFlow</h2>
 						<p class="c-section-heading__ja">制作の流れ</p>
+						<span class="js-line-animation"></span>
 					</div>
 					<!-- c-section-heading -->
 
-					<p class="p-workflow__text">
+					<p class="p-workflow__text jsfadeInLeft">
 						ご相談〜納品までのおおまかな流れです。状況に応じて柔軟に対応させていただきます。
 					</p>
 
@@ -467,10 +476,10 @@
 					<div class="p-workflow__container">
 						<!-- p-workflow-card -->
 						<div class="p-workflow-card">
-							<div class="p-workflow-card__img">
-								<img src="./assets/img/p-workflow-card__img-1.png" alt="メールボックスと男性" width="600" height="467" />
+							<div class="p-workflow-card__img jsfadeInLeft">
+								<img class="jsScale" src="./assets/img/p-workflow-card__img-1.png" alt="メールボックスと男性" width="600" height="467" />
 							</div>
-							<div class="p-workflow-card__text-box">
+							<div class="p-workflow-card__text-box jsfadeInRight">
 								<div class="p-workflow-card__head">
 									<p class="p-workflow-card__tag">STEP01</p>
 									<h3 class="p-workflow-card__title">ご相談・お見積もり</h3>
@@ -485,10 +494,10 @@
 						<!-- p-workflow-card -->
 						<!-- p-workflow-card -->
 						<div class="p-workflow-card">
-							<div class="p-workflow-card__img">
-								<img src="./assets/img/p-workflow-card__img-2.png" alt="プログラミングをする男性" width="600" height="467" />
+							<div class="p-workflow-card__img jsfadeInRight">
+								<img class="jsScale" src="./assets/img/p-workflow-card__img-2.png" alt="プログラミングをする男性" width="600" height="467" />
 							</div>
-							<div class="p-workflow-card__text-box">
+							<div class="p-workflow-card__text-box jsfadeInLeft">
 								<div class="p-workflow-card__head">
 									<p class="p-workflow-card__tag">STEP02</p>
 									<h3 class="p-workflow-card__title">コーディング制作</h3>
@@ -502,10 +511,10 @@
 						<!-- p-workflow-card -->
 						<!-- p-workflow-card -->
 						<div class="p-workflow-card">
-							<div class="p-workflow-card__img">
-								<img src="./assets/img/p-workflow-card__img-3.png" alt="制作物の確認をする男女" width="600" height="467" />
+							<div class="p-workflow-card__img jsfadeInLeft">
+								<img class="jsScale" src="./assets/img/p-workflow-card__img-3.png" alt="制作物の確認をする男女" width="600" height="467" />
 							</div>
-							<div class="p-workflow-card__text-box">
+							<div class="p-workflow-card__text-box jsfadeInRight">
 								<div class="p-workflow-card__head">
 									<p class="p-workflow-card__tag">STEP03</p>
 									<h3 class="p-workflow-card__title">確認</h3>
@@ -519,10 +528,10 @@
 						<!-- p-workflow-card -->
 						<!-- p-workflow-card -->
 						<div class="p-workflow-card">
-							<div class="p-workflow-card__img">
-								<img src="./assets/img/p-workflow-card__img-4.png" alt="制作物を納品する男性達" width="600" height="467" />
+							<div class="p-workflow-card__img jsfadeInRight">
+								<img class="jsScale" src="./assets/img/p-workflow-card__img-4.png" alt="制作物を納品する男性達" width="600" height="467" />
 							</div>
-							<div class="p-workflow-card__text-box">
+							<div class="p-workflow-card__text-box jsfadeInLeft">
 								<div class="p-workflow-card__head">
 									<p class="p-workflow-card__tag">STEP04</p>
 									<h3 class="p-workflow-card__title">納品 / サイト公開</h3>
@@ -548,20 +557,21 @@
 			<div class="p-contact__inner l-inner">
 				<div class="p-contact__content">
 					<!-- c-section-heading -->
-					<div class="c-section-heading">
+					<div class="c-section-heading jsfadeIn">
 						<h2 class="c-section-heading__en">Contact</h2>
 						<p class="c-section-heading__ja">お問い合わせ</p>
+						<span class="js-line-animation"></span>
 					</div>
 					<!-- c-section-heading -->
 
-					<div class="p-contact__text">
+					<div class="p-contact__text jsfadeIn">
 						<p>
 							お問い合わせは24時間受け付けております。<br />
 							お気軽にお問い合わせください。
 						</p>
 					</div>
 
-					<div class="p-contact__btn">
+					<div class="p-contact__btn jsfadeIn">
 						<a href="/" class="c-btn">Contact Form</a>
 					</div>
 				</div>
