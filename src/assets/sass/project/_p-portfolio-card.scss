@@ -16,6 +16,7 @@
   border-radius: 12px;
   height: 55vh;
   overflow: hidden;
+  outline: 1px solid global.$gray;
 
   @include global.mq(md) {
     height: clamp(55vh, 60vh, 70vh);

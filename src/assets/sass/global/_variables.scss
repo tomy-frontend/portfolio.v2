@@ -21,6 +21,7 @@ $lh-base: normal; // ベース行間
 $z-indexes: (
   header: 30,
   drawer: 20,
+  mask: 10,
 );
 
 @function z-index($key) {

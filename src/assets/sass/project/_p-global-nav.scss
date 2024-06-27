@@ -40,7 +40,8 @@
     transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.5;
 
     &::after {

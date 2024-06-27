@@ -6,6 +6,7 @@
   left: 0;
   visibility: hidden;
   width: 100%;
+  height: auto;
   opacity: 0;
   transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* 0.5秒後にvisibilityが変更されるように設定 */
   z-index: global.z-index(drawer);
@@ -22,7 +23,7 @@
   height: 100%;
   margin: 0 auto;
   background: gray; //視認しやすいように色をつけています
-  //   background: global.$text-color-white;
+  background: global.$text-color-white;
   border-radius: 12px;
   padding-top: 120px;
   padding-bottom: 50px;
@@ -41,8 +42,8 @@
 .p-drawer__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-bottom: 50px;
+  gap: 20px;
+  padding-bottom: 50px; //sns-listとの余白調整
   border-bottom: 1px solid global.$text-color-black;
 }
 
@@ -51,15 +52,36 @@
 }
 
 .p-drawer__link-en {
+  font-family: global.$ff-en;
+  display: inline-block;
   margin-right: 10px;
-  display: inline;
 }
 
 .p-drawer__link-ja {
   font-size: global.rem(10);
-  display: inline;
+  display: inline-block;
 }
 
 .p-drawer__sns {
   margin-top: 30px;
+}
+
+// is-openが付与された時のmask
+.p-drawer-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* 0.5秒後にvisibilityが変更されるように設定 */
+  z-index: global.z-index(mask);
+}
+
+.p-drawer-mask.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease, visibility 0s; /* 即座にvisibilityがvisibleになるように設定 */
 }

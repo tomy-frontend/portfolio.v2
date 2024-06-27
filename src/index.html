@@ -71,8 +71,8 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="./assets/js/ityped.js" defer></script>
-    <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/animation.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
     <!-- オリジナルマウスカーソル -->
@@ -83,8 +83,8 @@
     <header class="p-header JsHeader">
       <div class="p-header__inner">
         <!-- p-header__logo -->
-        <h1 class="p-header__logo">
-          <a href="/"
+        <h1>
+          <a href="/" class="p-header__logo"
             ><span class="p-header__logo-text">Web Engineer</span>
             <span class="p-header__logo-title">Tomy Portfolio</span></a
           >
@@ -92,7 +92,7 @@
         <!-- p-header__logo -->
 
         <!-- p-global-nav -->
-        <nav class="p-global-nav">
+        <nav class="p-global-nav" aria-label="グローバルナビゲーション">
           <ul class="p-global-nav__list">
             <li class="p-global-nav__item">
               <a href="#works" class="p-global-nav__link">Works</a>
@@ -125,7 +125,7 @@
 
     <!-- p-drawer -->
     <div class="p-drawer js-drawer">
-      <nav class="p-drawer__nav">
+      <nav class="p-drawer__nav" aria-label="ドロワーナビゲーション">
         <div class="p-drawer__inner">
           <ul class="p-drawer__list">
             <li class="p-drawer__item">
@@ -169,7 +169,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__x.svg"
-                    alt="富田真光のxアカウント"
+                    alt="X"
                     width="16"
                     height="16"
                 /></a>
@@ -181,7 +181,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__note.svg"
-                    alt="富田真光のnoteアカウント"
+                    alt="note"
                     width="16"
                     height="16"
                 /></a>
@@ -193,7 +193,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__wantedly.svg"
-                    alt="富田真光のwantedlyアカウント"
+                    alt="wantedly"
                     width="16"
                     height="16"
                 /></a>
@@ -204,6 +204,8 @@
       </nav>
     </div>
     <!-- p-drawer -->
+    <!-- mask -->
+    <div class="p-drawer-mask js-drawer-mask"></div>
 
     <main>
       <!-- p-fv -->
@@ -251,7 +253,7 @@
                   <div class="p-portfolio-card__inner">
                     <a href="/" class="p-portfolio-card__img">
                       <img
-                        src="./assets/img/portfolio2.jpeg"
+                        src="./assets/img/portfolio1.png"
                         alt="ポートフォリオの画像"
                         width="2822"
                         height="1434"

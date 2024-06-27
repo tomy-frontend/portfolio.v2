@@ -39,8 +39,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 	<script src="./assets/js/ityped.js" defer></script>
-	<script src="./assets/js/script.js" defer></script>
 	<script src="./assets/js/animation.js" defer></script>
+	<script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -52,14 +52,14 @@
 	<header class="p-header JsHeader">
 		<div class="p-header__inner">
 			<!-- p-header__logo -->
-			<h1 class="p-header__logo">
-				<a href="/"><span class="p-header__logo-text">Web Engineer</span>
+			<h1>
+				<a href="/" class="p-header__logo"><span class="p-header__logo-text">Web Engineer</span>
 					<span class="p-header__logo-title">Tomy Portfolio</span></a>
 			</h1>
 			<!-- p-header__logo -->
 
 			<!-- p-global-nav -->
-			<nav class="p-global-nav">
+			<nav class="p-global-nav" aria-label="グローバルナビゲーション">
 				<ul class="p-global-nav__list">
 					<li class="p-global-nav__item">
 						<a href="#works" class="p-global-nav__link">Works</a>
@@ -92,7 +92,7 @@
 
 	<!-- p-drawer -->
 	<div class="p-drawer js-drawer">
-		<nav class="p-drawer__nav">
+		<nav class="p-drawer__nav" aria-label="ドロワーナビゲーション">
 			<div class="p-drawer__inner">
 				<ul class="p-drawer__list">
 					<li class="p-drawer__item">
@@ -130,13 +130,13 @@
 					<p class="p-sns-list-text">Follow me</p>
 					<ul class="p-sns-list__list">
 						<li class="p-sns-list__item">
-							<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="富田真光のxアカウント" width="16" height="16" /></a>
+							<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="X" width="16" height="16" /></a>
 						</li>
 						<li class="p-sns-list__item">
-							<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="富田真光のnoteアカウント" width="16" height="16" /></a>
+							<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="note" width="16" height="16" /></a>
 						</li>
 						<li class="p-sns-list__item">
-							<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="富田真光のwantedlyアカウント" width="16" height="16" /></a>
+							<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="wantedly" width="16" height="16" /></a>
 						</li>
 					</ul>
 				</div>
@@ -144,6 +144,8 @@
 		</nav>
 	</div>
 	<!-- p-drawer -->
+	<!-- mask -->
+	<div class="p-drawer-mask js-drawer-mask"></div>
 
 	<main>
 		<!-- p-fv -->
@@ -190,7 +192,7 @@
 							<div class="p-portfolio-card js-scroll">
 								<div class="p-portfolio-card__inner">
 									<a href="/" class="p-portfolio-card__img">
-										<img src="./assets/img/portfolio2.jpeg" alt="ポートフォリオの画像" width="2822" height="1434" />
+										<img src="./assets/img/portfolio1.png" alt="ポートフォリオの画像" width="2822" height="1434" />
 									</a>
 									<h3 class="p-portfolio-card__title">
 										みなみ歯科クリニック様(架空サイト)
