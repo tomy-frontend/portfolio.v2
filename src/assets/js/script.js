@@ -1,3 +1,4 @@
+//ドロワーの開閉
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.querySelector(".js-menu-button");
   const drawer = document.querySelector(".js-drawer");
@@ -86,26 +87,26 @@ for (var i = 0; i < link.length; i++) {
 }
 
 // p-worksの水平スクロール
-const wrapper = document.querySelector(".js-wrapper");
-const slides = gsap.utils.toArray(".js-scroll");
+// const wrapper = document.querySelector(".js-wrapper");
+// const slides = gsap.utils.toArray(".js-scroll");
 
-// コンテナの幅を取得
-const wrapperWidth = wrapper.offsetWidth;
+// // コンテナの幅を取得
+// const wrapperWidth = wrapper.offsetWidth;
 
-// 横スクロールアニメーションの設定
-gsap.to(slides, {
-  xPercent: -100 * (slides.length - 1), // -X軸方向に移動
-  ease: "none", // アニメーションのイージング(noneは定速)
-  scrollTrigger: {
-    trigger: wrapper, // アニメーション開始のトリガー要素
-    pin: true, // 要素を固定
-    scrub: 1, // スクロール量に合わせてアニメーション
-    start: "top top", // アニメーションが始まる位置
-    end: `+=${wrapperWidth}`, // アニメーションが終わる位置
-    anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
-    invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
-  },
-});
+// // 横スクロールアニメーションの設定
+// gsap.to(slides, {
+//   xPercent: -100 * (slides.length - 1), // -X軸方向に移動
+//   ease: "none", // アニメーションのイージング(noneは定速)
+//   scrollTrigger: {
+//     trigger: wrapper, // アニメーション開始のトリガー要素
+//     pin: true, // 要素を固定
+//     scrub: 1, // スクロール量に合わせてアニメーション
+//     start: "top top", // アニメーションが始まる位置
+//     end: `+=${wrapperWidth}`, // アニメーションが終わる位置
+//     anticipatePin: 1, // ピン留めアニメーションをスムーズに開始
+//     invalidateOnRefresh: true, // ページの再読み込み時(リサイズ時)に値を再計算する
+//   },
+// });
 
 // ヘッダー高さの可変を考慮したスムーススクロール
 jQuery('a[href^="#"]').on("click", function (e) {
@@ -123,3 +124,48 @@ jQuery('a[href^="#"]').on("click", function (e) {
     "swing"
   );
 });
+
+//headerとdrawerのヘッダー考慮スクロール
+function scrollToSection(event) {
+  event.preventDefault();
+  const targetId = this.getAttribute("href").substring(1);
+  const targetElement = document.getElementById(targetId);
+  const headerHeight = document.querySelector("header").offsetHeight;
+
+  if (this.closest("#js-header-nav")) {
+    // '#js-header-nav' 内のリンククリック時の処理
+    window.scrollTo({
+      top: targetElement.offsetTop - headerHeight,
+      behavior: "smooth",
+    });
+  } else if (this.closest("#js-drawer-content")) {
+    // '#js-drawer-content' 内のリンククリック時の処理
+    window.scrollTo({
+      top: targetElement.offsetTop - headerHeight,
+    });
+  }
+}
+
+document
+  .querySelectorAll(
+    '#js-header-nav a[href^="#"], #js-drawer-content a[href^="#"]'
+  )
+  .forEach((anchor) => {
+    anchor.addEventListener("click", scrollToSection);
+  });
+
+//360px未満は表示倍率を変更
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value =
+      window.outerWidth > 360
+        ? "width=device-width,initial-scale=1"
+        : "width=360";
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
+    }
+  }
+  addEventListener("resize", switchViewport, false);
+  switchViewport();
+})();

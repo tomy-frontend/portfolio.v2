@@ -8,7 +8,7 @@
   font-family: global.$ff-en;
   font-size: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem); //最大40px,30px
   display: inline;
-  margin-right: 16px;
+  margin-right: 0.5em;
 }
 
 .c-section-heading__ja {
@@ -16,6 +16,7 @@
   font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem); //最大16px,10px
 }
 
+//jsでアニメーションするための要素
 .js-line-animation {
   position: absolute;
   content: "";

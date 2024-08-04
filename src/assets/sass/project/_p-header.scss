@@ -1,7 +1,7 @@
 @use "../global" as global;
 
 .p-header {
-  position: fixed;
+  position: sticky;
   top: 20px;
   left: 0;
   width: 100%;
@@ -10,14 +10,14 @@
 
 .p-header__inner {
   width: calc(100% - 20px * 2);
-  margin: 0 auto;
+  margin-inline: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   @include global.mq(lg) {
-    width: calc(100% - 60px * 2);
+    width: calc(100% - 60px * 2); //headerのみ広め
+    max-width: 1440px;
   }
 }
 
@@ -25,14 +25,13 @@
 .p-header__logo {
   display: flex;
   flex-direction: column;
-  padding: 6px 20px;
+  padding: 5.25px 20px;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.8);
+  background: global.$section-bg;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
   transition: global.$transition-default;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.5;
   }
 }

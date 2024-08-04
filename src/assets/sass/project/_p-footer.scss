@@ -2,7 +2,7 @@
 
 .p-footer {
   position: relative; //p-footer__top-btnのため
-  background: rgba(255, 255, 255, 0.8);
+  background: global.$section-bg;
 }
 
 .p-footer__top-btn {
@@ -15,18 +15,12 @@
   }
 }
 .p-footer__inner {
-  width: calc(100% - 20px * 2);
-  margin: 0 auto;
-  padding-top: 55px;
-  padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 
   @include global.mq(md) {
     padding-top: 35px;
     padding-bottom: 35px;
-  }
-
-  @include global.mq(lg) {
-    width: calc(100% - 60px * 2);
   }
 }
 
@@ -61,14 +55,12 @@
   gap: 40px;
   align-items: center;
 }
-.p-footer__sns {
-}
 
 .p-footer__copyright {
   font-size: global.rem(10);
 }
 
 .p-footer__copyright--sp {
-  margin-top: 15px;
+  margin-top: 1em;
   text-align: center;
 }

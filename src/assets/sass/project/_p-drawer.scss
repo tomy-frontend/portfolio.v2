@@ -42,13 +42,14 @@
 .p-drawer__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.2em;
   padding-bottom: 50px; //sns-listとの余白調整
   border-bottom: 1px solid global.$text-color-black;
 }
 
 .p-drawer__link {
   font-size: global.rem(24);
+  line-height: 1;
 }
 
 .p-drawer__link-en {

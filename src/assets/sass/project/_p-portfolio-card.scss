@@ -43,13 +43,11 @@
   //   cursor: url("../img/icon/cursor.svg"), auto;
   // }
 
-  &:hover img,
-  &:focus img {
+  &:hover img {
     transform: scale(1.1);
   }
 
-  &:hover::after,
-  &:focus::after {
+  &:hover::after {
     background: rgba(0, 0, 0, 0.5); // 半透明の黒
   }
 }
@@ -72,8 +70,7 @@
   background: global.$text-color-white;
   transition: global.$transition-default;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background: global.$text-color-black;
     color: global.$text-color-white;
   }

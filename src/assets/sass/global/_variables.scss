@@ -3,6 +3,7 @@ $text-color-black: #000000;
 $text-color-white: #ffffff;
 $gray: #bdbdbd;
 $red: #f00;
+$section-bg: rgba(255, 255, 255, 0.8);
 
 // フォント
 $ff-base: "Noto Sans JP", sans-serif;
@@ -15,6 +16,18 @@ $lh-base: normal; // ベース行間
 // rem計算
 @function rem($font-size-px) {
   @return calc($font-size-px / 16 * 1rem);
+}
+
+//clamp関数
+@function cal-clamp($min, $max, $min-view-port: 768, $max-view-port: 1000) {
+  $variable-part: calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant: calc(($max - $max-view-port * $variable-part) / 16);
+  $min-rem: calc($min / 16 * 1rem);
+  $max-rem: calc($max / 16 * 1rem);
+  $variable-rem: calc($constant * 1rem);
+  $variable-vw: calc(100 * $variable-part * 1vw);
+
+  @return clamp($min-rem, $variable-rem + $variable-vw, $max-rem);
 }
 
 // 重なり順の定義

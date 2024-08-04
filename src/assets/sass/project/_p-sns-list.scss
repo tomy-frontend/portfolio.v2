@@ -4,19 +4,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  gap: 1em;
 }
 .p-sns-list-text {
   color: global.$text-color-black;
   font-family: global.$ff-en;
   font-size: global.rem(14);
   font-weight: global.$fw-large;
+  line-height: 1;
 }
 
 .p-sns-list__list {
   display: flex;
   flex-direction: row;
-  gap: 18px;
+  gap: 0.8em;
+  line-height: 1;
 }
 
 .p-sns-list__link {

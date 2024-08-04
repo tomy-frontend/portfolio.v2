@@ -100,6 +100,27 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
   );
 });
 
+// blurアニメーション
+document.querySelectorAll(".jsBlur").forEach((jsBlur) => {
+  gsap.fromTo(
+    jsBlur,
+    { filter: "blur(15px)", opacity: 0 }, // 初期状態はblur(20px)で透明度は0
+    {
+      scrollTrigger: {
+        trigger: jsBlur, // トリガーとなるのは各`.jsBlur`要素自身
+        start: "top 80%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
+        end: "bottom 60%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
+        toggleActions: "play none none none", // アニメーションを1回再生して終了
+        once: true, // アニメーションを1回限り実行
+      },
+      filter: "blur(0)", // 最終的にblur(0)にする
+      opacity: 1, // 最終的な透明度は1
+      ease: "power1.out", // アニメーションのイージングを滑らかにする
+      duration: 2.0, // アニメーションの持続時間を2秒に設定
+    }
+  );
+});
+
 // lineが引かれるアニメーション
 document.querySelectorAll(".js-line-animation").forEach((line) => {
   gsap.fromTo(

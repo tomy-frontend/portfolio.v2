@@ -23,8 +23,7 @@
       transition: global.$transition-default;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       transform: scale(1.2);
 
       &::before {

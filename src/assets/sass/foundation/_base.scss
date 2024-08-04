@@ -1,5 +1,23 @@
 @use "../global" as global;
 
+// CSS変数デモ
+:root {
+  --base-color: #ff9595;
+  --primary-color: #ff9595;
+  --secondary-color: #ffffff;
+  --accent-color: #ffd700;
+  --text-color-black: #000000;
+  --text-color--white: #ffffff;
+  --gray: #bdbdbd;
+  --red: #f00;
+
+  @include global.mq(md) {
+    --primary-color: #000000; //ブレイクポイントで変数の値を変えることができる
+    --text-color-black: #ffffff;
+    --text-color-white: #000000;
+  }
+}
+
 body {
   color: global.$text-color-black;
   font-family: global.$ff-base;
@@ -7,7 +25,7 @@ body {
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
   // background: url(../img/body.bg.jpg); //一時的
-  background: gray;
+  background-color: gray; //一時的
 }
 
 img {
