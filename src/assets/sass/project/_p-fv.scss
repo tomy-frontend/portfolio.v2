@@ -8,22 +8,19 @@
 
 .p-fv__lead {
   font-family: global.$ff-en;
-  font-size: global.rem(20);
-
-  @include global.mq(md) {
-    font-size: global.rem(24);
-  }
+  font-size: global.cal-clamp(20, 24);
 }
 
 .p-fv__title {
   font-family: global.$ff-en;
-  font-size: global.rem(64);
-
-  @include global.mq(md) {
-    font-size: global.rem(80);
-  }
+  font-size: global.cal-clamp(64, 80);
 }
 
 .p-fv--page {
   height: 60vh !important;
+}
+
+//アニメーション用
+.jsfadeInText span {
+  display: inline-block;
 }

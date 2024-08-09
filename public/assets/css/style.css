@@ -442,7 +442,7 @@ th {
 }
 
 body {
-	background-color: gray;
+	background: #bdbdbd;
 	color: #000000;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
@@ -457,6 +457,16 @@ img {
 
 a {
 	color: inherit;
+	touch-action: manipulation;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:focus-visible {
+	outline: 2px solid #d4befe;
+	outline-offset: 2px;
 }
 
 .l-inner {
@@ -513,7 +523,7 @@ a {
 
 .c-btn {
 	border: 2px solid #000000;
-	border-radius: 16px;
+	border-radius: 1rem;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 	display: block;
 	inline-size: -moz-fit-content;
@@ -534,19 +544,6 @@ a {
 	top: 25%;
 	transition: all 0.5s ease;
 	width: 20px;
-}
-
-.c-btn:hover {
-	background-color: #000000;
-	box-shadow: none;
-	color: #ffffff;
-}
-
-.c-btn:hover::after {
-	background: url(../img/icon/arrow-right-white.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	transform: rotate(-45deg);
 }
 
 .c-btn--disable {
@@ -840,16 +837,20 @@ a {
 
 .p-fv__lead {
 	font-family: "Crimson Text", serif;
-	font-size: 1.25rem;
+	font-size: clamp(1.25rem, 0.4224137931rem + 1.724137931vw, 1.5rem);
 }
 
 .p-fv__title {
 	font-family: "Crimson Text", serif;
-	font-size: 4rem;
+	font-size: clamp(4rem, 0.6896551724rem + 6.8965517241vw, 5rem);
 }
 
 .p-fv--page {
 	height: 60vh !important;
+}
+
+.jsfadeInText span {
+	display: inline-block;
 }
 
 .p-portfolio-card {
@@ -963,14 +964,23 @@ a {
 }
 
 .p-message__title {
+	font-size: 1.125rem;
 	font-weight: 700;
 	line-height: 2;
-	margin-top: 40px;
+	margin-top: 2em;
 }
 
 .p-message__text {
 	line-height: 2;
-	margin-top: 40px;
+	margin-top: 1.5em;
+}
+
+.p-message__text p + p {
+	margin-top: 1.5em;
+}
+
+.p-message__text span {
+	display: inline-block;
 }
 
 .p-about {
@@ -1042,29 +1052,33 @@ a {
 
 .p-about__name-ja {
 	display: inline-block;
-	font-size: 1.5rem;
+	font-size: 1.625rem;
 }
 
 .p-about__name-en {
 	display: block;
 	font-family: "Crimson Text", serif;
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 
 .p-about__text {
 	line-height: 2;
-	margin-top: 16px;
+	margin-top: 1em;
+}
+
+.p-about__text span {
+	display: inline-block;
 }
 
 .p-about__text--emphasis {
 	font-weight: 700;
-	margin-top: 30px;
+	margin-top: 2em;
 }
 
 .p-about__list {
 	display: flex;
 	flex-direction: column;
-	margin-top: 30px;
+	margin-top: 1.875em;
 }
 
 .p-about__item {
@@ -1072,11 +1086,11 @@ a {
 }
 
 .p-about__btn {
-	margin-top: 36px;
+	margin-top: 2.5em;
 }
 
 .p-skills {
-	margin-top: 60px;
+	margin-top: 3.75em;
 }
 
 .p-skills__heading {
@@ -1086,32 +1100,32 @@ a {
 .p-skills__heading-en {
 	display: inline;
 	font-family: "Crimson Text", serif;
-	font-size: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem);
-	margin-right: 5px;
+	font-size: clamp(1.25rem, -2.0603448276rem + 6.8965517241vw, 2.25rem);
+	margin-right: 0.3125em;
 }
 
 .p-skills__heading-ja {
 	display: inline;
-	font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem);
+	font-size: clamp(0.625rem, -0.6163793103rem + 2.5862068966vw, 1rem);
 }
 
 .p-skills__container {
 	background: rgba(255, 255, 255, 0.8);
-	border-radius: 16px;
+	border-radius: 1em;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-direction: column;
-	margin-top: 16px;
-	padding: 16px;
+	margin-top: 1em;
+	padding: 1em;
+	position: relative;
 }
 
 .p-skills__box {
 	border-bottom: 1px solid #dbdbdb;
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
-	padding-bottom: 26px;
-	padding-top: 26px;
+	gap: 1em;
+	padding-block: 1.625em;
 }
 
 .p-skills__box:last-child {
@@ -1120,6 +1134,10 @@ a {
 
 .p-skills__title {
 	font-size: 1.25rem;
+}
+
+.p-skills__text span {
+	display: inline-block;
 }
 
 .p-service {
@@ -1288,13 +1306,13 @@ a {
 }
 
 .p-page-contact__section-heading {
-	margin-top: 80px;
+	margin-top: 5em;
 }
 
 .p-page-contact__text-box {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 1em;
 }
 
 .p-page-contact__lead {
@@ -1302,7 +1320,16 @@ a {
 }
 
 .p-form {
-	margin-top: 40px;
+	margin-top: 2.5em;
+}
+
+.p-form input:focus-visible,
+.p-form textarea:focus-visible,
+.p-form select:focus-visible,
+.p-form input[type=checkbox]:focus-visible,
+.p-form input[type=submit]:focus-visible {
+	outline: 2px solid #d4befe;
+	outline-offset: 2px;
 }
 
 .p-form__field {
@@ -1324,15 +1351,14 @@ a {
 	height: -moz-fit-content;
 	height: fit-content;
 	min-width: 140px;
-	padding-bottom: 16px;
-	padding-right: 16px;
-	padding-top: 16px;
+	padding-block: 1em;
+	padding-right: 1em;
 	width: 100%;
 }
 
 .p-form__field-label__emphasize {
 	color: #f00;
-	margin-left: 2px;
+	margin-left: 0.125em;
 }
 
 .p-form__field-item {
@@ -1341,10 +1367,9 @@ a {
 }
 
 .p-form__field-item select {
-	font-size: 16px;
-	padding-bottom: 16px;
+	font-size: 1em;
+	padding-block: 1em;
 	padding-right: 16px;
-	padding-top: 16px;
 	width: 100%;
 }
 
@@ -1353,16 +1378,21 @@ a {
 	background: none;
 }
 
+.p-form__field-item input:focus-visible,
+.p-form__field-item textarea:focus-visible {
+	outline: 2px solid #d4befe;
+	outline-offset: 2px;
+}
+
 .p-form__field-item input {
-	padding-bottom: 16px;
-	padding-right: 16px;
-	padding-top: 16px;
+	padding-block: 1em;
+	padding-right: 1em;
 }
 
 .p-form__field-item textarea {
 	border: 1px solid #bdbdbd;
 	border-radius: 12px;
-	padding: 16px;
+	padding: 1em;
 }
 
 .p-form__field-item input.wpcf7-email,
@@ -1377,7 +1407,7 @@ a {
 .p-form__privacy {
 	border: 1px solid #bdbdbd;
 	border-radius: 12px;
-	padding: 20px;
+	padding: 1.25em;
 }
 
 .p-form__field--tac {
@@ -1408,24 +1438,17 @@ a {
 .wpcf7-checkbox {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 16px;
+	gap: 1em;
 }
 
 .wpcf7-submit {
 	border: 2px solid #000000;
-	border-radius: 16px;
+	border-radius: 1em;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
 	padding: 9px 50px 9px 50px;
 	transition: all 0.5s ease;
-}
-
-.wpcf7-submit:hover,
-.wpcf7-submit:focus {
-	background-color: #000000;
-	box-shadow: none;
-	color: #ffffff;
 }
 
 .wpcf7-spinner {
@@ -1505,6 +1528,29 @@ a {
 	display: none;
 }
 
+@media (any-hover: hover) {
+
+.c-btn:hover {
+	background-color: #000000;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+.c-btn:hover::after {
+	background: url(../img/icon/arrow-right-white.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: rotate(-45deg);
+}
+
+.wpcf7-submit:hover {
+	background-color: #000000;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+}
+
 @media screen and (min-width: 768px) {
 
 :root {
@@ -1520,14 +1566,6 @@ a {
 
 .p-menu-button {
 	display: none;
-}
-
-.p-fv__lead {
-	font-size: 1.5rem;
-}
-
-.p-fv__title {
-	font-size: 5rem;
 }
 
 .p-portfolio-card__img {
@@ -1565,8 +1603,7 @@ a {
 .p-skills__box {
 	border-bottom: none;
 	border-right: 1px solid #dbdbdb;
-	padding-left: 26px;
-	padding-right: 26px;
+	padding-inline: 1.625em;
 }
 
 .p-skills__box:first-child {

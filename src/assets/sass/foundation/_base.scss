@@ -24,8 +24,7 @@ body {
   font-size: global.$fz-base;
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
-  // background: url(../img/body.bg.jpg); //一時的
-  background-color: gray; //一時的
+  background: global.$gray;
 }
 
 img {
@@ -35,4 +34,14 @@ img {
 
 a {
   color: inherit;
+  touch-action: manipulation;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid global.$main-color;
+    outline-offset: 2px;
+  }
 }

@@ -1,20 +1,21 @@
 @use "../global" as global;
 
-.p-message {
-}
-
-.p-message__inner {
-}
-
-.p-message__content {
-}
 .p-message__title {
-  margin-top: 40px;
+  margin-top: 2em;
+  font-size: global.rem(18);
   font-weight: global.$fw-large;
   line-height: 2;
 }
 
 .p-message__text {
-  margin-top: 40px;
+  margin-top: 1.5em;
   line-height: 2;
+
+  p + p {
+    margin-top: 1.5em;
+  }
+
+  span {
+    display: inline-block; //改行調整
+  }
 }

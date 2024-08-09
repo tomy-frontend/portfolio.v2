@@ -1,10 +1,7 @@
 @use "../global" as global;
 
 .p-skills {
-  margin-top: 60px;
-}
-
-.p-skills__inner {
+  margin-top: 3.75em;
 }
 
 .p-skills__heading {
@@ -12,21 +9,22 @@
 }
 .p-skills__heading-en {
   font-family: global.$ff-en;
-  font-size: clamp(1.25rem, 0.886rem + 1.82vw, 2.25rem); //最大40px,30px
+  font-size: global.cal-clamp(20, 36);
   display: inline;
-  margin-right: 5px;
+  margin-right: 0.3125em;
 }
 
 .p-skills__heading-ja {
   display: inline;
-  font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem); //最大16px,10px
+  font-size: global.cal-clamp(10, 16);
 }
 .p-skills__container {
-  margin-top: 16px;
-  padding: 16px;
+  position: relative;
+  margin-top: 1em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
+  border-radius: 1em;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.25);
 
@@ -39,9 +37,8 @@
 .p-skills__box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  gap: 1em;
+  padding-block: 1.625em;
   border-bottom: 1px solid #dbdbdb;
 
   &:last-child {
@@ -49,8 +46,7 @@
   }
 
   @include global.mq(md) {
-    padding-right: 26px;
-    padding-left: 26px;
+    padding-inline: 1.625em;
     border-bottom: none;
     border-right: 1px solid #dbdbdb;
 
@@ -68,5 +64,9 @@
 .p-skills__title {
   font-size: global.rem(20);
 }
+
 .p-skills__text {
+  span {
+    display: inline-block;
+  }
 }

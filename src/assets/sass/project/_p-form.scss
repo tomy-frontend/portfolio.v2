@@ -1,7 +1,18 @@
 @use "../global" as global;
 
 .p-form {
-  margin-top: 40px;
+  margin-top: 2.5em;
+
+  input,
+  textarea,
+  select,
+  input[type="checkbox"],
+  input[type="submit"] {
+    &:focus-visible {
+      outline: 2px solid global.$main-color;
+      outline-offset: 2px;
+    }
+  }
 }
 
 .p-form__field {
@@ -27,13 +38,11 @@
   }
 }
 .p-form__field-head {
-  //   width: 30%; //比率保持用
   width: 100%;
   height: fit-content;
   min-width: 140px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 16px;
+  padding-block: 1em;
+  padding-right: 1em;
   border-bottom: 1px solid global.$gray;
 
   @include global.mq(md) {
@@ -43,11 +52,10 @@
 
 .p-form__field-label__emphasize {
   color: global.$red;
-  margin-left: 2px;
+  margin-left: 0.125em;
 }
 
 .p-form__field-item {
-  //   width: 70%; //比率保持用
   width: 100%;
   border-bottom: 1px solid global.$gray;
 
@@ -57,25 +65,28 @@
 
   select {
     width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-block: 1em;
     padding-right: 16px;
-    font-size: 16px;
+    font-size: 1em;
   }
 
   input,
   textarea {
     background: none;
+
+    &:focus-visible {
+      outline: 2px solid global.$main-color;
+      outline-offset: 2px;
+    }
   }
 
   input {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-right: 16px;
+    padding-block: 1em;
+    padding-right: 1em;
   }
 
   textarea {
-    padding: 16px;
+    padding: 1em;
     border-radius: 12px;
     border: 1px solid global.$gray;
   }
@@ -92,7 +103,7 @@
 }
 
 .p-form__privacy {
-  padding: 20px;
+  padding: 1.25em;
   border-radius: 12px;
   border: 1px solid global.$gray;
 }
@@ -129,26 +140,24 @@
 .wpcf7-checkbox {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-}
-
-.wpcf7-list-item {
+  gap: 1em;
 }
 
 // submitボタンのスタイル
 .wpcf7-submit {
   inline-size: fit-content;
-  border-radius: 16px;
+  border-radius: 1em;
   border: 2px solid global.$text-color-black;
   padding: 9px 50px 9px 50px;
   box-shadow: (0px 4px 20px rgba(0, 0, 0, 0.25));
   transition: global.$transition-default;
 
-  &:hover,
-  &:focus {
-    color: global.$text-color-white;
-    background-color: global.$text-color-black;
-    box-shadow: none;
+  @media (any-hover: hover) {
+    &:hover {
+      color: global.$text-color-white;
+      background-color: global.$text-color-black;
+      box-shadow: none;
+    }
   }
 }
 

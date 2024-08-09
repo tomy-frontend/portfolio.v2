@@ -4,12 +4,6 @@
   overflow: hidden;
 }
 
-.p-about__inner {
-}
-
-.p-about__content {
-}
-
 .p-about__container {
   margin-top: 34px;
   display: flex;
@@ -95,27 +89,31 @@
 
 .p-about__name-ja {
   display: inline-block;
-  font-size: global.rem(24);
+  font-size: global.rem(26);
 }
 
 .p-about__name-en {
   display: block;
-  font-size: global.rem(18);
+  font-size: global.rem(20);
   font-family: global.$ff-en;
 }
 
 .p-about__text {
-  margin-top: 16px;
+  margin-top: 1em;
   line-height: 2;
+
+  span {
+    display: inline-block;
+  }
 }
 
 .p-about__text--emphasis {
-  margin-top: 30px;
+  margin-top: 2em;
   font-weight: global.$fw-large;
 }
 
 .p-about__list {
-  margin-top: 30px;
+  margin-top: 1.875em;
   display: flex;
   flex-direction: column;
 }
@@ -125,7 +123,7 @@
 }
 
 .p-about__btn {
-  margin-top: 36px;
+  margin-top: 2.5em;
 }
 
 // profile-decoの無限回転

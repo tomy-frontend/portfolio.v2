@@ -141,25 +141,57 @@ document.querySelectorAll(".js-line-animation").forEach((line) => {
   );
 });
 
-// ityped.js
-function initITyped() {
-  ityped.init(document.querySelector("#ityped"), {
-    strings: ["Welcome to"],
-    typeSpeed: 100,
-    backSpeed: 50,
-    startDelay: 500,
-    backDelay: 500,
-    loop: false,
-    showCursor: true,
-    placeholder: false,
-    disableBackTyping: false,
-    cursorChar: ".",
+//js-p-page-headingの文字を一文字ずつフェードイン
+function splitTextToSpans(textElement) {
+  const text = textElement.textContent;
+  const chars = text.split("");
+  textElement.innerHTML = "";
+  chars.forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    textElement.appendChild(span);
   });
 }
 
-ScrollTrigger.create({
-  trigger: "#ityped", // この要素がビューポートに入ったらトリガー
-  start: "top 75%", // 要素の上部がビューポートの75%の位置に来たらトリガー
-  onEnter: () => initITyped(), // 要素がビューポートに入った時に実行
-  once: true, // トリガーは一度だけ実行
+document.addEventListener("DOMContentLoaded", () => {
+  const textElement = document.querySelector(".jsfadeInText");
+  splitTextToSpans(textElement);
+
+  gsap.from(".jsfadeInText span", {
+    scrollTrigger: {
+      trigger: ".js-p-page-heading",
+      start: "top 75%",
+      end: "bottom 60%",
+      toggleActions: "play none none none",
+      // markers: true, // デバッグ用マーカー
+    },
+    duration: 1, // 各文字のアニメーションの持続時間
+    opacity: 0,
+    y: 50, // 開始時に文字を垂直方向に20ピクセル下から開始
+    ease: "power1.out",
+    stagger: 0.1, // 各文字のアニメーション開始の間隔
+  });
 });
+
+// ityped.js
+// function initITyped() {
+//   ityped.init(document.querySelector("#ityped"), {
+//     strings: ["Welcome to"],
+//     typeSpeed: 100,
+//     backSpeed: 50,
+//     startDelay: 500,
+//     backDelay: 500,
+//     loop: false,
+//     showCursor: true,
+//     placeholder: false,
+//     disableBackTyping: false,
+//     cursorChar: ".",
+//   });
+// }
+
+// ScrollTrigger.create({
+//   trigger: "#ityped", // この要素がビューポートに入ったらトリガー
+//   start: "top 75%", // 要素の上部がビューポートの75%の位置に来たらトリガー
+//   onEnter: () => initITyped(), // 要素がビューポートに入った時に実行
+//   once: true, // トリガーは一度だけ実行
+// });
