@@ -1,6 +1,6 @@
 @use "../global" as global;
 
 .p-section-bg {
-  border-radius: 60px;
+  border-radius: global.cal-clamp(20, 40);
   background: global.$section-bg;
 }

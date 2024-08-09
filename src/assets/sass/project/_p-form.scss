@@ -3,13 +3,14 @@
 .p-form {
   margin-top: 2.5em;
 
+  //フォーカス時のアウトライン
   input,
   textarea,
   select,
   input[type="checkbox"],
   input[type="submit"] {
     &:focus-visible {
-      outline: 2px solid global.$main-color;
+      outline: 1px solid global.$text-color-black;
       outline-offset: 2px;
     }
   }
@@ -73,11 +74,6 @@
   input,
   textarea {
     background: none;
-
-    &:focus-visible {
-      outline: 2px solid global.$main-color;
-      outline-offset: 2px;
-    }
   }
 
   input {

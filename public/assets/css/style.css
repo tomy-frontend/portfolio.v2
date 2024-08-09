@@ -498,26 +498,24 @@ a:focus-visible {
 .c-section-heading__en {
 	display: inline;
 	font-family: "Crimson Text", serif;
-	font-size: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
-	margin-right: 0.5em;
+	font-size: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	margin-right: 0.2em;
 }
 
 .c-section-heading__ja {
 	display: inline;
-	font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem);
+	font-size: clamp(0.625rem, -0.6163793103rem + 2.5862068966vw, 1rem);
 }
 
 .js-line-animation {
 	background-color: #000000;
-	background-position: center;
-	background-repeat: no-repeat;
 	bottom: 0;
 	content: "";
 	height: 1px;
 	left: 50%;
 	opacity: 0;
 	position: absolute;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 	width: 100%;
 }
 
@@ -826,7 +824,7 @@ a:focus-visible {
 
 .p-section-bg {
 	background: rgba(255, 255, 255, 0.8);
-	border-radius: 60px;
+	border-radius: clamp(1.25rem, -2.8879310345rem + 8.6206896552vw, 2.5rem);
 }
 
 .p-fv {
@@ -1101,12 +1099,12 @@ a:focus-visible {
 	display: inline;
 	font-family: "Crimson Text", serif;
 	font-size: clamp(1.25rem, -2.0603448276rem + 6.8965517241vw, 2.25rem);
-	margin-right: 0.3125em;
+	margin-right: 0.2em;
 }
 
 .p-skills__heading-ja {
 	display: inline;
-	font-size: clamp(0.625rem, -0.6163793103rem + 2.5862068966vw, 1rem);
+	font-size: clamp(0.625rem, -0.2025862069rem + 1.724137931vw, 0.875rem);
 }
 
 .p-skills__container {
@@ -1328,7 +1326,7 @@ a:focus-visible {
 .p-form select:focus-visible,
 .p-form input[type=checkbox]:focus-visible,
 .p-form input[type=submit]:focus-visible {
-	outline: 2px solid #d4befe;
+	outline: 1px solid #000000;
 	outline-offset: 2px;
 }
 
@@ -1376,12 +1374,6 @@ a:focus-visible {
 .p-form__field-item input,
 .p-form__field-item textarea {
 	background: none;
-}
-
-.p-form__field-item input:focus-visible,
-.p-form__field-item textarea:focus-visible {
-	outline: 2px solid #d4befe;
-	outline-offset: 2px;
 }
 
 .p-form__field-item input {
