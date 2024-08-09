@@ -9,14 +9,14 @@
 }
 .p-skills__heading-en {
   font-family: global.$ff-en;
-  font-size: global.cal-clamp(20, 36);
+  font-size: global.cal-clamp(26, 36);
   display: inline;
   margin-right: 0.2em;
 }
 
 .p-skills__heading-ja {
   display: inline;
-  font-size: global.cal-clamp(10, 14);
+  font-size: global.cal-clamp(12, 14);
 }
 .p-skills__container {
   position: relative;

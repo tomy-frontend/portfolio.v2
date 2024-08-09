@@ -491,20 +491,22 @@ a:focus-visible {
 }
 
 .c-section-heading {
-	display: inline-block;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	margin-right: auto;
 	position: relative;
 }
 
 .c-section-heading__en {
 	display: inline;
 	font-family: "Crimson Text", serif;
-	font-size: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	font-size: clamp(2.25rem, 1.4224137931rem + 1.724137931vw, 2.5rem);
 	margin-right: 0.2em;
 }
 
 .c-section-heading__ja {
 	display: inline;
-	font-size: clamp(0.625rem, -0.6163793103rem + 2.5862068966vw, 1rem);
+	font-size: clamp(0.75rem, -0.0775862069rem + 1.724137931vw, 1rem);
 }
 
 .js-line-animation {
@@ -513,7 +515,6 @@ a:focus-visible {
 	content: "";
 	height: 1px;
 	left: 50%;
-	opacity: 0;
 	position: absolute;
 	transform: translateX(-50%);
 	width: 100%;
@@ -609,6 +610,11 @@ a:focus-visible {
 	top: 20px;
 	width: 100%;
 	z-index: 30;
+}
+
+.p-header.hide {
+	opacity: 0;
+	transform: translateY(-110%);
 }
 
 .p-header__inner {
@@ -1098,13 +1104,13 @@ a:focus-visible {
 .p-skills__heading-en {
 	display: inline;
 	font-family: "Crimson Text", serif;
-	font-size: clamp(1.25rem, -2.0603448276rem + 6.8965517241vw, 2.25rem);
+	font-size: clamp(1.625rem, -0.4439655172rem + 4.3103448276vw, 2.25rem);
 	margin-right: 0.2em;
 }
 
 .p-skills__heading-ja {
 	display: inline;
-	font-size: clamp(0.625rem, -0.2025862069rem + 1.724137931vw, 0.875rem);
+	font-size: clamp(0.75rem, 0.3362068966rem + 0.8620689655vw, 0.875rem);
 }
 
 .p-skills__container {
@@ -1181,6 +1187,11 @@ a:focus-visible {
 	display: flex;
 	flex-direction: column;
 	gap: 46px;
+	text-align: center;
+}
+
+.p-contact__content .c-section-heading {
+	margin-inline: auto;
 }
 
 .p-workflow {

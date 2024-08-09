@@ -6,6 +6,12 @@
   left: 0;
   width: 100%;
   z-index: global.z-index(header);
+
+  //headerの表示・非表示切り替え用
+  &.hide {
+    transform: translateY(-110%);
+    opacity: 0;
+  }
 }
 
 .p-header__inner {

@@ -1,3 +1,19 @@
+//360px未満は表示倍率を変更
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value =
+      window.outerWidth > 360
+        ? "width=device-width,initial-scale=1"
+        : "width=360";
+    if (viewport.getAttribute("content") !== value) {
+      viewport.setAttribute("content", value);
+    }
+  }
+  addEventListener("resize", switchViewport, false);
+  switchViewport();
+})();
+
 //ドロワーの開閉
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.querySelector(".js-menu-button");
@@ -86,64 +102,33 @@ for (var i = 0; i < link.length; i++) {
   });
 }
 
-// ヘッダー高さの可変を考慮したスムーススクロール
-jQuery('a[href^="#"]').on("click", function (e) {
-  const speed = 300;
-  const id = jQuery(this).attr("href");
-  const target = jQuery("#" === id ? "html" : id);
-  const position =
-    jQuery(target).offset().top + (window.innerWidth < 768 ? -86 : -86);
-
-  jQuery("html, body").animate(
-    {
-      scrollTop: position,
-    },
-    speed,
-    "swing"
-  );
-});
-
-//headerとdrawerのヘッダー考慮スクロール
-function scrollToSection(event) {
+// スムーススクロール処理を定義
+function smoothScroll(event) {
   event.preventDefault();
+
   const targetId = this.getAttribute("href").substring(1);
   const targetElement = document.getElementById(targetId);
-  const headerHeight = document.querySelector("header").offsetHeight;
+  const headerHeight = window.innerWidth < 768 ? 86 : 86; // ヘッダーの高さを条件に応じて調整
+  const targetPosition = targetElement.offsetTop - headerHeight;
 
-  if (this.closest("#js-header-nav")) {
-    // '#js-header-nav' 内のリンククリック時の処理
-    window.scrollTo({
-      top: targetElement.offsetTop - headerHeight,
-      behavior: "smooth",
-    });
-  } else if (this.closest("#js-drawer-content")) {
-    // '#js-drawer-content' 内のリンククリック時の処理
-    window.scrollTo({
-      top: targetElement.offsetTop - headerHeight,
-    });
-  }
+  window.scrollTo({
+    top: targetPosition,
+    behavior: "smooth",
+  });
 }
 
-document
-  .querySelectorAll(
-    '#js-header-nav a[href^="#"], #js-drawer-content a[href^="#"]'
-  )
-  .forEach((anchor) => {
-    anchor.addEventListener("click", scrollToSection);
-  });
+// js-to-topのスムーススクロール
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", smoothScroll);
+});
 
-//360px未満は表示倍率を変更
-!(function () {
-  const viewport = document.querySelector('meta[name="viewport"]');
-  function switchViewport() {
-    const value =
-      window.outerWidth > 360
-        ? "width=device-width,initial-scale=1"
-        : "width=360";
-    if (viewport.getAttribute("content") !== value) {
-      viewport.setAttribute("content", value);
-    }
-  }
-  addEventListener("resize", switchViewport, false);
-  switchViewport();
-})();
+document
+  .getElementById("js-to-top")
+  .addEventListener("click", function (event) {
+    event.preventDefault(); // デフォルトのアンカーリンク動作を無効化
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // スムーススクロール
+    });
+  });
