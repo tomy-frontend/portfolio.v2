@@ -73,29 +73,33 @@
   display: flex;
   gap: 12px;
   align-items: flex-end;
-  line-height: normal;
+  line-height: 1;
 }
+
 .p-about__name-flex {
   display: flex;
   flex-direction: column;
-  gap: -4px;
+  // gap: -4px;
 }
+
 .p-about__job {
   display: inline-block;
-  font-size: global.rem(14);
   font-family: global.$ff-en;
-  line-height: 8px;
+  font-size: global.cal-clamp(14, 16);
+  line-height: 1;
 }
 
 .p-about__name-ja {
   display: inline-block;
-  font-size: global.rem(26);
+  font-size: global.cal-clamp(26, 32);
+  line-height: 1.2;
 }
 
 .p-about__name-en {
-  display: block;
-  font-size: global.rem(20);
+  display: inline-block;
   font-family: global.$ff-en;
+  font-size: global.cal-clamp(20, 22);
+  line-height: 1;
 }
 
 .p-about__text {

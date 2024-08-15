@@ -15,18 +15,26 @@
 
 .p-service-card__img {
   img {
+    inline-size: fit-content;
+    height: auto;
   }
 }
 
 .p-service-card__text-box {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 1em;
 }
 .p-service-card__title {
   font-size: global.rem(20);
+  font-weight: global.$fw-medium;
 }
 
 .p-service-card__text {
   text-align: left;
+
+  span {
+    margin-top: 0.75em;
+    display: inline-block;
+  }
 }

@@ -9,6 +9,13 @@
 .p-fv__lead {
   font-family: global.$ff-en;
   font-size: global.cal-clamp(20, 24);
+
+  span {
+    background: linear-gradient(-45deg, #2af598, #009efd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 }
 
 .p-fv__title {
@@ -16,6 +23,7 @@
   font-size: global.cal-clamp(64, 80);
 }
 
+//index.html以外の下層ページ用
 .p-fv--page {
   height: 60vh !important;
 }

@@ -91,13 +91,13 @@ document.addEventListener("mousemove", function (e) {
     "translate(" + e.clientX + "px, " + e.clientY + "px)";
 });
 
-// リンクにホバーした時にクラス追加、離れたらクラス削除
-var link = document.querySelectorAll("a, button");
-for (var i = 0; i < link.length; i++) {
-  link[i].addEventListener("mouseover", function (e) {
+// クラス名 'special-link' を持つ a タグにホバーした時にクラス追加、離れたらクラス削除
+var specialLinks = document.querySelectorAll("a.special-link");
+for (var i = 0; i < specialLinks.length; i++) {
+  specialLinks[i].addEventListener("mouseover", function (e) {
     cursor.classList.add("cursor--hover");
   });
-  link[i].addEventListener("mouseout", function (e) {
+  specialLinks[i].addEventListener("mouseout", function (e) {
     cursor.classList.remove("cursor--hover");
   });
 }

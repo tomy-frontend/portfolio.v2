@@ -38,7 +38,8 @@
 .p-workflow-card__tag {
   font-size: global.rem(14);
   font-family: global.$ff-en;
-  width: fit-content;
+  font-weight: global.$fw-bold;
+  inline-size: fit-content;
   padding: 5px 15px;
   border-radius: 16px;
   border: 1px solid global.$text-color-black;
@@ -47,6 +48,7 @@
 
 .p-workflow-card__title {
   font-size: global.rem(20);
+  font-weight: global.$fw-medium;
 }
 .p-workflow-card__text {
   line-height: 1.8;

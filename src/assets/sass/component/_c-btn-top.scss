@@ -1,7 +1,7 @@
 @use "../global" as global;
 
 .c-btn-top {
-  width: fit-content;
+  inline-size: fit-content;
 
   a {
     position: relative;
@@ -11,9 +11,9 @@
     &::before {
       position: absolute;
       content: "";
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 68px;
+      inline-size: fit-content;
       height: 68px;
       background: url(../img/icon/top-btn-deco.svg);
       background-position: center;
@@ -23,31 +23,20 @@
       transition: global.$transition-default;
     }
 
-    &:hover {
-      transform: scale(1.2);
-
-      &::before {
-        animation: rotate2-reverse 8s linear infinite;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
       }
     }
   }
+}
 
-  // 無限回転
-  @keyframes rotate2 {
-    0% {
-      transform: translate(-30%, -30%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-30%, -30%) rotate(360deg);
-    }
+// 無限回転
+@keyframes rotate2 {
+  0% {
+    transform: translate(-30%, -30%) rotate(0deg);
   }
-
-  @keyframes rotate2-reverse {
-    0% {
-      transform: translate(-30%, -30%) rotate(360deg);
-    }
-    100% {
-      transform: translate(-30%, -30%) rotate(0deg);
-    }
+  100% {
+    transform: translate(-30%, -30%) rotate(360deg);
   }
 }

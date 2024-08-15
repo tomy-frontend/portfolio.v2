@@ -1,33 +1,27 @@
 @use "../global" as global;
 
-/*デフォルトのマウスカーソルを非表示にする*/
-// html,
-// body,
-// button,
-// a {
-//   cursor: none;
-// }
+// .special-linkがついたaタグにhoverした時のみオリジナルカーソルを表示する
 
-// .cursor {
-//   position: fixed;
-//   top: -5px;
-//   left: -5px;
-//   width: 10px;
-//   height: 10px;
-//   border-radius: 50%;
-//   background: rgba(0, 0, 0, 0.7);
-//   z-index: 1000;
-//   transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
-//   transform: translate(0, 0);
-//   pointer-events: none;
-//   transition: transform 0.1s ease-out; /* 位置の変更を滑らかに */
-// }
-
-// // /*aタグ,buttonにホバーした時に見た目変化*/
-// .cursor.cursor--hover {
-//   top: -20px;
-//   left: -20px;
-//   width: 40px;
-//   height: 40px;
-//   background: rgba(165, 174, 255, 0.5);
-// }
+.cursor {
+  position: fixed;
+  top: -25px;
+  left: -55px;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s linear, opacity 0.3s ease-in-out;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+.cursor--hover {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 0);
+  background: url(../img/icon/View-more-cursor.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

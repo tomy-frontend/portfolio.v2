@@ -443,6 +443,7 @@ th {
 
 body {
 	background: #bdbdbd;
+	background: #f5f5f5;
 	color: #000000;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 16px;
@@ -568,11 +569,34 @@ a:focus-visible {
 	z-index: 2;
 }
 
-/*デフォルトのマウスカーソルを非表示にする*/
+.cursor {
+	border-radius: 3px;
+	height: 30px;
+	left: -55px;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: -25px;
+	transform: translate(-50%, -50%);
+	transition: transform 0.3s linear, opacity 0.3s ease-in-out;
+	visibility: hidden;
+	width: 100px;
+	z-index: 1000;
+}
+
+.cursor--hover {
+	background: url(../img/icon/View-more-cursor.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 1;
+	transform: translate(0, 0);
+	visibility: visible;
+}
 
 .c-btn-top {
-	width: -moz-fit-content;
-	width: fit-content;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
 }
 
 .c-btn-top a {
@@ -589,19 +613,12 @@ a:focus-visible {
 	background-size: cover;
 	content: "";
 	height: 68px;
-	left: 0;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	inset: 0;
 	position: absolute;
-	top: 0;
 	transition: all 0.5s ease;
 	width: 68px;
-}
-
-.c-btn-top a:hover {
-	transform: scale(1.2);
-}
-
-.c-btn-top a:hover::before {
-	animation: rotate2-reverse 8s linear infinite;
 }
 
 .p-header {
@@ -844,6 +861,13 @@ a:focus-visible {
 	font-size: clamp(1.25rem, 0.4224137931rem + 1.724137931vw, 1.5rem);
 }
 
+.p-fv__lead span {
+	background: linear-gradient(-45deg, #2af598, #009efd);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
 .p-fv__title {
 	font-family: "Crimson Text", serif;
 	font-size: clamp(4rem, 0.6896551724rem + 6.8965517241vw, 5rem);
@@ -1038,31 +1062,32 @@ a:focus-visible {
 	align-items: flex-end;
 	display: flex;
 	gap: 12px;
-	line-height: normal;
+	line-height: 1;
 }
 
 .p-about__name-flex {
 	display: flex;
 	flex-direction: column;
-	gap: -4px;
 }
 
 .p-about__job {
 	display: inline-block;
 	font-family: "Crimson Text", serif;
-	font-size: 0.875rem;
-	line-height: 8px;
+	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
+	line-height: 1;
 }
 
 .p-about__name-ja {
 	display: inline-block;
-	font-size: 1.625rem;
+	font-size: clamp(1.625rem, 0.3836206897rem + 2.5862068966vw, 2rem);
+	line-height: 1.2;
 }
 
 .p-about__name-en {
-	display: block;
+	display: inline-block;
 	font-family: "Crimson Text", serif;
-	font-size: 1.25rem;
+	font-size: clamp(1.25rem, 0.8362068966rem + 0.8620689655vw, 1.375rem);
+	line-height: 1;
 }
 
 .p-about__text {
@@ -1138,6 +1163,7 @@ a:focus-visible {
 
 .p-skills__title {
 	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 .p-skills__text span {
@@ -1168,18 +1194,30 @@ a:focus-visible {
 	text-align: center;
 }
 
+.p-service-card__img img {
+	height: auto;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+}
+
 .p-service-card__text-box {
 	display: flex;
 	flex-direction: column;
-	gap: 7px;
+	gap: 1em;
 }
 
 .p-service-card__title {
 	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 .p-service-card__text {
 	text-align: left;
+}
+
+.p-service-card__text span {
+	display: inline-block;
+	margin-top: 0.75em;
 }
 
 .p-contact__content {
@@ -1250,13 +1288,15 @@ a:focus-visible {
 	border-radius: 16px;
 	font-family: "Crimson Text", serif;
 	font-size: 0.875rem;
+	font-weight: 600;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
 	padding: 5px 15px;
-	width: -moz-fit-content;
-	width: fit-content;
 }
 
 .p-workflow-card__title {
 	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 .p-workflow-card__text {
@@ -1570,6 +1610,10 @@ a:focus-visible {
 	transform: rotate(-45deg);
 }
 
+.c-btn-top a:hover {
+	transform: scale(1.2);
+}
+
 .wpcf7-submit:hover {
 	background-color: #000000;
 	box-shadow: none;
@@ -1773,18 +1817,6 @@ a:focus-visible {
 
 100% {
 	transform: translate(-30%, -30%) rotate(360deg);
-}
-
-}
-
-@keyframes rotate2-reverse {
-
-0% {
-	transform: translate(-30%, -30%) rotate(360deg);
-}
-
-100% {
-	transform: translate(-30%, -30%) rotate(0deg);
 }
 
 }

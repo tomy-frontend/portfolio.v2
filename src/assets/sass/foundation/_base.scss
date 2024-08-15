@@ -24,7 +24,8 @@ body {
   font-size: global.$fz-base;
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
-  background: global.$gray;
+  background: global.$gray; //視認性の為仮
+  background: #f5f5f5;
 }
 
 img {

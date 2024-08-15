@@ -176,24 +176,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ityped.js
-// function initITyped() {
-//   ityped.init(document.querySelector("#ityped"), {
-//     strings: ["Welcome to"],
-//     typeSpeed: 100,
-//     backSpeed: 50,
-//     startDelay: 500,
-//     backDelay: 500,
-//     loop: false,
-//     showCursor: true,
-//     placeholder: false,
-//     disableBackTyping: false,
-//     cursorChar: ".",
-//   });
-// }
+function initITyped() {
+  ityped.init(document.querySelector("#ityped"), {
+    strings: ["insatiable curiosity."],
+    typeSpeed: 130,
+    backSpeed: 50,
+    startDelay: 500,
+    backDelay: 500,
+    loop: false,
+    showCursor: true,
+    placeholder: false,
+    disableBackTyping: false,
+    cursorChar: "",
+  });
+}
 
-// ScrollTrigger.create({
-//   trigger: "#ityped", // この要素がビューポートに入ったらトリガー
-//   start: "top 75%", // 要素の上部がビューポートの75%の位置に来たらトリガー
-//   onEnter: () => initITyped(), // 要素がビューポートに入った時に実行
-//   once: true, // トリガーは一度だけ実行
-// });
+ScrollTrigger.create({
+  trigger: "#ityped", // この要素がビューポートに入ったらトリガー
+  start: "top 75%", // 要素の上部がビューポートの75%の位置に来たらトリガー
+  onEnter: () => initITyped(), // 要素がビューポートに入った時に実行
+  once: true, // トリガーは一度だけ実行
+});
