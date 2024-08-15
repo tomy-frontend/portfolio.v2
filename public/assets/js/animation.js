@@ -39,6 +39,7 @@ document.querySelectorAll(".jsfadeIn").forEach((element) => {
       start: "top 90%",
       end: "bottom 60%",
       toggleActions: "play none none none",
+      // scrub: true,
     },
     duration: 1,
     opacity: 0,
@@ -55,6 +56,7 @@ document.querySelectorAll(".jsfadeInLeft").forEach((element) => {
       start: "top 90%",
       end: "bottom 60%",
       toggleActions: "play none none none",
+      // scrub: true,
     },
     duration: 1,
     opacity: 0,
@@ -104,7 +106,7 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
 document.querySelectorAll(".jsBlur").forEach((jsBlur) => {
   gsap.fromTo(
     jsBlur,
-    { filter: "blur(15px)", opacity: 0 }, // 初期状態はblur(20px)で透明度は0
+    { filter: "blur(15px)", opacity: 0 }, // 初期状態はblur(15px)で透明度は0
     {
       scrollTrigger: {
         trigger: jsBlur, // トリガーとなるのは各`.jsBlur`要素自身

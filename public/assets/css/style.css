@@ -445,7 +445,7 @@ body {
 	background: #bdbdbd;
 	color: #000000;
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: 1rem;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: normal;
 }
@@ -1186,12 +1186,16 @@ a:focus-visible {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	gap: 46px;
+	gap: 1.5em;
 	text-align: center;
 }
 
 .p-contact__content .c-section-heading {
 	margin-inline: auto;
+}
+
+.p-contact__text {
+	line-height: 1.8;
 }
 
 .p-workflow {
@@ -1203,12 +1207,12 @@ a:focus-visible {
 }
 
 .p-workflow__container {
+	--contents-width: 1000px;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
-	margin: 0 auto;
+	margin-inline: auto;
 	margin-top: 50px;
-	max-width: 1000px;
 	width: 100%;
 }
 
@@ -1253,6 +1257,14 @@ a:focus-visible {
 
 .p-workflow-card__title {
 	font-size: 1.25rem;
+}
+
+.p-workflow-card__text {
+	line-height: 1.8;
+}
+
+.p-workflow-card__text span {
+	display: inline-block;
 }
 
 .p-page-work__content {
@@ -1637,6 +1649,7 @@ a:focus-visible {
 
 .p-workflow__container {
 	margin-top: 80px;
+	max-width: var(--contents-width);
 	width: calc(100% - 40px);
 }
 

@@ -4,10 +4,14 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 1.5em;
   text-align: center;
 
   .c-section-heading {
     margin-inline: auto;
   }
+}
+
+.p-contact__text {
+  line-height: 1.8;
 }
