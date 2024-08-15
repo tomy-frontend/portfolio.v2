@@ -1,8 +1,12 @@
 @use "../global" as global;
 
 .p-footer {
+  --background: rgba(255, 255, 255, 0.8);
+
   position: relative; //p-footer__top-btnのため
-  background: global.$section-bg;
+  background: var(--background);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(10px) saturate(120%);
 }
 
 .p-footer__top-btn {
