@@ -21,7 +21,7 @@
 body {
   color: global.$text-color-black;
   font-family: global.$ff-base;
-  font-size: global.$fz-base;
+  font-size: global.cal-clamp(14, 16);
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
   background: global.$gray; //視認性の為仮

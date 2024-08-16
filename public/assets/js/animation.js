@@ -40,6 +40,7 @@ document.querySelectorAll(".jsfadeIn").forEach((element) => {
       end: "bottom 60%",
       toggleActions: "play none none none",
       // scrub: true,
+      // markers: true, // デバッグ用マーカー
     },
     duration: 1,
     opacity: 0,
@@ -57,6 +58,7 @@ document.querySelectorAll(".jsfadeInLeft").forEach((element) => {
       end: "bottom 60%",
       toggleActions: "play none none none",
       // scrub: true,
+      // markers: true, // デバッグ用マーカー
     },
     duration: 1,
     opacity: 0,
@@ -73,6 +75,7 @@ document.querySelectorAll(".jsfadeInRight").forEach((element) => {
       start: "top 90%",
       end: "bottom 60%",
       toggleActions: "play none none none",
+      // markers: true, // デバッグ用マーカー
     },
     duration: 1,
     opacity: 0,
@@ -93,6 +96,7 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
         end: "bottom 60%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
         toggleActions: "play none none none", // アニメーションを1回再生して終了
         once: true, // アニメーションを1回限り実行
+        // markers: true, // デバッグ用マーカー
       },
       scale: 1, // 目標とするスケール（元のサイズに戻る）
       opacity: 1, // 最終的な透明度は1

@@ -78,10 +78,6 @@
     <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
-    <!-- オリジナルマウスカーソル -->
-    <!-- <div id="cursor" class="cursor"></div> -->
-    <!-- オリジナルマウスカーソル -->
-
     <!-- p-header -->
     <header id="js-header" class="p-header JsHeader">
       <div class="p-header__inner">
@@ -102,7 +98,7 @@
         >
           <ul class="p-global-nav__list">
             <li class="p-global-nav__item">
-              <a href="#works" class="p-global-nav__link">Works</a>
+              <a href="./archive.html" class="p-global-nav__link">Works</a>
             </li>
             <li class="p-global-nav__item">
               <a href="#aboutme" class="p-global-nav__link">AboutMe</a>
@@ -114,7 +110,7 @@
               <a href="#workflow" class="p-global-nav__link">WorkFlow</a>
             </li>
             <li class="p-global-nav__item">
-              <a href="#contact" class="p-global-nav__link">Contact</a>
+              <a href="./contact.html" class="p-global-nav__link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -140,7 +136,7 @@
         <div class="p-drawer__inner">
           <ul class="p-drawer__list">
             <li class="p-drawer__item">
-              <a href="#works" class="p-drawer__link"
+              <a href="./archive.html" class="p-drawer__link"
                 ><p class="p-drawer__link-en">Works</p>
                 <p class="p-drawer__link-ja">制作実績</p></a
               >
@@ -164,7 +160,7 @@
               >
             </li>
             <li class="p-drawer__item">
-              <a href="#contact" class="p-drawer__link"
+              <a href="./contact.html" class="p-drawer__link"
                 ><p class="p-drawer__link-en">Contact</p>
                 <p class="p-drawer__link-ja">お問い合わせ</p></a
               >
@@ -230,26 +226,180 @@
       <!-- p-fv -->
 
       <!-- works -->
-      <section id="works" class="p-works l-section-padding p-section-bg">
-        <div class="p-works__inner l-inner">
-          <!-- p-works__content -->
-          <div class="p-works__content">
-            <!-- c-section-heading -->
-            <div class="c-section-heading jsfadeInLeft">
-              <h2 class="c-section-heading__en">Works</h2>
-              <p class="c-section-heading__ja">制作実績</p>
-              <span class="js-line-animation"></span>
-            </div>
-            <!-- c-section-heading -->
+      <div id="scrollWrap">
+        <section id="works" class="p-works l-section-padding p-section-bg">
+          <!-- l-inner -->
+          <div class="p-works__inner l-inner">
+            <!-- p-works__content -->
+            <div class="p-works__content">
+              <!-- c-section-heading -->
+              <div class="c-section-heading jsfadeIn">
+                <h2 class="c-section-heading__en">Works</h2>
+                <p class="c-section-heading__ja">制作実績</p>
+                <span class="js-line-animation"></span>
+              </div>
+              <!-- c-section-heading -->
 
-            <div class="p-works__btn u-hidden-pc jsfadeIn">
-              <a href="./archive.html" class="c-btn special-link">All Works</a>
+              <!-- p-works__text-box -->
+              <div class="p-works__text-box jsfadeIn">
+                <p>私の過去制作実績でございます。</p>
+                <p>
+                  作品ページでは制作に関して工夫したポイント・苦労したポイント、
+                  また、制作期間・費用感について記載させていただいておりますので、
+                  <span>ぜひご参照ください。</span>
+                </p>
+                <p>
+                  当サイトも自らデザイン・ コーディングをしておりますので、
+                  <span>実績の一つとしてご査収ください。</span>
+                </p>
+                <!-- p-works__btn -->
+                <div class="p-works__btn u-hidden-sp">
+                  <a href="./archive.html" class="c-btn special-link"
+                    >All Works</a
+                  >
+                </div>
+                <!-- p-works__btn -->
+              </div>
+              <!-- p-works__text-box -->
+
+              <!-- 水平スクロールセクション -->
+              <div id="squares" class="section">
+                <div class="container">
+                  <!-- 左側 -->
+                  <div class="left jsfadeIn">
+                    <p>私の過去制作実績でございます。</p>
+                    <p>
+                      作品ページでは制作に関して工夫したポイント・苦労したポイント、
+                      また、制作期間・費用感について記載させていただいておりますので、
+                      ぜひご参照ください。
+                    </p>
+                    <p>
+                      当サイトも自らデザイン・ コーディングをしておりますので、
+                      実績の一つとしてご査収ください。
+                    </p>
+
+                    <!-- p-works__btn -->
+                    <div class="p-works__btn u-hidden-sp jsfadeIn">
+                      <a href="./archive.html" class="c-btn">All Works</a>
+                    </div>
+                    <!-- p-works__btn -->
+                  </div>
+                  <!-- 左側 -->
+                  <!-- 右側 -->
+                  <div class="right jsfadeIn">
+                    <!-- p-portfolio-card__card -->
+                    <div class="p-portfolio-card square">
+                      <div class="p-portfolio-card__inner">
+                        <a href="/" class="p-portfolio-card__img">
+                          <img
+                            src="./assets/img/portfolio.png"
+                            alt="ポートフォリオの画像"
+                            width="2822"
+                            height="1434"
+                          />
+                        </a>
+                        <h3 class="p-portfolio-card__title">
+                          みなみ歯科クリニック様
+                        </h3>
+                        <div class="p-portfolio-card__category">
+                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
+                          <a href="/" class="p-portfolio-card__tag">LP</a>
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >wordpress</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag">React</a>
+                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- p-portfolio-card__card -->
+                    <!-- p-portfolio-card__card -->
+                    <div class="p-portfolio-card square">
+                      <div class="p-portfolio-card__inner">
+                        <a href="/" class="p-portfolio-card__img">
+                          <img
+                            src="./assets/img/portfolio.png"
+                            alt="ポートフォリオの画像"
+                            width="2822"
+                            height="1434"
+                          />
+                        </a>
+                        <h3 class="p-portfolio-card__title">
+                          みなみ歯科クリニック様
+                        </h3>
+                        <div class="p-portfolio-card__category">
+                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
+                          <a href="/" class="p-portfolio-card__tag">LP</a>
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >wordpress</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag">React</a>
+                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- p-portfolio-card__card -->
+                    <!-- p-portfolio-card__card -->
+                    <div class="p-portfolio-card square">
+                      <div class="p-portfolio-card__inner">
+                        <a href="/" class="p-portfolio-card__img">
+                          <img
+                            src="./assets/img/portfolio.png"
+                            alt="ポートフォリオの画像"
+                            width="2822"
+                            height="1434"
+                          />
+                        </a>
+                        <h3 class="p-portfolio-card__title">
+                          みなみ歯科クリニック様
+                        </h3>
+                        <div class="p-portfolio-card__category">
+                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
+                          <a href="/" class="p-portfolio-card__tag">LP</a>
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >架空サイト</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag"
+                            >wordpress</a
+                          >
+                          <a href="/" class="p-portfolio-card__tag">React</a>
+                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- p-portfolio-card__card -->
+                  </div>
+                  <!-- 右側 -->
+                </div>
+              </div>
+              <!-- 水平スクロールセクション -->
+              <!-- p-works__btn -->
+              <div class="p-works__btn u-hidden-pc jsfadeIn">
+                <a href="./archive.html" class="c-btn">All Works</a>
+              </div>
+              <!-- p-works__btn -->
             </div>
+            <!-- p-works__content -->
           </div>
-          <!-- p-works__content -->
-        </div>
-      </section>
-      <!-- works -->
+          <!-- l-inner -->
+        </section>
+        <!-- works -->
+      </div>
 
       <!-- message -->
       <section id="message" class="p-message l-section-padding">

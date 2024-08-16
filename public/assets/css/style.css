@@ -446,7 +446,7 @@ body {
 	background: #f5f5f5;
 	color: #000000;
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: 16px;
+	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
 	font-weight: 400;
 	line-height: normal;
 }
@@ -942,41 +942,68 @@ a:focus-visible {
 	transition: all 0.5s ease;
 }
 
-.p-works {
+.section {
 	overflow: hidden;
 }
 
-.p-works__text-box {
-	margin-top: 36px;
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: clamp(1.25rem, -2.8879310345rem + 8.6206896552vw, 2.5rem);
+	width: 100%;
 }
 
-.p-works__text {
-	line-height: 2;
+.left {
+	display: none;
 }
 
-.p-works__btn {
-	margin-top: 36px;
-	text-align: center;
+.left p {
+	line-height: 1.8;
 }
 
-.p-works__btn .c-btn {
+.left p span {
 	display: inline-block;
 }
 
-.p-works__btn.u-hidden-sp {
-	-moz-text-align-last: left;
-	text-align-last: left;
+.left p + p {
+	margin-top: 0.75em;
 }
 
-.p-works__container {
-	display: flex;
-	flex-direction: row;
+.right {
+	display: inline-flex;
 	gap: 20px;
-	height: 100vh;
-	padding-bottom: 30px;
-	padding-right: 30px;
-	padding-top: 90px;
-	width: 300%; /* 要素の数×100% */
+	margin-top: 2em;
+	overflow: hidden;
+	width: 100%;
+}
+
+.square {
+	height: 100%;
+	min-width: 300px;
+	width: 100%;
+}
+
+.p-works__text-box {
+	margin-top: 1em;
+}
+
+.p-works__text-box p {
+	line-height: 1.8;
+}
+
+.p-works__text-box p span {
+	display: inline-block;
+}
+
+.p-works__text-box p + p {
+	margin-top: 0.75em;
+}
+
+.p-works__btn {
+	margin-inline: auto;
+	margin-top: 2em;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .p-message__title {
@@ -1625,8 +1652,24 @@ a:focus-visible {
 	display: none;
 }
 
-.p-works__container {
-	padding-right: 0;
+.left {
+	display: block;
+	margin-top: 2em;
+	width: 30%;
+}
+
+.right {
+	margin-top: 0;
+	width: 70%;
+}
+
+.p-works__text-box {
+	display: none;
+	visibility: hidden;
+}
+
+.p-works__btn {
+	margin-inline: 0;
 }
 
 .p-about__container {

@@ -82,26 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
   handleMediaChange(matchMedia);
 });
 
-// カーソル用のdivタグを取得してcursorに格納
-var cursor = document.getElementById("cursor");
-
-// カーソル用のdivタグをマウスに追従させる
-document.addEventListener("mousemove", function (e) {
-  cursor.style.transform =
-    "translate(" + e.clientX + "px, " + e.clientY + "px)";
-});
-
-// クラス名 'special-link' を持つ a タグにホバーした時にクラス追加、離れたらクラス削除
-var specialLinks = document.querySelectorAll("a.special-link");
-for (var i = 0; i < specialLinks.length; i++) {
-  specialLinks[i].addEventListener("mouseover", function (e) {
-    cursor.classList.add("cursor--hover");
-  });
-  specialLinks[i].addEventListener("mouseout", function (e) {
-    cursor.classList.remove("cursor--hover");
-  });
-}
-
 // スムーススクロール処理を定義
 function smoothScroll(event) {
   event.preventDefault();
@@ -132,3 +112,22 @@ document
       behavior: "smooth", // スムーススクロール
     });
   });
+
+// p-worksの水平スクロール
+const horizontalScroll = gsap.to(".square", {
+  x: -500, // 左に600px移動
+  paused: true, // 最初はアニメーションを止めておく
+  ease: "none", // アニメーションの動きを一定にする
+});
+
+ScrollTrigger.create({
+  trigger: "#scrollWrap", // この要素がスクロールのトリガーになる
+  pin: true, // トリガー要素を画面に固定する
+  start: "center center", // トリガー要素が画面の中央に来たときにアニメーションが始まる
+  end: "+=300", // 300pxスクロールするまでアニメーションを続ける
+  pinSpacing: true, // トリガー要素が固定されても周囲のスペースを維持する
+  fastScrollEnd: true, // スクロールが速く終わった場合の設定
+  onUpdate: (self) => {
+    gsap.to(horizontalScroll, { progress: self.progress, duration: 1 }); // スクロールの進行度に合わせてアニメーションを進める
+  },
+});
