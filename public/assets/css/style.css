@@ -869,10 +869,7 @@ a:focus-visible {
 }
 
 .p-portfolio-card {
-	background: #ffffff;
-	border-radius: 12px;
-	max-width: 450px;
-	padding: 14px 14px 40px 14px;
+	padding: 0.875em 0.875em 2.5em 0.875em;
 }
 
 .p-portfolio-card__inner {
@@ -881,7 +878,8 @@ a:focus-visible {
 }
 
 .p-portfolio-card__img {
-	border-radius: 12px;
+	aspect-ratio: 1/1;
+	border-radius: 8px;
 	height: 55vh;
 	outline: 1px solid #bdbdbd;
 	overflow: hidden;
@@ -915,30 +913,25 @@ a:focus-visible {
 
 .p-portfolio-card__title {
 	font-size: 1.25rem;
-	margin-top: 24px;
+	margin-top: 1.5em;
 }
 
 .p-portfolio-card__category {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 10px;
-	margin-top: 16px;
+	gap: 0.625em;
+	margin-top: 1em;
 }
 
 .p-portfolio-card__tag {
 	background: #ffffff;
 	border: 1px solid #000000;
-	border-radius: 16px;
+	border-radius: 1em;
 	font-size: 0.875rem;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
 	padding: 4px 14px;
 	transition: all 0.5s ease;
-	width: -moz-fit-content;
-	width: fit-content;
-}
-
-.p-portfolio-card__tag:hover {
-	background: #000000;
-	color: #ffffff;
 }
 
 .p-works {
@@ -1160,10 +1153,6 @@ a:focus-visible {
 	display: inline-block;
 }
 
-.p-service {
-	margin-top: 60px;
-}
-
 .p-service__container {
 	display: grid;
 	gap: 40px;
@@ -1227,10 +1216,6 @@ a:focus-visible {
 
 .p-contact__text {
 	line-height: 1.8;
-}
-
-.p-workflow {
-	margin-top: 100px;
 }
 
 .p-workflow__text {
@@ -1352,23 +1337,14 @@ a:focus-visible {
 }
 
 .p-archive__category {
-	margin-top: 20px;
+	margin-top: clamp(1.25rem, -2.8879310345rem + 8.6206896552vw, 2.5rem);
 }
 
 .p-archive__container {
 	display: grid;
-	flex-wrap: wrap;
-	gap: 30px;
-	grid-template-columns: 1fr;
-	margin-top: 30px;
-}
-
-.p-archive__container .p-portfolio-card {
-	max-width: none;
-}
-
-.p-archive__container .p-portfolio-card__img {
-	height: 35vh;
+	gap: clamp(1.25rem, -0.8189655172rem + 4.3103448276vw, 1.875rem);
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	margin-top: clamp(1.875rem, -2.2629310345rem + 8.6206896552vw, 3.125rem);
 }
 
 .p-page-contact__section-heading {
@@ -1611,6 +1587,11 @@ a:focus-visible {
 	transform: scale(1.2);
 }
 
+.p-portfolio-card__tag:hover {
+	background: #000000;
+	color: #ffffff;
+}
+
 .wpcf7-submit:hover {
 	background-color: #000000;
 	box-shadow: none;
@@ -1724,15 +1705,6 @@ a:focus-visible {
 	grid-template-columns: 15% auto;
 }
 
-.p-archive__category {
-	margin-top: 40px;
-}
-
-.p-archive__container {
-	grid-template-columns: repeat(2, 1fr);
-	margin-top: 50px;
-}
-
 .p-form__field {
 	flex-direction: row;
 }
@@ -1786,14 +1758,6 @@ a:focus-visible {
 
 .p-about__container {
 	gap: 100px;
-}
-
-.p-archive__container {
-	grid-template-columns: repeat(3, 1fr);
-}
-
-.p-archive__container .p-portfolio-card__img {
-	height: 40vh;
 }
 
 }

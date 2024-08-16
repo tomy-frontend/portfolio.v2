@@ -1,44 +1,12 @@
 @use "../global" as global;
 
-.p-archive {
-}
-
-.p-archive__inner {
-}
-
-.p-archive__content {
-}
-
 .p-archive__category {
-  margin-top: 20px;
-  @include global.mq(md) {
-    margin-top: 40px;
-  }
+  margin-top: global.cal-clamp(20, 40);
 }
 
 .p-archive__container {
-  margin-top: 30px;
+  margin-top: global.cal-clamp(30, 50);
   display: grid;
-  grid-template-columns: 1fr;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  @include global.mq(md) {
-    margin-top: 50px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include global.mq(xl) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .p-portfolio-card {
-    max-width: none;
-  }
-  .p-portfolio-card__img {
-    height: 35vh;
-
-    @include global.mq(xl) {
-      height: 40vh;
-    }
-  }
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: global.cal-clamp(20, 30);
 }
