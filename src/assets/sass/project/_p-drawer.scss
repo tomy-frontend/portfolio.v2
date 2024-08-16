@@ -22,7 +22,6 @@
   width: calc(100% - 10px * 2);
   height: 100%;
   margin: 0 auto;
-  background: gray; //視認しやすいように色をつけています
   background: global.$text-color-white;
   border-radius: 12px;
   padding-top: 120px;
@@ -31,11 +30,11 @@
 
 .p-drawer__inner {
   width: calc(100% - 50px * 2);
-  margin: 0 auto;
+  margin-inline: auto;
 
   //   375px以下の時のスタイル
   @include global.mq(sm) {
-    width: calc(100% - 20px * 2);
+    width: calc(100% - 15px * 2);
   }
 }
 
@@ -48,18 +47,19 @@
 }
 
 .p-drawer__link {
-  font-size: global.rem(24);
+  font-size: global.rem(28);
   line-height: 1;
 }
 
 .p-drawer__link-en {
   font-family: global.$ff-en;
+  font-weight: global.$fw-medium;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.125em;
 }
 
 .p-drawer__link-ja {
-  font-size: global.rem(10);
+  font-size: global.rem(16);
   display: inline-block;
 }
 

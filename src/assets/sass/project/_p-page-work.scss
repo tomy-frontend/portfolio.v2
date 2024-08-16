@@ -3,11 +3,7 @@
 .p-page-work__content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-
-  @include global.mq(md) {
-    gap: 50px;
-  }
+  gap: global.cal-clamp(30, 50);
 }
 
 .p-page-work__head {
@@ -17,24 +13,31 @@
 }
 
 .p-page-work__title {
-  font-size: global.rem(30);
+  font-size: global.cal-clamp(24, 30);
+  font-weight: global.$fw-medium;
 }
 
 .p-page-work__img {
   width: 100%;
-  height: 100%;
-  max-height: 1200px;
+  max-width: 900px;
+  max-height: 700px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  margin-inline: auto;
   overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
+    border-radius: inherit;
     object-fit: cover;
   }
 }
 
 .p-page-work__description {
   --padding-inline: 30px;
+
   display: grid;
   grid-template-columns: 1fr;
   gap: 60px;
@@ -57,8 +60,37 @@
 
 .p-page-work__question {
   font-weight: global.$fw-large;
+  line-height: 1.8;
 }
 
 .p-page-work__answer {
   line-height: 1.8;
+
+  a {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right; /* 基点を右側に設定 */
+      transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          transform: scaleX(1);
+          transform-origin: left; /* hover時は基点を左側に */
+          transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+        }
+      }
+    }
+  }
 }

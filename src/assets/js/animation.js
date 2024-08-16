@@ -36,7 +36,8 @@ document.querySelectorAll(".jsfadeIn").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
-      start: "top 90%",
+      // start: "top 90%",
+      start: "top 60%",
       end: "bottom 60%",
       toggleActions: "play none none none",
       // scrub: true,
@@ -54,7 +55,8 @@ document.querySelectorAll(".jsfadeInLeft").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
-      start: "top 90%",
+      // start: "top 90%",
+      start: "top 60%",
       end: "bottom 60%",
       toggleActions: "play none none none",
       // scrub: true,
@@ -72,7 +74,8 @@ document.querySelectorAll(".jsfadeInRight").forEach((element) => {
   gsap.from(element, {
     scrollTrigger: {
       trigger: element,
-      start: "top 90%",
+      // start: "top 90%",
+      start: "top 60%",
       end: "bottom 60%",
       toggleActions: "play none none none",
       // markers: true, // デバッグ用マーカー
@@ -92,7 +95,7 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
     {
       scrollTrigger: {
         trigger: jsScale, // トリガーとなるのは各`.jsScale`要素自身
-        start: "top 80%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
+        start: "top 60%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
         end: "bottom 60%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
         toggleActions: "play none none none", // アニメーションを1回再生して終了
         once: true, // アニメーションを1回限り実行
@@ -135,7 +138,7 @@ document.querySelectorAll(".js-line-animation").forEach((line) => {
     {
       scrollTrigger: {
         trigger: line, // トリガーとなるのは各`.line-animation`要素自身
-        start: "top 90%", // ビューポートの上端から90%の位置でアニメーション開始
+        start: "top 60%", // ビューポートの上端から90%の位置でアニメーション開始
         end: "bottom 60%", // ビューポートの下端から60%の位置でアニメーション終了
         toggleActions: "play none none none",
       },

@@ -446,8 +446,9 @@ body {
 	background: #f5f5f5;
 	color: #000000;
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
+	font-size: 16px;
 	font-weight: 400;
+	letter-spacing: 0.05em;
 	line-height: normal;
 }
 
@@ -502,12 +503,14 @@ a:focus-visible {
 	display: inline;
 	font-family: "Crimson Text", serif;
 	font-size: clamp(2.25rem, 1.4224137931rem + 1.724137931vw, 2.5rem);
+	font-weight: 600;
 	margin-right: 0.2em;
 }
 
 .c-section-heading__ja {
-	display: inline;
-	font-size: clamp(0.75rem, -0.0775862069rem + 1.724137931vw, 1rem);
+	display: inline-block;
+	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
+	font-weight: 500;
 }
 
 .js-line-animation {
@@ -689,22 +692,12 @@ a:focus-visible {
 	width: 100%;
 }
 
-.p-global-nav__link:hover {
-	opacity: 0.5;
-}
-
-.p-global-nav__link:hover::after {
-	opacity: 0.5;
-	transform: scaleX(1);
-	transform-origin: left; /* hover時は基点を左側に */
-	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
-}
-
 .p-menu-button {
 	--background: rgba(255, 255, 255, 0.8);
 	background: var(--background);
-	border-radius: 12px;
-	width: 65px;
+	border-radius: 8px;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
 	-webkit-backdrop-filter: blur(10px) saturate(120%);
 	backdrop-filter: blur(10px) saturate(120%);
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
@@ -740,7 +733,6 @@ a:focus-visible {
 }
 
 .p-drawer__nav {
-	background: gray;
 	background: #ffffff;
 	border-radius: 12px;
 	height: 100%;
@@ -751,7 +743,7 @@ a:focus-visible {
 }
 
 .p-drawer__inner {
-	margin: 0 auto;
+	margin-inline: auto;
 	width: calc(100% - 100px);
 }
 
@@ -764,19 +756,20 @@ a:focus-visible {
 }
 
 .p-drawer__link {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 	line-height: 1;
 }
 
 .p-drawer__link-en {
 	display: inline-block;
 	font-family: "Crimson Text", serif;
-	margin-right: 10px;
+	font-weight: 500;
+	margin-right: 0.125em;
 }
 
 .p-drawer__link-ja {
 	display: inline-block;
-	font-size: 0.625rem;
+	font-size: 1rem;
 }
 
 .p-drawer__sns {
@@ -940,6 +933,10 @@ a:focus-visible {
 	inline-size: fit-content;
 	padding: 4px 14px;
 	transition: all 0.5s ease;
+}
+
+.p-works {
+	overflow: hidden;
 }
 
 .section {
@@ -1323,7 +1320,7 @@ a:focus-visible {
 .p-page-work__content {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: clamp(1.875rem, -2.2629310345rem + 8.6206896552vw, 3.125rem);
 }
 
 .p-page-work__head {
@@ -1333,17 +1330,23 @@ a:focus-visible {
 }
 
 .p-page-work__title {
-	font-size: 1.875rem;
+	font-size: clamp(1.5rem, 0.2586206897rem + 2.5862068966vw, 1.875rem);
+	font-weight: 500;
 }
 
 .p-page-work__img {
-	height: 100%;
-	max-height: 1200px;
+	aspect-ratio: 1/1;
+	border-radius: 8px;
+	height: auto;
+	margin-inline: auto;
+	max-height: 700px;
+	max-width: 900px;
 	overflow: hidden;
 	width: 100%;
 }
 
 .p-page-work__img img {
+	border-radius: inherit;
 	height: 100%;
 	width: 100%;
 	-o-object-fit: cover;
@@ -1365,10 +1368,29 @@ a:focus-visible {
 
 .p-page-work__question {
 	font-weight: 700;
+	line-height: 1.8;
 }
 
 .p-page-work__answer {
 	line-height: 1.8;
+}
+
+.p-page-work__answer a {
+	display: inline-block;
+	position: relative;
+}
+
+.p-page-work__answer a::after {
+	background: currentColor;
+	bottom: -5px;
+	content: "";
+	height: 1px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transform-origin: right; /* 基点を右側に設定 */
+	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+	width: 100%;
 }
 
 .p-archive__category {
@@ -1393,7 +1415,12 @@ a:focus-visible {
 }
 
 .p-page-contact__lead {
-	font-size: 1.625rem;
+	font-size: clamp(1.375rem, 0.5474137931rem + 1.724137931vw, 1.625rem);
+	font-weight: 500;
+}
+
+.p-page-contact__lead span {
+	display: inline-block;
 }
 
 .p-form {
@@ -1622,9 +1649,26 @@ a:focus-visible {
 	transform: scale(1.2);
 }
 
+.p-global-nav__link:hover {
+	opacity: 0.5;
+}
+
+.p-global-nav__link:hover::after {
+	opacity: 0.5;
+	transform: scaleX(1);
+	transform-origin: left; /* hover時は基点を左側に */
+	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+}
+
 .p-portfolio-card__tag:hover {
 	background: #000000;
 	color: #ffffff;
+}
+
+.p-page-work__answer a:hover::after {
+	transform: scaleX(1);
+	transform-origin: left; /* hover時は基点を左側に */
+	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
 }
 
 .wpcf7-submit:hover {
@@ -1670,6 +1714,10 @@ a:focus-visible {
 
 .p-works__btn {
 	margin-inline: 0;
+}
+
+.p-works__btn--tac {
+	margin-inline: auto;
 }
 
 .p-about__container {
@@ -1737,10 +1785,6 @@ a:focus-visible {
 .p-workflow-card__text-box {
 	margin-top: 30px;
 	width: 60%;
-}
-
-.p-page-work__content {
-	gap: 50px;
 }
 
 .p-page-work__description {
@@ -1812,7 +1856,7 @@ a:focus-visible {
 @media screen and (max-width: 375px) {
 
 .p-drawer__inner {
-	width: calc(100% - 40px);
+	width: calc(100% - 30px);
 }
 
 }

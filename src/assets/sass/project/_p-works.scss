@@ -1,8 +1,8 @@
 @use "../global" as global;
 
-// .p-works {
-//   // overflow: hidden;
-// }
+.p-works {
+  overflow: hidden;
+}
 
 // 水平スクロールセクション
 .section {
@@ -86,5 +86,12 @@
 
   @include global.mq(md) {
     margin-inline: 0;
+  }
+}
+
+//single.htmlで使用
+.p-works__btn--tac {
+  @include global.mq(md) {
+    margin-inline: auto;
   }
 }

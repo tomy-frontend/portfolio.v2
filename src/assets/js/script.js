@@ -115,7 +115,7 @@ document
 
 // p-worksの水平スクロール
 const horizontalScroll = gsap.to(".square", {
-  x: -500, // 左に600px移動
+  x: -800, // 左に800px移動
   paused: true, // 最初はアニメーションを止めておく
   ease: "none", // アニメーションの動きを一定にする
 });

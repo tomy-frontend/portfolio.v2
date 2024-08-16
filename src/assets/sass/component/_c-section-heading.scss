@@ -8,13 +8,15 @@
 .c-section-heading__en {
   font-family: global.$ff-en;
   font-size: global.cal-clamp(36, 40);
+  font-weight: global.$fw-bold;
   display: inline;
   margin-right: 0.2em;
 }
 
 .c-section-heading__ja {
-  display: inline;
-  font-size: global.cal-clamp(12, 16);
+  display: inline-block;
+  font-size: global.cal-clamp(14, 16);
+  font-weight: global.$fw-medium;
 }
 
 //jsでアニメーションするための要素

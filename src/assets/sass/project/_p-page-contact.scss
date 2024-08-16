@@ -9,5 +9,10 @@
   gap: 1em;
 }
 .p-page-contact__lead {
-  font-size: global.rem(26);
+  font-size: global.cal-clamp(22, 26);
+  font-weight: global.$fw-medium;
+
+  span {
+    display: inline-block;
+  }
 }
