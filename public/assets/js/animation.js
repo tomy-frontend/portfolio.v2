@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     duration: 1, // 各文字のアニメーションの持続時間
     opacity: 0,
-    y: 50, // 開始時に文字を垂直方向に20ピクセル下から開始
+    y: 50, // 開始時に文字を垂直方向に50ピクセル下から開始
     ease: "power1.out",
     stagger: 0.1, // 各文字のアニメーション開始の間隔
   });

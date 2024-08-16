@@ -7,6 +7,6 @@
 .p-archive__container {
   margin-top: global.cal-clamp(30, 50);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: global.cal-clamp(20, 30);
 }

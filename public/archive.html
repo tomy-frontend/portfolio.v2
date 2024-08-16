@@ -44,21 +44,21 @@
 
 <body>
 	<!-- オリジナルマウスカーソル -->
-	<div id="cursor" class="cursor"></div>
+	<!-- <div id="cursor" class="cursor"></div> -->
 	<!-- オリジナルマウスカーソル -->
 
 	<!-- p-header -->
-	<header class="p-header">
+	<header id="js-header" class="p-header JsHeader">
 		<div class="p-header__inner">
 			<!-- p-header__logo -->
-			<h1 class="p-header__logo">
-				<a href="/"><span class="p-header__logo-text">Web Engineer</span>
+			<h1>
+				<a href="/" class="p-header__logo"><span class="p-header__logo-text">Web Engineer</span>
 					<span class="p-header__logo-title">Tomy Portfolio</span></a>
 			</h1>
 			<!-- p-header__logo -->
 
 			<!-- p-global-nav -->
-			<nav class="p-global-nav">
+			<nav id="js-header-nav" class="p-global-nav" aria-label="グローバルナビゲーション">
 				<ul class="p-global-nav__list">
 					<li class="p-global-nav__item">
 						<a href="#works" class="p-global-nav__link">Works</a>
@@ -91,7 +91,7 @@
 
 	<!-- p-drawer -->
 	<div class="p-drawer js-drawer">
-		<nav class="p-drawer__nav">
+		<nav id="js-drawer-content" class="p-drawer__nav" aria-label="ドロワーナビゲーション">
 			<div class="p-drawer__inner">
 				<ul class="p-drawer__list">
 					<li class="p-drawer__item">
@@ -129,13 +129,13 @@
 					<p class="p-sns-list-text">Follow me</p>
 					<ul class="p-sns-list__list">
 						<li class="p-sns-list__item">
-							<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="富田真光のxアカウント" width="16" height="16" /></a>
+							<a href="https://twitter.com/minichua_dax" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__x.svg" alt="X" width="16" height="16" /></a>
 						</li>
 						<li class="p-sns-list__item">
-							<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="富田真光のnoteアカウント" width="16" height="16" /></a>
+							<a href="https://note.com/dax_sasayaki" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__note.svg" alt="note" width="16" height="16" /></a>
 						</li>
 						<li class="p-sns-list__item">
-							<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="富田真光のwantedlyアカウント" width="16" height="16" /></a>
+							<a href="https://www.wantedly.com/id/tomy_dev" target="_blank" class="p-sns-list__link"><img src="./assets/img/icon/icon__wantedly.svg" alt="wantedly" width="16" height="16" /></a>
 						</li>
 					</ul>
 				</div>
@@ -143,6 +143,8 @@
 		</nav>
 	</div>
 	<!-- p-drawer -->
+	<!-- mask -->
+	<div class="p-drawer-mask js-drawer-mask"></div>
 
 	<main>
 		<!-- p-fv -->
@@ -166,6 +168,10 @@
 						<a href="/" class="p-portfolio-card__tag">LP</a>
 						<a href="/" class="p-portfolio-card__tag">架空サイト</a>
 						<a href="/" class="p-portfolio-card__tag">wordpress</a>
+						<a href="/" class="p-portfolio-card__tag">React</a>
+						<a href="/" class="p-portfolio-card__tag">Next.js</a>
+						<a href="/" class="p-portfolio-card__tag">Micro CMS</a>
+						<a href="/" class="p-portfolio-card__tag">Three.js</a>
 					</div>
 
 					<!-- p-archive__container -->
@@ -174,10 +180,10 @@
 						<div class="p-portfolio-card">
 							<div class="p-portfolio-card__inner">
 								<a href="/" class="p-portfolio-card__img special-link">
-									<img src="./assets/img/portfolio1.png" alt="ポートフォリオの画像" width="2822" height="1434" />
+									<img src="./assets/img/portfolio.png" alt="ポートフォリオの画像" width="2822" height="1434" />
 								</a>
 								<h3 class="p-portfolio-card__title">
-									みなみ歯科クリニック様(架空サイト)
+									みなみ歯科クリニック様
 								</h3>
 								<div class="p-portfolio-card__category">
 									<a href="/" class="p-portfolio-card__tag">自主制作</a>
@@ -193,16 +199,35 @@
 						<div class="p-portfolio-card">
 							<div class="p-portfolio-card__inner">
 								<a href="/" class="p-portfolio-card__img">
-									<img src="./assets/img/portfolio2.png" alt="ポートフォリオの画像" width="2822" height="1434" />
+									<img src="./assets/img/portfolio.png" alt="ポートフォリオの画像" width="2822" height="1434" />
 								</a>
 								<h3 class="p-portfolio-card__title">
-									みなみ歯科クリニック様(架空サイト)
+									みなみ歯科クリニック様
 								</h3>
 								<div class="p-portfolio-card__category">
 									<a href="/" class="p-portfolio-card__tag">自主制作</a>
 									<a href="/" class="p-portfolio-card__tag">LP</a>
 									<a href="/" class="p-portfolio-card__tag">架空サイト</a>
 									<a href="/" class="p-portfolio-card__tag">架空サイト</a>
+									<a href="/" class="p-portfolio-card__tag">wordpress</a>
+									<a href="/" class="p-portfolio-card__tag">React</a>
+									<a href="/" class="p-portfolio-card__tag">Next.js</a>
+								</div>
+							</div>
+						</div>
+						<!-- p-portfolio-card__card -->
+						<!-- p-portfolio-card__card -->
+						<div class="p-portfolio-card">
+							<div class="p-portfolio-card__inner">
+								<a href="/" class="p-portfolio-card__img">
+									<img src="./assets/img/portfolio.png" alt="ポートフォリオの画像" width="2822" height="1434" />
+								</a>
+								<h3 class="p-portfolio-card__title">
+									みなみ歯科クリニック様
+								</h3>
+								<div class="p-portfolio-card__category">
+									<a href="/" class="p-portfolio-card__tag">自主制作</a>
+									<a href="/" class="p-portfolio-card__tag">LP</a>
 									<a href="/" class="p-portfolio-card__tag">wordpress</a>
 								</div>
 							</div>
@@ -212,27 +237,10 @@
 						<div class="p-portfolio-card">
 							<div class="p-portfolio-card__inner">
 								<a href="/" class="p-portfolio-card__img">
-									<img src="./assets/img/portfolio2.png" alt="ポートフォリオの画像" width="2822" height="1434" />
+									<img src="./assets/img/portfolio.png" alt="ポートフォリオの画像" width="2822" height="1434" />
 								</a>
 								<h3 class="p-portfolio-card__title">
-									みなみ歯科クリニック様(架空サイト)
-								</h3>
-								<div class="p-portfolio-card__category">
-									<a href="/" class="p-portfolio-card__tag">自主制作</a>
-									<a href="/" class="p-portfolio-card__tag">LP</a>
-									<a href="/" class="p-portfolio-card__tag">wordpress</a>
-								</div>
-							</div>
-						</div>
-						<!-- p-portfolio-card__card -->
-						<!-- p-portfolio-card__card -->
-						<div class="p-portfolio-card">
-							<div class="p-portfolio-card__inner">
-								<a href="/" class="p-portfolio-card__img">
-									<img src="./assets/img/portfolio2.png" alt="ポートフォリオの画像" width="2822" height="1434" />
-								</a>
-								<h3 class="p-portfolio-card__title">
-									みなみ歯科クリニック様(架空サイト)
+									みなみ歯科クリニック様
 								</h3>
 								<div class="p-portfolio-card__category">
 									<a href="/" class="p-portfolio-card__tag">自主制作</a>

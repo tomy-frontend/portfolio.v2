@@ -880,14 +880,21 @@ a:focus-visible {
 .p-portfolio-card__img {
 	aspect-ratio: 1/1;
 	border-radius: 8px;
-	height: 55vh;
+	height: auto;
 	outline: 1px solid #bdbdbd;
 	overflow: hidden;
 	position: relative;
+	width: 100%;
 }
 
 .p-portfolio-card__img img {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: top;
 	border-radius: inherit;
+	object-position: top;
 	transform-origin: center top;
 	transition: all 0.5s ease;
 }
@@ -912,7 +919,7 @@ a:focus-visible {
 }
 
 .p-portfolio-card__title {
-	font-size: 1.25rem;
+	font-size: clamp(1.125rem, 0.7112068966rem + 0.8620689655vw, 1.25rem);
 	margin-top: 1.5em;
 }
 
@@ -927,7 +934,8 @@ a:focus-visible {
 	background: #ffffff;
 	border: 1px solid #000000;
 	border-radius: 1em;
-	font-size: 0.875rem;
+	font-size: clamp(0.75rem, 0.3362068966rem + 0.8620689655vw, 0.875rem);
+	font-weight: 500;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
 	padding: 4px 14px;
@@ -1343,7 +1351,7 @@ a:focus-visible {
 .p-archive__container {
 	display: grid;
 	gap: clamp(1.25rem, -0.8189655172rem + 4.3103448276vw, 1.875rem);
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin-top: clamp(1.875rem, -2.2629310345rem + 8.6206896552vw, 3.125rem);
 }
 
@@ -1615,10 +1623,6 @@ a:focus-visible {
 
 .p-menu-button {
 	display: none;
-}
-
-.p-portfolio-card__img {
-	height: 60vh;
 }
 
 .p-works__container {
