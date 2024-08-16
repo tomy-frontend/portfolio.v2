@@ -524,7 +524,7 @@ a:focus-visible {
 .c-btn {
 	border: 2px solid #000000;
 	border-radius: 1rem;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	display: block;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
@@ -567,31 +567,6 @@ a:focus-visible {
 	transform: translate(-8%, -50%) rotate(-10.066deg);
 	width: 175.295px;
 	z-index: 2;
-}
-
-.cursor {
-	border-radius: 3px;
-	height: 30px;
-	left: -55px;
-	opacity: 0;
-	pointer-events: none;
-	position: fixed;
-	top: -25px;
-	transform: translate(-50%, -50%);
-	transition: transform 0.3s linear, opacity 0.3s ease-in-out;
-	visibility: hidden;
-	width: 100px;
-	z-index: 1000;
-}
-
-.cursor--hover {
-	background: url(../img/icon/View-more-cursor.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	opacity: 1;
-	transform: translate(0, 0);
-	visibility: visible;
 }
 
 .c-btn-top {
@@ -651,7 +626,7 @@ a:focus-visible {
 	padding: 5.25px 20px;
 	-webkit-backdrop-filter: blur(10px) saturate(120%);
 	backdrop-filter: blur(10px) saturate(120%);
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	transition: all 0.5s ease;
 }
 
@@ -678,7 +653,7 @@ a:focus-visible {
 	padding: 20px 35px;
 	-webkit-backdrop-filter: blur(10px) saturate(120%);
 	backdrop-filter: blur(10px) saturate(120%);
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	display: none;
 	visibility: hidden;
 }
@@ -726,16 +701,19 @@ a:focus-visible {
 }
 
 .p-menu-button {
-	background: rgba(255, 255, 255, 0.8);
+	--background: rgba(255, 255, 255, 0.8);
+	background: var(--background);
 	border-radius: 12px;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+	width: 65px;
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	backdrop-filter: blur(10px) saturate(120%);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	color: #000000;
 	font-family: "Crimson Text", serif;
 	font-size: 0.9375rem;
 	letter-spacing: 2px;
 	padding: 7px 13px;
 	transition: all 0.5s ease;
-	width: 65px;
 }
 
 .p-menu-button.is-open {
@@ -1047,7 +1025,7 @@ a:focus-visible {
 	-o-object-fit: cover;
 	object-fit: cover;
 	-o-object-position: top;
-	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
 	object-position: top;
 	transition: all 0.5s ease;
 }
@@ -1148,14 +1126,17 @@ a:focus-visible {
 }
 
 .p-skills__container {
-	background: rgba(255, 255, 255, 0.8);
+	--background: rgba(255, 255, 255, 0.8);
+	background: var(--background);
 	border-radius: 1em;
-	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.25);
 	display: flex;
 	flex-direction: column;
 	margin-top: 1em;
 	padding: 1em;
 	position: relative;
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	backdrop-filter: blur(10px) saturate(120%);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 }
 
 .p-skills__box {
@@ -1191,9 +1172,12 @@ a:focus-visible {
 }
 
 .p-service-card {
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 50px 0px;
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+	--background: rgba(255, 255, 255, 0.8);
+	background: var(--background);
+	border-radius: 2em 0px;
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	backdrop-filter: blur(10px) saturate(120%);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 }
 
 .p-service-card__inner {
@@ -1270,7 +1254,7 @@ a:focus-visible {
 }
 
 .p-workflow-card__img {
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
 	width: 100%;
 }
@@ -1410,7 +1394,6 @@ a:focus-visible {
 .p-form select:focus-visible,
 .p-form input[type=checkbox]:focus-visible,
 .p-form input[type=submit]:focus-visible {
-	outline: 1px solid #000000;
 	outline-offset: 2px;
 }
 
@@ -1451,6 +1434,7 @@ a:focus-visible {
 .p-form__field-item select {
 	font-size: 1em;
 	padding-block: 1em;
+	padding-left: 0.5em;
 	padding-right: 16px;
 	width: 100%;
 }
@@ -1462,6 +1446,7 @@ a:focus-visible {
 
 .p-form__field-item input {
 	padding-block: 1em;
+	padding-left: 0.5em;
 	padding-right: 1em;
 }
 
@@ -1520,7 +1505,7 @@ a:focus-visible {
 .wpcf7-submit {
 	border: 2px solid #000000;
 	border-radius: 1em;
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
 	padding: 9px 50px 9px 50px;
