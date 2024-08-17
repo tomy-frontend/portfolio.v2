@@ -19,18 +19,18 @@
     gap: 100px;
   }
 }
+
 .p-about__img {
   position: relative;
   margin-inline: auto;
   width: 100%;
   height: auto;
   max-width: 550px;
-  max-height: 632px;
-  aspect-ratio: 16 / 24;
+  max-height: global.cal-clamp(550, 700);
+  aspect-ratio: 9 / 16;
 
   @include global.mq(md) {
     width: 50%;
-    max-height: none;
   }
 
   img {
@@ -42,24 +42,19 @@
     transition: global.$transition-default;
   }
 
+  //無限回転デコレーション文字
   &::after {
     position: absolute;
     content: "";
-    top: 0;
-    right: 0;
-    width: 130px;
-    height: 130px;
+    inset: 0;
+    width: global.cal-clamp(130, 183);
+    height: global.cal-clamp(130, 183);
     transform: translate(30%, -50%);
     background: url(../img/icon/p-about-deco.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     animation: rotate 15s linear infinite;
-
-    @include global.mq(md) {
-      width: 183px;
-      height: 183px;
-    }
   }
 }
 

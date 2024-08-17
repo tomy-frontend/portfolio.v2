@@ -25,9 +25,8 @@ body {
   font-weight: global.$fw-base;
   line-height: global.$lh-base;
   letter-spacing: 0.05em;
-  background: global.$gray; //視認性の為仮
   background: #f5f5f5;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 img {

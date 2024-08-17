@@ -442,14 +442,14 @@ th {
 }
 
 body {
-	background: #bdbdbd;
 	background: #f5f5f5;
-	color: #000000;
+	color: #1d1d1d;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.05em;
 	line-height: normal;
+	overflow-x: hidden;
 }
 
 img {
@@ -514,7 +514,7 @@ a:focus-visible {
 }
 
 .js-line-animation {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	bottom: 0;
 	content: "";
 	height: 1px;
@@ -525,7 +525,7 @@ a:focus-visible {
 }
 
 .c-btn {
-	border: 2px solid #000000;
+	border: 2px solid #1d1d1d;
 	border-radius: 1rem;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	display: block;
@@ -701,7 +701,7 @@ a:focus-visible {
 	-webkit-backdrop-filter: blur(10px) saturate(120%);
 	backdrop-filter: blur(10px) saturate(120%);
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
-	color: #000000;
+	color: #1d1d1d;
 	font-family: "Crimson Text", serif;
 	font-size: 0.9375rem;
 	letter-spacing: 2px;
@@ -710,7 +710,7 @@ a:focus-visible {
 }
 
 .p-menu-button.is-open {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	color: #ffffff;
 }
 
@@ -748,7 +748,7 @@ a:focus-visible {
 }
 
 .p-drawer__list {
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #1d1d1d;
 	display: flex;
 	flex-direction: column;
 	gap: 1.2em;
@@ -803,7 +803,7 @@ a:focus-visible {
 }
 
 .p-sns-list-text {
-	color: #000000;
+	color: #1d1d1d;
 	font-family: "Crimson Text", serif;
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -925,7 +925,7 @@ a:focus-visible {
 
 .p-portfolio-card__tag {
 	background: #ffffff;
-	border: 1px solid #000000;
+	border: 1px solid #1d1d1d;
 	border-radius: 1em;
 	font-size: clamp(0.75rem, 0.3362068966rem + 0.8620689655vw, 0.875rem);
 	font-weight: 500;
@@ -1035,10 +1035,10 @@ a:focus-visible {
 }
 
 .p-about__img {
-	aspect-ratio: 16/24;
+	aspect-ratio: 9/16;
 	height: auto;
 	margin-inline: auto;
-	max-height: 632px;
+	max-height: clamp(34.375rem, 3.3405172414rem + 64.6551724138vw, 43.75rem);
 	max-width: 550px;
 	position: relative;
 	width: 100%;
@@ -1062,12 +1062,11 @@ a:focus-visible {
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
-	height: 130px;
+	height: clamp(8.125rem, -2.8405172414rem + 22.8448275862vw, 11.4375rem);
+	inset: 0;
 	position: absolute;
-	right: 0;
-	top: 0;
 	transform: translate(30%, -50%);
-	width: 130px;
+	width: clamp(8.125rem, -2.8405172414rem + 22.8448275862vw, 11.4375rem);
 }
 
 .p-about__name-box {
@@ -1294,7 +1293,7 @@ a:focus-visible {
 
 .p-workflow-card__tag {
 	background: #ffffff;
-	border: 1px solid #000000;
+	border: 1px solid #1d1d1d;
 	border-radius: 16px;
 	font-family: "Crimson Text", serif;
 	font-size: 0.875rem;
@@ -1541,7 +1540,7 @@ a:focus-visible {
 }
 
 .wpcf7-submit {
-	border: 2px solid #000000;
+	border: 2px solid #1d1d1d;
 	border-radius: 1em;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	inline-size: -moz-fit-content;
@@ -1633,7 +1632,7 @@ a:focus-visible {
 @media (any-hover: hover) {
 
 .c-btn:hover {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	box-shadow: none;
 	color: #ffffff;
 }
@@ -1661,7 +1660,7 @@ a:focus-visible {
 }
 
 .p-portfolio-card__tag:hover {
-	background: #000000;
+	background: #1d1d1d;
 	color: #ffffff;
 }
 
@@ -1672,7 +1671,7 @@ a:focus-visible {
 }
 
 .wpcf7-submit:hover {
-	background-color: #000000;
+	background-color: #1d1d1d;
 	box-shadow: none;
 	color: #ffffff;
 }
@@ -1726,13 +1725,7 @@ a:focus-visible {
 }
 
 .p-about__img {
-	max-height: none;
 	width: 50%;
-}
-
-.p-about__img::after {
-	height: 183px;
-	width: 183px;
 }
 
 .p-about__text-box {
