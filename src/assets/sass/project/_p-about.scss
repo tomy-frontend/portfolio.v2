@@ -82,6 +82,11 @@
   font-family: global.$ff-en;
   font-size: global.cal-clamp(14, 16);
   line-height: 1;
+
+  background: linear-gradient(-45deg, #2af598, #3640d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .p-about__name-ja {

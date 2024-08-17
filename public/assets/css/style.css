@@ -530,6 +530,8 @@ a:focus-visible {
 }
 
 .c-btn {
+	--background: rgba(255, 255, 255, 0.8);
+	background: var(--background);
 	border: 2px solid #1d1d1d;
 	border-radius: 1rem;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
@@ -539,6 +541,8 @@ a:focus-visible {
 	padding: 9px 50px 9px 23px;
 	position: relative;
 	transition: all 0.5s ease;
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	backdrop-filter: blur(10px) saturate(120%);
 }
 
 .c-btn::after {
@@ -649,6 +653,10 @@ a:focus-visible {
 	flex-direction: row;
 	gap: 0.8em;
 	line-height: 1;
+}
+
+.p-sns-list__link {
+	transition: all 0.5s ease;
 }
 
 .p-sns-list__link img {
@@ -934,7 +942,7 @@ a:focus-visible {
 }
 
 .p-fv__lead span {
-	background: linear-gradient(-45deg, #2af598, #009efd);
+	background: linear-gradient(-45deg, #2af598, #3640d0);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -1172,10 +1180,14 @@ a:focus-visible {
 }
 
 .p-about__job {
+	background: linear-gradient(-45deg, #2af598, #3640d0);
 	display: inline-block;
 	font-family: "Crimson Text", serif;
 	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
 	line-height: 1;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
 .p-about__name-ja {
@@ -1760,6 +1772,10 @@ details[open] .p-faq__a {
 
 .c-btn-top a:hover {
 	transform: scale(1.2);
+}
+
+.p-sns-list__link:hover {
+	opacity: 0.5;
 }
 
 .p-global-nav__link:hover {
