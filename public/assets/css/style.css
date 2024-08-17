@@ -456,7 +456,7 @@ a:focus {
 }
 
 a:focus-visible {
-	outline: 2px solid #d4befe;
+	outline: 2px solid #3640d0;
 	outline-offset: 2px;
 }
 
@@ -1416,13 +1416,14 @@ a:focus-visible {
 }
 
 .p-faq__container {
+	--content-width: 800px;
 	margin-inline: auto;
-	max-width: 800px;
+	max-width: var(--content-width);
 }
 
 details {
 	border-bottom: 1px solid #bdbdbd;
-	padding-block: 2.5em;
+	padding-block: 1.5em;
 }
 
 details summary {
@@ -1432,20 +1433,47 @@ details summary {
 	font-weight: 500;
 	gap: 2%;
 	grid-template-columns: 5% 1fr 5%;
-}
-
-details[open] summary {
-	padding-bottom: 1em;
-}
-
-details[open] summary .p-faq__icon {
-	transform: rotate(45deg);
+	padding-block: 1em;
+	transition: all 0.5s ease;
 }
 
 .p-faq__a {
 	display: grid;
 	gap: 2%;
 	grid-template-columns: 5% 1fr 5%;
+	height: 0;
+	line-height: 1.8;
+	overflow: hidden;
+}
+
+.p-faq__a a {
+	border-bottom: 1px solid;
+	color: #3640d0;
+	display: inline-block;
+	font-weight: 500;
+	padding-bottom: 0.1em;
+	padding-right: 1em;
+	position: relative;
+	transition: all 0.5s ease;
+}
+
+.p-faq__a a::before {
+	background: url(../img/icon/icon-link.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 0.7em;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0.7em;
+}
+
+details[open] .p-faq__a {
+	height: auto;
+	transition: height 0.3s ease;
 }
 
 .p-faq__head-icon {
@@ -1460,6 +1488,8 @@ details[open] summary .p-faq__icon {
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
 	justify-self: center;
+	transform: rotate(90deg);
+	transition: all 0.3s ease;
 }
 
 .p-page-work__content {
@@ -1754,6 +1784,14 @@ details[open] summary .p-faq__icon {
 .p-portfolio-card-tag:hover {
 	background: #1d1d1d;
 	color: #ffffff;
+}
+
+details summary:hover {
+	gap: 3%;
+}
+
+.p-faq__a a:hover {
+	opacity: 0.6;
 }
 
 .p-page-work__answer a:hover::after {

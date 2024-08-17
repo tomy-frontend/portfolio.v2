@@ -10,13 +10,15 @@
 }
 
 .p-faq__container {
+  --content-width: 800px;
+
   margin-inline: auto;
-  max-width: 800px;
+  max-width: var(--content-width);
 }
 
 details {
   border-bottom: 1px solid global.$gray;
-  padding-block: 2.5em;
+  padding-block: 1.5em;
 }
 
 details summary {
@@ -26,21 +28,68 @@ details summary {
   gap: 2%;
   align-items: center;
   font-weight: global.$fw-medium;
+  padding-block: 1em;
+  transition: global.$transition-default;
+
+  @media (any-hover: hover) {
+    &:hover {
+      gap: 3%;
+    }
+  }
 }
 
 //detailsが開いている時の処理
-details[open] summary {
-  padding-bottom: 1em;
+// details[open] summary {
 
-  .p-faq__icon {
-    transform: rotate(45deg);
-  }
-}
+// }
 
 .p-faq__a {
   display: grid;
   grid-template-columns: 5% 1fr 5%;
   gap: 2%;
+  line-height: 1.8;
+
+  //最初は非表示
+  overflow: hidden;
+  height: 0;
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: global.$main-color;
+    font-weight: global.$fw-medium;
+    padding-bottom: 0.1em;
+    padding-right: 1em;
+    border-bottom: 1px solid;
+    transition: global.$transition-default;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    //icon-link
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 0;
+      width: 0.7em;
+      height: 0.7em;
+      transform: translateY(-50%);
+      background: url(../img/icon/icon-link.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+//detailsが開いている時の処理
+details[open] .p-faq__a {
+  height: auto;
+  transition: height 0.3s ease;
 }
 
 .p-faq__head-icon {
@@ -54,4 +103,6 @@ details[open] summary {
   font-size: global.rem(20);
   inline-size: fit-content;
   justify-self: center;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
 }

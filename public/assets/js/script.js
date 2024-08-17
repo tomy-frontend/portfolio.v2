@@ -151,3 +151,39 @@ for (var i = 0; i < specialLinks.length; i++) {
     cursor.classList.remove("cursor--hover");
   });
 }
+
+//detailsのアコーディオンの滑らかな開閉
+document.querySelectorAll("details").forEach((detail) => {
+  const summary = detail.querySelector("summary");
+  const content = detail.querySelector(".p-faq__a");
+  const icon = detail.querySelector(".p-faq__icon");
+
+  summary.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if (detail.hasAttribute("open")) {
+      // 閉じるアニメーション
+      content.style.height = content.scrollHeight + "px";
+      icon.style.transform = "rotate(90deg)";
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+        content.addEventListener(
+          "transitionend",
+          () => {
+            detail.removeAttribute("open");
+          },
+          { once: true }
+        );
+      });
+    } else {
+      // 開くアニメーション
+      detail.setAttribute("open", "");
+      const height = content.scrollHeight;
+      content.style.height = "0px";
+      icon.style.transform = "rotate(45deg)";
+      requestAnimationFrame(() => {
+        content.style.height = height + "px";
+      });
+    }
+  });
+});
