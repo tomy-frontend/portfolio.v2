@@ -5,6 +5,7 @@
   font-size: global.rem(18);
   font-weight: global.$fw-large;
   line-height: 2;
+  word-break: keep-all;
 }
 
 .p-message__text {

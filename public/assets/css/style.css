@@ -1105,6 +1105,7 @@ a:focus-visible {
 	font-weight: 700;
 	line-height: 2;
 	margin-top: 2em;
+	word-break: keep-all;
 }
 
 .p-message__text {
@@ -1231,6 +1232,10 @@ a:focus-visible {
 	margin-top: 2.5em;
 }
 
+.p-about__sns {
+	margin-top: 1.875em;
+}
+
 .p-skills {
 	margin-top: 3.75em;
 }
@@ -1349,6 +1354,7 @@ a:focus-visible {
 
 .p-contact__text {
 	line-height: 1.8;
+	word-break: keep-all;
 }
 
 .p-workflow__text {
