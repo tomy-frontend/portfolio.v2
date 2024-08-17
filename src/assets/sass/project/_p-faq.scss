@@ -1,0 +1,57 @@
+@use "../global" as global;
+
+.p-faq {
+  padding-top: 150px;
+  padding-bottom: 70px;
+
+  .c-section-heading {
+    margin-inline: auto;
+  }
+}
+
+.p-faq__container {
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+details {
+  border-bottom: 1px solid global.$gray;
+  padding-block: 2.5em;
+}
+
+details summary {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  gap: 2%;
+  align-items: center;
+  font-weight: global.$fw-medium;
+}
+
+//detailsが開いている時の処理
+details[open] summary {
+  padding-bottom: 1em;
+
+  .p-faq__icon {
+    transform: rotate(45deg);
+  }
+}
+
+.p-faq__a {
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  gap: 2%;
+}
+
+.p-faq__head-icon {
+  font-family: global.$ff-en;
+  font-size: global.rem(20);
+  font-weight: global.$fw-medium;
+  justify-self: center;
+}
+
+.p-faq__icon {
+  font-size: global.rem(20);
+  inline-size: fit-content;
+  justify-self: center;
+}

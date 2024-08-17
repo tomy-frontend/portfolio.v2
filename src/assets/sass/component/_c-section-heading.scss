@@ -3,13 +3,13 @@
 .c-section-heading {
   position: relative;
   inline-size: fit-content;
-  margin-right: auto;
+  max-width: fit-content;
 }
 .c-section-heading__en {
   font-family: global.$ff-en;
   font-size: global.cal-clamp(36, 40);
   font-weight: global.$fw-bold;
-  display: inline;
+  display: inline-block;
   margin-right: 0.2em;
 }
 

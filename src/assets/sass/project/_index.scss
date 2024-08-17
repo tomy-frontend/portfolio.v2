@@ -1,12 +1,15 @@
+// common
+@forward "p-sns-list";
+@forward "p-section-bg";
+
 // header
 @forward "p-header";
 @forward "p-global-nav";
 @forward "p-menu-button";
 @forward "p-drawer";
 
-// common
-@forward "p-sns-list";
-@forward "p-section-bg";
+// footer
+@forward "p-footer";
 
 // main
 @forward "p-fv";
@@ -20,10 +23,12 @@
 @forward "p-contact";
 @forward "p-workflow";
 @forward "p-workflow-card";
+@forward "p-faq";
+
+//page-work
 @forward "p-page-work";
 @forward "p-archive";
+
+//page-contact
 @forward "p-page-contact";
 @forward "p-form";
-
-// footer
-@forward "p-footer";

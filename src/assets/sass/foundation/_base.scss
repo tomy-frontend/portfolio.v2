@@ -1,23 +1,5 @@
 @use "../global" as global;
 
-// CSS変数
-:root {
-  --base-color: #ff9595;
-  --primary-color: #ff9595;
-  --secondary-color: #ffffff;
-  --accent-color: #ffd700;
-  --text-color-black: #000000;
-  --text-color--white: #ffffff;
-  --gray: #bdbdbd;
-  --red: #f00;
-
-  @include global.mq(md) {
-    --primary-color: #000000; //ブレイクポイントで変数の値を変えることができる
-    --text-color-black: #ffffff;
-    --text-color-white: #000000;
-  }
-}
-
 body {
   color: global.$text-color-black;
   font-family: global.$ff-base;
@@ -45,5 +27,20 @@ a {
   &:focus-visible {
     outline: 2px solid global.$main-color;
     outline-offset: 2px;
+  }
+}
+
+// 背景動画
+.video-background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

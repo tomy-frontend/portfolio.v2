@@ -43,9 +43,16 @@
 </head>
 
 <body>
-	<!-- オリジナルマウスカーソル -->
-	<!-- <div id="cursor" class="cursor"></div> -->
-	<!-- オリジナルマウスカーソル -->
+	<!-- 背景動画 -->
+	<div class="video-background">
+		<video autoplay loop muted playsinline>
+			<source src="./assets/img/body_bg.mp4" type="video/mp4" />
+			<track kind="captions" src="captions_ja.vtt" srclang="ja" label="日本語" />
+			<!-- 動画が再生できない場合のフォールバック -->
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<!-- 背景動画 -->
 
 	<!-- p-header -->
 	<header class="p-header">
@@ -153,7 +160,9 @@
 			</div>
 		</div>
 		<!-- p-fv -->
-		<section class="p-page-work l-section-padding p-section-bg">
+
+		<!-- 投稿コンテンツ -->
+		<article class="p-page-work l-section-padding p-section-bg">
 			<div class="p-page-work__inner l-inner">
 				<!-- p-page-work__content -->
 				<div class="p-page-work__content">
@@ -161,11 +170,9 @@
 					<div class="p-page-work__head">
 						<h2 class="p-page-work__title">歯科クリニックWordPressサイト</h2>
 						<div class="p-portfolio-card__category">
-							<a href="/" class="p-portfolio-card__tag">自主制作</a>
-							<a href="/" class="p-portfolio-card__tag">LP</a>
-							<a href="/" class="p-portfolio-card__tag">架空サイト</a>
-							<a href="/" class="p-portfolio-card__tag">架空サイト</a>
-							<a href="/" class="p-portfolio-card__tag">wordpress</a>
+							<span class="p-portfolio-card__tag">LP</span>
+							<span class="p-portfolio-card__tag">架空サイト</span>
+							<span class="p-portfolio-card__tag">wordpress</span>
 						</div>
 					</div>
 					<!-- p-page-work__head -->
@@ -214,12 +221,14 @@
 					</div>
 					<!-- p-page-work__body -->
 					<div class="p-works__btn p-works__btn--tac">
-						<a href="/" class="c-btn">All Works</a>
+						<a href="./archive.html" class="c-btn">All Works</a>
 					</div>
 				</div>
 			</div>
 			<!-- p-page-work__content -->
-		</section>
+		</article>
+		<!-- 投稿コンテンツ -->
+
 		<!-- contact -->
 		<section id="contact" class="p-contact l-section-padding l-section-padding--lg">
 			<div class="p-contact__inner l-inner">

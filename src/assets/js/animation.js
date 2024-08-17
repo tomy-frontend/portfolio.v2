@@ -50,6 +50,25 @@ document.querySelectorAll(".jsfadeIn").forEach((element) => {
   });
 });
 
+// 下からフェードイン index.html works専用
+document.querySelectorAll(".jsfadeInWork").forEach((element) => {
+  gsap.from(element, {
+    scrollTrigger: {
+      trigger: element,
+      start: "top 90%", //works用に調整
+      // start: "top 60%",
+      end: "bottom 60%",
+      toggleActions: "play none none none",
+      // scrub: true,
+      // markers: true, // デバッグ用マーカー
+    },
+    duration: 1,
+    opacity: 0,
+    y: 50,
+    ease: "power1.out",
+  });
+});
+
 // 左からフェードイン
 document.querySelectorAll(".jsfadeInLeft").forEach((element) => {
   gsap.from(element, {
@@ -105,27 +124,6 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
       opacity: 1, // 最終的な透明度は1
       ease: "power1.out", // アニメーションのイージングを滑らかにする
       duration: 2.0, // アニメーションの持続時間を1.5秒に設定
-    }
-  );
-});
-
-// blurアニメーション
-document.querySelectorAll(".jsBlur").forEach((jsBlur) => {
-  gsap.fromTo(
-    jsBlur,
-    { filter: "blur(15px)", opacity: 0 }, // 初期状態はblur(15px)で透明度は0
-    {
-      scrollTrigger: {
-        trigger: jsBlur, // トリガーとなるのは各`.jsBlur`要素自身
-        start: "top 80%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
-        end: "bottom 60%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
-        toggleActions: "play none none none", // アニメーションを1回再生して終了
-        once: true, // アニメーションを1回限り実行
-      },
-      filter: "blur(0)", // 最終的にblur(0)にする
-      opacity: 1, // 最終的な透明度は1
-      ease: "power1.out", // アニメーションのイージングを滑らかにする
-      duration: 2.0, // アニメーションの持続時間を2秒に設定
     }
   );
 });

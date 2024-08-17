@@ -78,6 +78,10 @@
     <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
+    <!-- オリジナルマウスカーソル -->
+    <div id="cursor" class="cursor"></div>
+    <!-- オリジナルマウスカーソル -->
+
     <!-- 背景動画 -->
     <div class="video-background">
       <video autoplay loop muted playsinline>
@@ -93,6 +97,7 @@
       </video>
     </div>
     <!-- 背景動画 -->
+
     <!-- p-header -->
     <header id="js-header" class="p-header JsHeader">
       <div class="p-header__inner">
@@ -248,7 +253,7 @@
             <!-- p-works__content -->
             <div class="p-works__content">
               <!-- c-section-heading -->
-              <div class="c-section-heading jsfadeIn">
+              <div class="c-section-heading jsfadeInWork">
                 <h2 class="c-section-heading__en">Works</h2>
                 <p class="c-section-heading__ja">制作実績</p>
                 <span class="js-line-animation"></span>
@@ -256,7 +261,7 @@
               <!-- c-section-heading -->
 
               <!-- p-works__text-box スマホのみ -->
-              <div class="p-works__text-box jsfadeIn">
+              <div class="p-works__text-box jsfadeInWork">
                 <p>私の過去制作実績でございます。</p>
                 <p>
                   作品ページでは制作に関して工夫したポイント・苦労したポイント、
@@ -281,7 +286,7 @@
               <div id="squares" class="section">
                 <div class="container">
                   <!-- 左側 -->
-                  <div class="left jsfadeIn">
+                  <div class="left jsfadeInWork">
                     <p>私の過去制作実績でございます。</p>
                     <p>
                       作品ページでは制作に関して工夫したポイント・苦労したポイント、
@@ -301,102 +306,81 @@
                   </div>
                   <!-- 左側 -->
                   <!-- 右側 -->
-                  <div class="right jsfadeIn">
+                  <div class="right jsfadeInWork">
                     <!-- p-portfolio-card__card -->
-                    <div class="p-portfolio-card square">
-                      <div class="p-portfolio-card__inner">
-                        <a href="./single.html" class="p-portfolio-card__img">
-                          <img
-                            src="./assets/img/portfolio.png"
-                            alt="ポートフォリオの画像"
-                            width="2822"
-                            height="1434"
-                          />
-                        </a>
-                        <h3 class="p-portfolio-card__title">
-                          みなみ歯科クリニック様
-                        </h3>
-                        <div class="p-portfolio-card__category">
-                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
-                          <a href="/" class="p-portfolio-card__tag">LP</a>
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >wordpress</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag">React</a>
-                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
-                        </div>
+                    <a
+                      href="./single.html"
+                      class="p-portfolio-card square special-link"
+                    >
+                      <div class="p-portfolio-card__img">
+                        <img
+                          src="./assets/img/portfolio.png"
+                          alt="ポートフォリオの画像"
+                          width="2822"
+                          height="1434"
+                        />
                       </div>
-                    </div>
-                    <!-- p-portfolio-card__card -->
-                    <!-- p-portfolio-card__card -->
-                    <div class="p-portfolio-card square">
-                      <div class="p-portfolio-card__inner">
-                        <a href="./single.html" class="p-portfolio-card__img">
-                          <img
-                            src="./assets/img/portfolio.png"
-                            alt="ポートフォリオの画像"
-                            width="2822"
-                            height="1434"
-                          />
-                        </a>
-                        <h3 class="p-portfolio-card__title">
-                          みなみ歯科クリニック様
-                        </h3>
-                        <div class="p-portfolio-card__category">
-                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
-                          <a href="/" class="p-portfolio-card__tag">LP</a>
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >wordpress</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag">React</a>
-                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
-                        </div>
+                      <h3 class="p-portfolio-card__title">
+                        みなみ歯科クリニック様
+                      </h3>
+                      <div class="p-portfolio-card__category">
+                        <span class="p-portfolio-card__tag">LP</span>
+                        <span class="p-portfolio-card__tag">架空サイト</span>
+                        <span class="p-portfolio-card__tag">wordpress</span>
+                        <span class="p-portfolio-card__tag">React</span>
+                        <span class="p-portfolio-card__tag">Next.js</span>
                       </div>
-                    </div>
+                    </a>
                     <!-- p-portfolio-card__card -->
                     <!-- p-portfolio-card__card -->
-                    <div class="p-portfolio-card square">
-                      <div class="p-portfolio-card__inner">
-                        <a href="./single.html" class="p-portfolio-card__img">
-                          <img
-                            src="./assets/img/portfolio.png"
-                            alt="ポートフォリオの画像"
-                            width="2822"
-                            height="1434"
-                          />
-                        </a>
-                        <h3 class="p-portfolio-card__title">
-                          みなみ歯科クリニック様
-                        </h3>
-                        <div class="p-portfolio-card__category">
-                          <a href="/" class="p-portfolio-card__tag">自主制作</a>
-                          <a href="/" class="p-portfolio-card__tag">LP</a>
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >架空サイト</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag"
-                            >wordpress</a
-                          >
-                          <a href="/" class="p-portfolio-card__tag">React</a>
-                          <a href="/" class="p-portfolio-card__tag">Next.js</a>
-                        </div>
+                    <a
+                      href="./single.html"
+                      class="p-portfolio-card square special-link"
+                    >
+                      <div class="p-portfolio-card__img">
+                        <img
+                          src="./assets/img/portfolio.png"
+                          alt="ポートフォリオの画像"
+                          width="2822"
+                          height="1434"
+                        />
                       </div>
-                    </div>
+                      <h3 class="p-portfolio-card__title">
+                        みなみ歯科クリニック様
+                      </h3>
+                      <div class="p-portfolio-card__category">
+                        <span class="p-portfolio-card__tag">LP</span>
+                        <span class="p-portfolio-card__tag">架空サイト</span>
+                        <span class="p-portfolio-card__tag">wordpress</span>
+                        <span class="p-portfolio-card__tag">React</span>
+                        <span class="p-portfolio-card__tag">Next.js</span>
+                      </div>
+                    </a>
+                    <!-- p-portfolio-card__card -->
+                    <!-- p-portfolio-card__card -->
+                    <a
+                      href="./single.html"
+                      class="p-portfolio-card square special-link"
+                    >
+                      <div class="p-portfolio-card__img">
+                        <img
+                          src="./assets/img/portfolio.png"
+                          alt="ポートフォリオの画像"
+                          width="2822"
+                          height="1434"
+                        />
+                      </div>
+                      <h3 class="p-portfolio-card__title">
+                        みなみ歯科クリニック様
+                      </h3>
+                      <div class="p-portfolio-card__category">
+                        <span class="p-portfolio-card__tag">LP</span>
+                        <span class="p-portfolio-card__tag">架空サイト</span>
+                        <span class="p-portfolio-card__tag">wordpress</span>
+                        <span class="p-portfolio-card__tag">React</span>
+                        <span class="p-portfolio-card__tag">Next.js</span>
+                      </div>
+                    </a>
                     <!-- p-portfolio-card__card -->
                   </div>
                   <!-- 右側 -->
@@ -704,8 +688,7 @@
                     <h3 class="p-workflow-card__title">ご相談・お見積もり</h3>
                   </div>
                   <p class="p-workflow-card__text">
-                    要件や納期、予算など当サイトのお問い合わせページより
-                    お気軽にお問い合わせください。
+                    要件や納期、予算など当サイトのお問い合わせページよりお気軽にお問い合わせください。
                     <span>対応内容に応じてお見積もりをお送りいたします。</span>
                   </p>
                 </div>
@@ -786,6 +769,71 @@
               <!-- p-workflow-card -->
             </div>
             <!-- p-workflow__container -->
+
+            <!-- p-faq -->
+            <div id="faq" class="p-faq">
+              <!-- c-section-heading -->
+              <div class="c-section-heading jsfadeInLeft">
+                <h2 class="c-section-heading__en">FAQ</h2>
+                <p class="c-section-heading__ja">よくあるご質問</p>
+                <span class="js-line-animation"></span>
+              </div>
+              <!-- c-section-heading -->
+
+              <!-- faq-container -->
+              <div class="p-faq__container">
+                <details>
+                  <summary>
+                    <span class="p-faq__head-icon">Q.</span>
+                    パソコンデザインしかありませんが、スマホのレスポンシブも対応可能ですか？
+                    <span class="p-faq__icon">+</span>
+                  </summary>
+                  <div class="p-faq__a">
+                    <span class="p-faq__head-icon">A.</span>
+                    <p>
+                      対応可能です。<br />
+                      私にてレスポンシブ対応し、ご確認頂いた後に調整なども可能です。
+                    </p>
+                    <span class="p-faq__icon"></span>
+                  </div>
+                </details>
+
+                <details>
+                  <summary>
+                    <span class="p-faq__head-icon">Q.</span>
+                    アニメーションなど対応可能ですか？
+                    <span class="p-faq__icon">+</span>
+                  </summary>
+                  <div class="p-faq__a">
+                    <span class="p-faq__head-icon">A.</span>
+                    <p>
+                      もちろん対応可能です。<br />
+                      CSS、JavaScriptともに対応可能です。<br />
+                      アニメーションのデザインが無い場合でも私にてご提案させていただきます。
+                    </p>
+                    <span class="p-faq__icon"></span>
+                  </div>
+                </details>
+
+                <details>
+                  <summary>
+                    <span class="p-faq__head-icon">Q.</span>
+                    デザインの修正は可能ですか？
+                    <span class="p-faq__icon">+</span>
+                  </summary>
+                  <div class="p-faq__a">
+                    <span class="p-faq__head-icon">A.</span>
+                    <p>
+                      もちろん対応可能です。<br />
+                      お客様のご要望に合わせて修正は無料で行わせていただきます。デザインの大幅な変更の場合は追加料金が発生する場合がございますのでご了承くださいませ。
+                    </p>
+                    <span class="p-faq__icon"></span>
+                  </div>
+                </details>
+              </div>
+              <!-- faq-container -->
+            </div>
+            <!-- p-faq -->
           </div>
         </div>
       </section>
