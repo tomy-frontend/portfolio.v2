@@ -46,7 +46,8 @@
   &::after {
     position: absolute;
     content: "";
-    inset: 0;
+    top: 0;
+    right: 0;
     width: global.cal-clamp(130, 183);
     height: global.cal-clamp(130, 183);
     transform: translate(30%, -50%);

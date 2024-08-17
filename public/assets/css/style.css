@@ -861,6 +861,21 @@ a:focus-visible {
 	display: inline-block;
 }
 
+.video-background {
+	height: 100vh;
+	inset: 0;
+	position: fixed;
+	width: 100vw;
+	z-index: -1;
+}
+
+.video-background video {
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
 .p-portfolio-card {
 	padding: 0.875em 0.875em 2.5em 0.875em;
 }
@@ -1063,8 +1078,9 @@ a:focus-visible {
 	background-size: cover;
 	content: "";
 	height: clamp(8.125rem, -2.8405172414rem + 22.8448275862vw, 11.4375rem);
-	inset: 0;
 	position: absolute;
+	right: 0;
+	top: 0;
 	transform: translate(30%, -50%);
 	width: clamp(8.125rem, -2.8405172414rem + 22.8448275862vw, 11.4375rem);
 }
