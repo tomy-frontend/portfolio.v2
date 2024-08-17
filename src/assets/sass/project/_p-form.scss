@@ -13,6 +13,32 @@
       outline-offset: 2px;
     }
   }
+
+  input[type="checkbox"] {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid global.$gray;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 2px;
+    appearance: none;
+    padding-block: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  input[type="checkbox"]:checked:before {
+    position: absolute;
+    content: "";
+    top: 1px;
+    left: 4px;
+    transform: rotate(50deg);
+    width: 6px;
+    height: 10px;
+    border-right: 2px solid global.$main-color;
+    border-bottom: 2px solid global.$main-color;
+  }
 }
 
 .p-form__field {
@@ -93,8 +119,16 @@
     width: 100%;
   }
 
-  input:-internal-autofill-selected {
+  .wpcf7-list-item {
+    font-size: global.rem(16);
+
+    @include global.mq(sm) {
+      font-size: global.rem(14);
+    }
   }
+
+  // input:-internal-autofill-selected {
+  // }
 }
 
 // checkboxとtextareaのborder打ち消し用
@@ -103,7 +137,7 @@
 }
 
 .p-form__privacy {
-  padding: 1.25em;
+  padding: global.cal-clamp(15, 20);
   border-radius: 12px;
   border: 1px solid global.$gray;
 }
@@ -141,6 +175,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
+}
+
+.wpcf7-list-item-label {
+  word-break: keep-all;
 }
 
 // submitボタンのスタイル

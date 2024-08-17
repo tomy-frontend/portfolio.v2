@@ -1622,6 +1622,32 @@ details[open] .p-faq__a {
 	outline-offset: 2px;
 }
 
+.p-form input[type=checkbox] {
+	border: 1px solid #bdbdbd;
+	height: 16px;
+	position: relative;
+	width: 16px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin-bottom: 2px;
+	padding-block: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.p-form input[type=checkbox]:checked:before {
+	border-bottom: 2px solid #3640d0;
+	border-right: 2px solid #3640d0;
+	content: "";
+	height: 10px;
+	left: 4px;
+	position: absolute;
+	top: 1px;
+	transform: rotate(50deg);
+	width: 6px;
+}
+
 .p-form__field {
 	display: flex;
 	flex-direction: column;
@@ -1686,6 +1712,10 @@ details[open] .p-faq__a {
 	width: 100%;
 }
 
+.p-form__field-item .wpcf7-list-item {
+	font-size: 1rem;
+}
+
 .p-form__field-item--bordernone {
 	border-bottom: none;
 }
@@ -1693,7 +1723,7 @@ details[open] .p-faq__a {
 .p-form__privacy {
 	border: 1px solid #bdbdbd;
 	border-radius: 12px;
-	padding: 1.25em;
+	padding: clamp(0.9375rem, -0.0969827586rem + 2.1551724138vw, 1.25rem);
 }
 
 .p-form__field--tac {
@@ -1725,6 +1755,10 @@ details[open] .p-faq__a {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1em;
+}
+
+.wpcf7-list-item-label {
+	word-break: keep-all;
 }
 
 .wpcf7-submit {
@@ -1990,6 +2024,10 @@ details summary:hover {
 
 .p-drawer__inner {
 	width: calc(100% - 30px);
+}
+
+.p-form__field-item .wpcf7-list-item {
+	font-size: 0.875rem;
 }
 
 }
