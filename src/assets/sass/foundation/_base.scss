@@ -25,7 +25,7 @@ a {
   }
 
   &:focus-visible {
-    outline: 2px solid global.$main-color;
+    outline: 1px solid global.$main-color;
     outline-offset: 2px;
   }
 }
