@@ -1032,6 +1032,11 @@ a:focus-visible {
 	transition: all 0.5s ease;
 }
 
+.p-portfolio-card-tag.is-checked {
+	background: #1d1d1d;
+	color: #ffffff;
+}
+
 .p-works {
 	overflow: hidden;
 }

@@ -87,4 +87,10 @@
       color: global.$text-color-white;
     }
   }
+
+  //is-checkedが付与された時
+  &.is-checked {
+    background: global.$text-color-black;
+    color: global.$text-color-white;
+  }
 }
