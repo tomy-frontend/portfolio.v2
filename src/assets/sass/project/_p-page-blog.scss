@@ -1,0 +1,182 @@
+@use "../global" as global;
+
+.p-page-blog {
+  .p-blog-card__time {
+    font-size: global.cal-clamp(22, 24);
+  }
+
+  .p-blog-card__tag {
+    font-size: global.cal-clamp(16, 18);
+  }
+}
+
+.p-page-blog__title {
+  margin-top: 1em;
+  font-size: global.cal-clamp(28, 36);
+  font-weight: global.$fw-medium;
+}
+
+//関連記事
+.p-page-blog__relation {
+  margin-top: global.cal-clamp(60, 80);
+  padding-block: global.cal-clamp(60, 80);
+
+  .p-blog__list {
+    width: calc(100% - global.cal-clamp(20, 50) * 2);
+    max-width: 900px;
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+//WordPress投稿本文とエディター画面スタイル
+.entry-content,
+.editor-styles-wrapper {
+  margin-top: global.cal-clamp(30, 40);
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  dl,
+  dt,
+  p,
+  div,
+  span,
+  img,
+  a,
+  table,
+  tr,
+  th,
+  td,
+  small,
+  button,
+  time,
+  figure {
+    margin-top: 1.3em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  li,
+  dd {
+    margin-top: 0.75em;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 1.5em;
+  }
+
+  h2 {
+    font-size: global.cal-clamp(33.18, 39.81);
+    font-weight: global.$fw-bold;
+    line-height: 1.5;
+    padding-block-end: 0.1em;
+    border-bottom: 3px solid;
+  }
+
+  h3 {
+    font-size: global.cal-clamp(27.65, 33.18);
+    font-weight: global.$fw-bold;
+    line-height: 1.5;
+    padding-inline-start: 0.3em;
+    border-left: 5px solid;
+  }
+
+  h4 {
+    font-size: global.cal-clamp(23.04, 27.65);
+    font-weight: global.$fw-bold;
+    line-height: 1.5;
+  }
+
+  h5 {
+    font-size: global.cal-clamp(19.2, 23.04);
+    font-weight: global.$fw-bold;
+    line-height: 1.5;
+  }
+
+  h6 {
+    font-size: global.cal-clamp(16, 19.2);
+    font-weight: global.$fw-bold;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: global.cal-clamp(14, 16);
+    line-height: 2;
+  }
+
+  a {
+    font-size: inherit;
+    font-weight: global.$fw-medium;
+    line-height: inherit;
+    color: global.$main-color;
+    font-weight: global.$fw-medium;
+    border-bottom: 1px solid global.$main-color;
+    transition: global.$transition-default;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  button {
+    --background: rgba(255, 255, 255, 0.9);
+
+    position: relative;
+    display: block;
+    inline-size: fit-content;
+    border-radius: 1rem;
+    border: 2px solid global.$text-color-black;
+    padding: 9px 50px 9px 23px;
+    box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
+    transition: global.$transition-default;
+    background: var(--background);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    backdrop-filter: blur(10px) saturate(120%);
+    user-select: none;
+
+    // 矢印アイコン
+    &::after {
+      position: absolute;
+      content: "";
+      background: url(../img/icon/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      top: 25%;
+      left: calc(100% - 36px);
+      width: 20px;
+      height: 20px;
+      transition: global.$transition-default;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: global.$text-color-white;
+        background-color: global.$text-color-black;
+        box-shadow: none;
+
+        &::after {
+          background: url(../img/icon/arrow-right-white.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

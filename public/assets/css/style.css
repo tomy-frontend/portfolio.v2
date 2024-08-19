@@ -961,6 +961,17 @@ a:focus-visible {
 }
 
 .p-portfolio-card {
+	display: grid;
+	gap: 0.75em;
+	grid-row: span 3;
+	grid-template-rows: subgrid;
+	padding: 0.875em 0.875em 2.5em 0.875em;
+}
+
+.p-portfolio-card--top {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
 	padding: 0.875em 0.875em 2.5em 0.875em;
 }
 
@@ -978,9 +989,9 @@ a:focus-visible {
 	width: 100%;
 	-o-object-fit: cover;
 	object-fit: cover;
-	-o-object-position: top;
+	-o-object-position: center;
 	border-radius: inherit;
-	object-position: top;
+	object-position: center;
 	transition: all 0.5s ease;
 }
 
@@ -996,14 +1007,12 @@ a:focus-visible {
 
 .p-portfolio-card__title {
 	font-size: clamp(1.125rem, 0.7112068966rem + 0.8620689655vw, 1.25rem);
-	margin-top: 1em;
 }
 
 .p-portfolio-card__category {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.625em;
-	margin-top: 1em;
 }
 
 .p-portfolio-card__tag {
@@ -1319,9 +1328,11 @@ a:focus-visible {
 
 .p-blog__list {
 	display: grid;
-	gap: clamp(1.25rem, -0.8189655172rem + 4.3103448276vw, 1.875rem);
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 	margin-top: clamp(1.875rem, -2.2629310345rem + 8.6206896552vw, 3.125rem);
+	-moz-column-gap: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	column-gap: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	row-gap: clamp(2.5rem, 0.4310344828rem + 4.3103448276vw, 3.125rem);
 }
 
 .p-blog__btn {
@@ -1628,6 +1639,10 @@ details[open] .p-faq__a {
 	transition: all 0.3s ease;
 }
 
+.p-page-work .p-portfolio-card__tag {
+	font-size: clamp(1rem, 0.5862068966rem + 0.8620689655vw, 1.125rem);
+}
+
 .p-page-work__content {
 	display: flex;
 	flex-direction: column;
@@ -1641,7 +1656,7 @@ details[open] .p-faq__a {
 }
 
 .p-page-work__title {
-	font-size: clamp(1.5rem, 0.2586206897rem + 2.5862068966vw, 1.875rem);
+	font-size: clamp(1.75rem, 0.0948275862rem + 3.4482758621vw, 2.25rem);
 	font-weight: 500;
 }
 
@@ -1710,9 +1725,247 @@ details[open] .p-faq__a {
 
 .p-archive__container {
 	display: grid;
-	gap: clamp(1.25rem, -0.8189655172rem + 4.3103448276vw, 1.875rem);
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	margin-top: clamp(1.875rem, -2.2629310345rem + 8.6206896552vw, 3.125rem);
+	-moz-column-gap: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	column-gap: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+	row-gap: clamp(2.5rem, 0.4310344828rem + 4.3103448276vw, 3.125rem);
+}
+
+.p-page-blog .p-blog-card__time {
+	font-size: clamp(1.375rem, 0.9612068966rem + 0.8620689655vw, 1.5rem);
+}
+
+.p-page-blog .p-blog-card__tag {
+	font-size: clamp(1rem, 0.5862068966rem + 0.8620689655vw, 1.125rem);
+}
+
+.p-page-blog__title {
+	font-size: clamp(1.75rem, 0.0948275862rem + 3.4482758621vw, 2.25rem);
+	font-weight: 500;
+	margin-top: 1em;
+}
+
+.p-page-blog__relation {
+	margin-top: clamp(3.75rem, -0.3879310345rem + 8.6206896552vw, 5rem);
+	padding-block: clamp(3.75rem, -0.3879310345rem + 8.6206896552vw, 5rem);
+}
+
+.p-page-blog__relation .p-blog__list {
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	margin-inline: auto;
+	max-width: 900px;
+	width: calc(100% - clamp(1.25rem, -4.9568965517rem + 12.9310344828vw, 3.125rem) * 2);
+}
+
+.entry-content,
+.editor-styles-wrapper {
+	margin-top: clamp(1.875rem, -0.1939655172rem + 4.3103448276vw, 2.5rem);
+}
+
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
+.entry-content ul,
+.entry-content ol,
+.entry-content dl,
+.entry-content dt,
+.entry-content p,
+.entry-content div,
+.entry-content span,
+.entry-content img,
+.entry-content a,
+.entry-content table,
+.entry-content tr,
+.entry-content th,
+.entry-content td,
+.entry-content small,
+.entry-content button,
+.entry-content time,
+.entry-content figure,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper dl,
+.editor-styles-wrapper dt,
+.editor-styles-wrapper p,
+.editor-styles-wrapper div,
+.editor-styles-wrapper span,
+.editor-styles-wrapper img,
+.editor-styles-wrapper a,
+.editor-styles-wrapper table,
+.editor-styles-wrapper tr,
+.editor-styles-wrapper th,
+.editor-styles-wrapper td,
+.editor-styles-wrapper small,
+.editor-styles-wrapper button,
+.editor-styles-wrapper time,
+.editor-styles-wrapper figure {
+	margin-top: 1.3em;
+}
+
+.entry-content h2:first-child,
+.entry-content h3:first-child,
+.entry-content h4:first-child,
+.entry-content h5:first-child,
+.entry-content h6:first-child,
+.entry-content ul:first-child,
+.entry-content ol:first-child,
+.entry-content dl:first-child,
+.entry-content dt:first-child,
+.entry-content p:first-child,
+.entry-content div:first-child,
+.entry-content span:first-child,
+.entry-content img:first-child,
+.entry-content a:first-child,
+.entry-content table:first-child,
+.entry-content tr:first-child,
+.entry-content th:first-child,
+.entry-content td:first-child,
+.entry-content small:first-child,
+.entry-content button:first-child,
+.entry-content time:first-child,
+.entry-content figure:first-child,
+.editor-styles-wrapper h2:first-child,
+.editor-styles-wrapper h3:first-child,
+.editor-styles-wrapper h4:first-child,
+.editor-styles-wrapper h5:first-child,
+.editor-styles-wrapper h6:first-child,
+.editor-styles-wrapper ul:first-child,
+.editor-styles-wrapper ol:first-child,
+.editor-styles-wrapper dl:first-child,
+.editor-styles-wrapper dt:first-child,
+.editor-styles-wrapper p:first-child,
+.editor-styles-wrapper div:first-child,
+.editor-styles-wrapper span:first-child,
+.editor-styles-wrapper img:first-child,
+.editor-styles-wrapper a:first-child,
+.editor-styles-wrapper table:first-child,
+.editor-styles-wrapper tr:first-child,
+.editor-styles-wrapper th:first-child,
+.editor-styles-wrapper td:first-child,
+.editor-styles-wrapper small:first-child,
+.editor-styles-wrapper button:first-child,
+.editor-styles-wrapper time:first-child,
+.editor-styles-wrapper figure:first-child {
+	margin-top: 0;
+}
+
+.entry-content li,
+.entry-content dd,
+.editor-styles-wrapper li,
+.editor-styles-wrapper dd {
+	margin-top: 0.75em;
+}
+
+.entry-content ol,
+.editor-styles-wrapper ol {
+	list-style: decimal;
+	padding-left: 1.5em;
+}
+
+.entry-content h2,
+.editor-styles-wrapper h2 {
+	border-bottom: 3px solid;
+	font-size: clamp(2.07375rem, 0.7020258621rem + 2.8577586207vw, 2.488125rem);
+	font-weight: 600;
+	line-height: 1.5;
+	padding-block-end: 0.1em;
+}
+
+.entry-content h3,
+.editor-styles-wrapper h3 {
+	border-left: 5px solid;
+	font-size: clamp(1.728125rem, 0.583987069rem + 2.3836206897vw, 2.07375rem);
+	font-weight: 600;
+	line-height: 1.5;
+	padding-inline-start: 0.3em;
+}
+
+.entry-content h4,
+.editor-styles-wrapper h4 {
+	font-size: clamp(1.44rem, 0.4862068966rem + 1.9870689655vw, 1.728125rem);
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.entry-content h5,
+.editor-styles-wrapper h5 {
+	font-size: clamp(1.2rem, 0.4055172414rem + 1.6551724138vw, 1.44rem);
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.entry-content h6,
+.editor-styles-wrapper h6 {
+	font-size: clamp(1rem, 0.3379310345rem + 1.3793103448vw, 1.2rem);
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.entry-content p,
+.editor-styles-wrapper p {
+	font-size: clamp(0.875rem, 0.4612068966rem + 0.8620689655vw, 1rem);
+	line-height: 2;
+}
+
+.entry-content a,
+.editor-styles-wrapper a {
+	border-bottom: 1px solid #3640d0;
+	color: #3640d0;
+	font-size: inherit;
+	font-weight: 500;
+	font-weight: 500;
+	line-height: inherit;
+	transition: all 0.5s ease;
+}
+
+.entry-content img,
+.editor-styles-wrapper img {
+	height: auto;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.entry-content button,
+.editor-styles-wrapper button {
+	--background: rgba(255, 255, 255, 0.9);
+	background: var(--background);
+	border: 2px solid #1d1d1d;
+	border-radius: 1rem;
+	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
+	display: block;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	padding: 9px 50px 9px 23px;
+	position: relative;
+	transition: all 0.5s ease;
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	backdrop-filter: blur(10px) saturate(120%);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.entry-content button::after,
+.editor-styles-wrapper button::after {
+	background: url(../img/icon/arrow-right.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	content: "";
+	height: 20px;
+	left: calc(100% - 36px);
+	position: absolute;
+	top: 25%;
+	transition: all 0.5s ease;
+	width: 20px;
 }
 
 .p-page-contact__section-heading {
@@ -1959,6 +2212,14 @@ details[open] .p-faq__a {
 	background: rgba(0, 0, 0, 0.4);
 }
 
+.p-portfolio-card--top:hover .p-portfolio-card__img img {
+	transform: scale(1.1);
+}
+
+.p-portfolio-card--top:hover .p-portfolio-card__img::after {
+	background: rgba(0, 0, 0, 0.4);
+}
+
 .p-portfolio-card-tag:hover {
 	background: #1d1d1d;
 	color: #ffffff;
@@ -1984,6 +2245,26 @@ details summary:hover {
 	transform: scaleX(1);
 	transform-origin: left; /* hover時は基点を左側に */
 	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+}
+
+.entry-content a:hover,
+.editor-styles-wrapper a:hover {
+	opacity: 0.5;
+}
+
+.entry-content button:hover,
+.editor-styles-wrapper button:hover {
+	background-color: #1d1d1d;
+	box-shadow: none;
+	color: #ffffff;
+}
+
+.entry-content button:hover::after,
+.editor-styles-wrapper button:hover::after {
+	background: url(../img/icon/arrow-right-white.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: rotate(-45deg);
 }
 
 .wpcf7-submit:hover {

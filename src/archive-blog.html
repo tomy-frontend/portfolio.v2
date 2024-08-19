@@ -83,11 +83,11 @@
     <!-- JavaScriptアニメーション -->
 
     <!-- p-header -->
-    <header class="p-header">
+    <header id="js-header" class="p-header JsHeader">
       <div class="p-header__inner">
         <!-- p-header__logo -->
-        <h1 class="p-header__logo">
-          <a href="/"
+        <h1>
+          <a href="/" class="p-header__logo"
             ><span class="p-header__logo-text">Web Engineer</span>
             <span class="p-header__logo-title">Tomy Portfolio</span></a
           >
@@ -95,7 +95,11 @@
         <!-- p-header__logo -->
 
         <!-- p-global-nav -->
-        <nav class="p-global-nav">
+        <nav
+          id="js-header-nav"
+          class="p-global-nav"
+          aria-label="グローバルナビゲーション"
+        >
           <ul class="p-global-nav__list">
             <li class="p-global-nav__item">
               <a href="#works" class="p-global-nav__link">Works</a>
@@ -128,7 +132,11 @@
 
     <!-- p-drawer -->
     <div class="p-drawer js-drawer">
-      <nav class="p-drawer__nav">
+      <nav
+        id="js-drawer-content"
+        class="p-drawer__nav"
+        aria-label="ドロワーナビゲーション"
+      >
         <div class="p-drawer__inner">
           <ul class="p-drawer__list">
             <li class="p-drawer__item">
@@ -172,7 +180,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__x.svg"
-                    alt="富田真光のxアカウント"
+                    alt="X"
                     width="16"
                     height="16"
                 /></a>
@@ -184,7 +192,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__note.svg"
-                    alt="富田真光のnoteアカウント"
+                    alt="note"
                     width="16"
                     height="16"
                 /></a>
@@ -196,7 +204,7 @@
                   class="p-sns-list__link"
                   ><img
                     src="./assets/img/icon/icon__wantedly.svg"
-                    alt="富田真光のwantedlyアカウント"
+                    alt="wantedly"
                     width="16"
                     height="16"
                 /></a>
@@ -207,94 +215,162 @@
       </nav>
     </div>
     <!-- p-drawer -->
-
     <!-- mask -->
     <div class="p-drawer-mask js-drawer-mask"></div>
-    <!-- mask -->
 
     <main>
       <!-- p-fv -->
       <div class="p-fv p-fv--page l-inner">
         <div class="p-fv__wrapper">
-          <p class="p-fv__lead jsfadeIn">制作実績</p>
-          <h2 class="p-fv__title jsfadeInText">Works</h2>
+          <p class="p-fv__lead jsfadeIn">ブログ</p>
+          <h2 class="p-fv__title jsfadeInText">Blog</h2>
         </div>
       </div>
       <!-- p-fv -->
+      <section class="p-archive l-section-padding p-section-bg">
+        <div class="p-archive__inner l-inner">
+          <!-- p-archive__content -->
+          <div class="p-archive__content">
+            <div class="c-section-heading">
+              <h2 class="c-section-heading__en">Category</h2>
+              <p class="c-section-heading__ja">カテゴリー</p>
+            </div>
 
-      <!-- 投稿コンテンツ -->
-      <article class="p-page-work l-section-padding p-section-bg">
-        <div class="p-page-work__inner l-inner">
-          <!-- p-page-work__content -->
-          <div class="p-page-work__content">
-            <!-- p-page-work__head -->
-            <div class="p-page-work__head">
-              <h2 class="p-page-work__title">歯科クリニックWordPressサイト</h2>
-              <div class="p-portfolio-card__category">
-                <span class="p-portfolio-card__tag">LP</span>
-                <span class="p-portfolio-card__tag">架空サイト</span>
-                <span class="p-portfolio-card__tag">wordpress</span>
-              </div>
+            <!-- p-archive__category -->
+            <div class="p-portfolio-card__category p-archive__category">
+              <a href="/" class="p-portfolio-card-tag is-checked">All</a>
+              <a href="/" class="p-portfolio-card-tag">Blog</a>
+              <a href="/" class="p-portfolio-card-tag">News</a>
             </div>
-            <!-- p-page-work__head -->
-            <!-- p-page-work__img -->
-            <div class="p-page-work__img">
-              <img
-                src="./assets/img/portfolio.png"
-                alt="制作実績１"
-                width="2478"
-                height="16384"
-              />
+            <!-- p-archive__category -->
+
+            <!-- p-archive__container -->
+            <div class="p-archive__container">
+              <!-- p-blog-card -->
+              <a class="p-blog-card" href="./single-blog.html">
+                <div class="p-blog-card__img">
+                  <img
+                    src="./assets/img/portfolio.png"
+                    alt="ブログサムネ"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-blog-card__head">
+                  <time class="p-blog-card__time" datetime="2024-08-19"
+                    >2024.08.19</time
+                  >
+                  <span class="p-blog-card__tag">カテゴリ</span>
+                </div>
+                <h3 class="p-blog-card__title">ブログのタイトルが入ります。</h3>
+                <p class="p-blog-card__text">ブログの抜粋</p>
+              </a>
+              <!-- p-blog-card -->
+              <!-- p-blog-card -->
+              <a class="p-blog-card" href="./single-blog.html">
+                <div class="p-blog-card__img">
+                  <img
+                    src="./assets/img/portfolio.png"
+                    alt="ブログサムネ"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-blog-card__head">
+                  <time class="p-blog-card__time" datetime="2024-08-19"
+                    >2024.08.19</time
+                  >
+                  <span class="p-blog-card__tag">カテゴリ</span>
+                </div>
+                <h3 class="p-blog-card__title">
+                  ブログのタイトルが入ります。ブログのタイトルが入ります。
+                </h3>
+                <p class="p-blog-card__text">
+                  ブログの抜粋が入ります。ブログの抜粋が入ります。
+                </p>
+              </a>
+              <!-- p-blog-card -->
+              <!-- p-blog-card -->
+              <a class="p-blog-card" href="./single-blog.html">
+                <div class="p-blog-card__img">
+                  <img
+                    src="./assets/img/portfolio.png"
+                    alt="ブログサムネ"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-blog-card__head">
+                  <time class="p-blog-card__time" datetime="2024-08-19"
+                    >2024.08.19</time
+                  >
+                  <span class="p-blog-card__tag">カテゴリ</span>
+                </div>
+                <h3 class="p-blog-card__title">
+                  ブログのタイトルが入ります。ブログのタイトルが入ります。
+                </h3>
+                <p class="p-blog-card__text">
+                  ブログの抜粋が入ります。ブログの抜粋が入ります。
+                </p>
+              </a>
+              <!-- p-blog-card -->
+              <!-- p-blog-card -->
+              <a class="p-blog-card" href="./single-blog.html">
+                <div class="p-blog-card__img">
+                  <img
+                    src="./assets/img/portfolio.png"
+                    alt="ブログサムネ"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-blog-card__head">
+                  <time class="p-blog-card__time" datetime="2024-08-19"
+                    >2024.08.19</time
+                  >
+                  <span class="p-blog-card__tag">カテゴリ</span>
+                </div>
+                <h3 class="p-blog-card__title">ブログのタイトルが入ります。</h3>
+                <p class="p-blog-card__text">
+                  ブログの抜粋が入ります。ブログの抜粋が入ります。
+                </p>
+              </a>
+              <!-- p-blog-card -->
+              <!-- p-blog-card -->
+              <a class="p-blog-card" href="./single-blog.html">
+                <div class="p-blog-card__img">
+                  <img
+                    src="./assets/img/portfolio.png"
+                    alt="ブログサムネ"
+                    width="1080"
+                    height="1080"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="p-blog-card__head">
+                  <time class="p-blog-card__time" datetime="2024-08-19"
+                    >2024.08.19</time
+                  >
+                  <span class="p-blog-card__tag">カテゴリ</span>
+                </div>
+                <h3 class="p-blog-card__title">
+                  ブログのタイトルが入ります。ブログのタイトルが入ります。
+                </h3>
+                <p class="p-blog-card__text">
+                  ブログの抜粋が入ります。ブログの抜粋が入ります。
+                </p>
+              </a>
+              <!-- p-blog-card -->
             </div>
-            <!-- p-page-work__img -->
-            <!-- p-page-work__body -->
-            <div class="p-page-work__description">
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">クライアント</dt>
-                <dd class="p-page-work__answer">SnapOnomichi様</dd>
-              </dl>
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">サイトURL</dt>
-                <dd class="p-page-work__answer">
-                  <a href="/">https://~~~~~~~~~~~~~.com</a>
-                </dd>
-              </dl>
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">担当範囲</dt>
-                <dd class="p-page-work__answer">
-                  サイト設計 / デザイン / コーディング / WordPress実装 /
-                  メンテナンス / サイト運用
-                </dd>
-              </dl>
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">制作期間</dt>
-                <dd class="p-page-work__answer">1週間</dd>
-              </dl>
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">費用目安</dt>
-                <dd class="p-page-work__answer">約100,000円</dd>
-              </dl>
-              <dl class="p-page-work__box">
-                <dt class="p-page-work__question">説明</dt>
-                <dd class="p-page-work__answer">
-                  スクールの課題として
-                  LP制作を行いました。無限スライダーアニメーションの
-                  実装とスムーススクロールの実装をしています。
-                  CSS設計はFLOCSSを取り入れ、保守しやすいようにコーディングをしております。
-                  その他苦労したことを入れる。WordPressカスタム投稿で実装しました!
-                </dd>
-              </dl>
-            </div>
-            <!-- p-page-work__body -->
-            <div class="p-works__btn p-works__btn--tac">
-              <a href="./archive.html" class="c-btn">All Works</a>
-            </div>
+            <!-- p-archive__container -->
           </div>
+          <!-- p-archive__content -->
         </div>
-        <!-- p-page-work__content -->
-      </article>
-      <!-- 投稿コンテンツ -->
-
+      </section>
       <!-- contact -->
       <section
         id="contact"

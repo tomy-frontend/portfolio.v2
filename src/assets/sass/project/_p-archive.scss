@@ -8,5 +8,6 @@
   margin-top: global.cal-clamp(30, 50);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: global.cal-clamp(20, 30);
+  column-gap: global.cal-clamp(30, 40);
+  row-gap: global.cal-clamp(40, 50);
 }

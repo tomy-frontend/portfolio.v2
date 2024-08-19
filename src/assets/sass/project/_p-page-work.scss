@@ -1,5 +1,11 @@
 @use "../global" as global;
 
+.p-page-work {
+  .p-portfolio-card__tag {
+    font-size: global.cal-clamp(16, 18);
+  }
+}
+
 .p-page-work__content {
   display: flex;
   flex-direction: column;
@@ -13,7 +19,7 @@
 }
 
 .p-page-work__title {
-  font-size: global.cal-clamp(24, 30);
+  font-size: global.cal-clamp(28, 36);
   font-weight: global.$fw-medium;
 }
 
