@@ -518,15 +518,18 @@ a:focus-visible {
 	font-weight: 500;
 }
 
-.js-line-animation {
-	background-color: #1d1d1d;
-	bottom: 0;
-	content: "";
-	height: 1px;
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
-	width: 100%;
+.jsLine {
+	background-image: linear-gradient(to bottom, transparent 95%, rgb(0, 0, 0) 5%); /* 線の色 */
+	background-position: center bottom; /* 線の起点を左・下に設定 */
+	background-repeat: no-repeat;
+	background-size: 0 1em; /* 線の横幅を0、縦幅を0.5emに */
+	transition: background-size 2s ease-in-out; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+
+/* マーカーが表示された時のスタイル */
+
+.jsLine.active {
+	background-size: 100% 1em; /* 線の横幅を100%にする */
 }
 
 .c-btn {
@@ -680,11 +683,6 @@ a:focus-visible {
 	z-index: 30;
 }
 
-.p-header.hide {
-	opacity: 0;
-	transform: translateY(-110%);
-}
-
 .p-header__inner {
 	align-items: center;
 	display: flex;
@@ -704,10 +702,6 @@ a:focus-visible {
 	backdrop-filter: blur(10px) saturate(120%);
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	transition: all 0.5s ease;
-}
-
-.p-header__logo:hover {
-	opacity: 0.5;
 }
 
 .p-header__logo-text {
@@ -962,7 +956,10 @@ a:focus-visible {
 }
 
 .p-portfolio-card {
+	border: 0.5px solid transparent;
+	border-radius: 12px;
 	padding: 0.875em 0.875em 2.5em 0.875em;
+	transition: all 0.5s ease;
 }
 
 .p-portfolio-card__img {
@@ -1108,6 +1105,8 @@ a:focus-visible {
 .p-message__title {
 	font-size: 1.125rem;
 	font-weight: 700;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
 	line-height: 2;
 	margin-top: 2em;
 	word-break: keep-all;
@@ -1124,6 +1123,22 @@ a:focus-visible {
 
 .p-message__text span {
 	display: inline-block;
+}
+
+/* マーカーのスタイル */
+
+.jsMarker {
+	background-image: linear-gradient(to bottom, transparent 65%, rgba(54, 64, 208, 0.5) 35%); /* 線の色 */
+	background-position: left bottom; /* 線の起点を左・下に設定 */
+	background-repeat: no-repeat;
+	background-size: 0 1em; /* 線の横幅を0、縦幅を0.5emに */
+	transition: background-size 2s ease-in; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+
+/* マーカーが表示された時のスタイル */
+
+.jsMarker.active {
+	background-size: 100% 1em; /* 線の横幅を100%にする */
 }
 
 .p-about {
@@ -1824,6 +1839,10 @@ details[open] .p-faq__a {
 	opacity: 0.5;
 }
 
+.p-header__logo:hover {
+	opacity: 0.7;
+}
+
 .p-global-nav__link:hover {
 	opacity: 0.5;
 }
@@ -1833,6 +1852,10 @@ details[open] .p-faq__a {
 	transform: scaleX(1);
 	transform-origin: left; /* hover時は基点を左側に */
 	transition: transform 0.3s ease; /* アニメーション速度とイージングを設定 */
+}
+
+.p-portfolio-card:hover {
+	border-color: #bdbdbd;
 }
 
 .p-portfolio-card:hover .p-portfolio-card__img img {

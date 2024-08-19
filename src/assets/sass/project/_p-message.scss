@@ -4,6 +4,7 @@
   margin-top: 2em;
   font-size: global.rem(18);
   font-weight: global.$fw-large;
+  inline-size: fit-content;
   line-height: 2;
   word-break: keep-all;
 }
@@ -19,4 +20,21 @@
   span {
     display: inline-block; //改行調整
   }
+}
+
+/* マーカーのスタイル */
+.jsMarker {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 65%,
+    rgba(54, 64, 208, 0.5) 35%
+  ); /* 線の色 */
+  background-position: left bottom; /* 線の起点を左・下に設定 */
+  background-repeat: no-repeat;
+  background-size: 0 1em; /* 線の横幅を0、縦幅を0.5emに */
+  transition: background-size 2s ease-in; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+/* マーカーが表示された時のスタイル */
+.jsMarker.active {
+  background-size: 100% 1em; /* 線の横幅を100%にする */
 }

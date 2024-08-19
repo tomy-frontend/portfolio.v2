@@ -19,14 +19,19 @@
   font-weight: global.$fw-medium;
 }
 
-//jsでアニメーションするための要素
-.js-line-animation {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 1px;
-  background-color: global.$text-color-black;
+//下線アニメーション
+.jsLine {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 95%,
+    rgba(0, 0, 0, 100) 5%
+  ); /* 線の色 */
+  background-position: center bottom; /* 線の起点を左・下に設定 */
+  background-repeat: no-repeat;
+  background-size: 0 1em; /* 線の横幅を0、縦幅を0.5emに */
+  transition: background-size 2s ease-in-out; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+/* マーカーが表示された時のスタイル */
+.jsLine.active {
+  background-size: 100% 1em; /* 線の横幅を100%にする */
 }

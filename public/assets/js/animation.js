@@ -128,26 +128,6 @@ document.querySelectorAll(".jsScale").forEach((jsScale) => {
   );
 });
 
-// lineが引かれるアニメーション
-document.querySelectorAll(".js-line-animation").forEach((line) => {
-  gsap.fromTo(
-    line,
-    { opacity: 0, scale: 0 }, // 初期状態
-    {
-      scrollTrigger: {
-        trigger: line, // トリガーとなるのは各`.line-animation`要素自身
-        start: "top 60%", // ビューポートの上端から90%の位置でアニメーション開始
-        end: "bottom 60%", // ビューポートの下端から60%の位置でアニメーション終了
-        toggleActions: "play none none none",
-      },
-      opacity: 1, // 目標とする透明度
-      scale: 1, // 目標とするスケール
-      duration: 3, // アニメーションの持続時間（秒）
-      ease: "power3.out", // イージング関数
-    }
-  );
-});
-
 //js-p-page-headingの文字を一文字ずつフェードイン
 function splitTextToSpans(textElement) {
   const text = textElement.textContent;
@@ -177,5 +157,36 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 50, // 開始時に文字を垂直方向に50ピクセル下から開始
     ease: "power1.out",
     stagger: 0.1, // 各文字のアニメーション開始の間隔
+  });
+});
+
+// マーカーのアニメーション
+document.querySelectorAll(".jsMarker").forEach((marker) => {
+  gsap.to(marker, {
+    scrollTrigger: {
+      trigger: marker, // 各`.jsMarker`要素がトリガー
+      start: "top 20%", // アニメーションが始まる位置
+      // markers: true, // デバッグ用のマーカーを表示（必要に応じて有効化）
+      toggleClass: {
+        targets: marker, // クラスを切り替える対象の要素
+        className: "active", // クラス名 "active" を付け外し
+      },
+      once: true, // 1回のみ動作
+    },
+  });
+});
+
+// ラインアニメーション
+document.querySelectorAll(".jsLine").forEach((line) => {
+  gsap.to(line, {
+    scrollTrigger: {
+      trigger: line, // 各`.jsLine`要素がトリガー
+      start: "top 60%", // アニメーションが始まる位置
+      toggleClass: {
+        targets: line, // クラスを切り替える対象の要素
+        className: "active", // クラス名 "active" を付け外し
+      },
+      once: true, // 1回のみ動作
+    },
   });
 });

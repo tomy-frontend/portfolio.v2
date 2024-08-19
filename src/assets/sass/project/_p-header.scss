@@ -6,12 +6,6 @@
   left: 0;
   width: 100%;
   z-index: global.z-index(header);
-
-  //headerの表示・非表示切り替え用
-  &.hide {
-    transform: translateY(-110%);
-    opacity: 0;
-  }
 }
 
 .p-header__inner {
@@ -23,7 +17,7 @@
 
   @include global.mq(lg) {
     width: calc(100% - 60px * 2); //headerのみ広め
-    max-width: 1440px;
+    max-width: 1440px; //headerのみ広め
   }
 }
 
@@ -41,8 +35,10 @@
   box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
   transition: global.$transition-default;
 
-  &:hover {
-    opacity: 0.5;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
