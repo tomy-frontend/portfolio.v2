@@ -2,13 +2,9 @@
 
 .p-portfolio-card {
   padding: 0.875em 0.875em 2.5em 0.875em;
-  border-radius: 12px;
-  border: 0.5px solid transparent;
-  transition: global.$transition-default;
 
   @media (any-hover: hover) {
     &:hover {
-      border-color: global.$gray;
       .p-portfolio-card__img {
         img {
           transform: scale(1.1);
@@ -28,7 +24,6 @@
   border-radius: 8px;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  outline: 1px solid global.$gray;
 
   img {
     width: 100%;
@@ -52,7 +47,7 @@
 }
 
 .p-portfolio-card__title {
-  margin-top: 1.5em;
+  margin-top: 1em;
   font-size: global.cal-clamp(18, 20);
 }
 

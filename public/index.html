@@ -29,11 +29,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
-	<!-- reset.css destyle -->
-	<!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
-    /> -->
 	<!-- css読み込み -->
 	<link rel="stylesheet" href="./assets/css/style.min.css" />
 	<!-- JS読み込み -->
@@ -44,6 +39,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" defer></script>
 	<script src="./assets/js/lib/anime.min.js" defer></script>
 	<script src="./assets/js/animation.js" defer></script>
+	<script src="./assets/js/cursor.js" defer></script>
+	<script src="./assets/js/horizontalScroll.js" defer></script>
 	<script src="./assets/js/script.js" defer></script>
 </head>
 
@@ -76,7 +73,7 @@
 						<a href="#aboutme" class="p-global-nav__link">AboutMe</a>
 					</li>
 					<li class="p-global-nav__item">
-						<a href="#service" class="p-global-nav__link">Service</a>
+						<a href="./archive-blog.html" class="p-global-nav__link">Blog</a>
 					</li>
 					<li class="p-global-nav__item">
 						<a href="#workflow" class="p-global-nav__link">WorkFlow</a>
@@ -116,9 +113,9 @@
 						</a>
 					</li>
 					<li class="p-drawer__item">
-						<a href="#service" class="p-drawer__link">
-							<p class="p-drawer__link-en">Service</p>
-							<p class="p-drawer__link-ja">提供しているサービス</p>
+						<a href="./archive-blog.html" class="p-drawer__link">
+							<p class="p-drawer__link-en">Blog</p>
+							<p class="p-drawer__link-ja">ブログ</p>
 						</a>
 					</li>
 					<li class="p-drawer__item">
@@ -398,6 +395,7 @@
 					<!-- p-about__container -->
 				</div>
 				<!-- p-about__content -->
+
 				<!-- p-skills -->
 				<div class="p-skills">
 					<div class="p-skills__inner">
@@ -442,6 +440,77 @@
 					</div>
 				</div>
 				<!-- p-skills -->
+
+				<!-- p-blog -->
+				<div class="p-blog">
+					<!-- c-section-heading -->
+					<div class="c-section-heading jsfadeInLeft jsLine">
+						<h2 class="c-section-heading__en">BLOG</h2>
+						<p class="c-section-heading__ja">ブログ</p>
+					</div>
+					<!-- c-section-heading -->
+
+					<!-- p-blog__list -->
+					<div class="p-blog__list">
+						<!-- p-blog-card -->
+						<a class="p-blog-card" href="./single-blog.html">
+							<div class="p-blog-card__img">
+								<img src="./assets/img/portfolio.png" alt="ブログサムネ" width="1080" height="1080" loading="lazy" />
+							</div>
+							<div class="p-blog-card__head">
+								<time class="p-blog-card__time" datetime="2024-08-19">2024.08.19</time>
+								<span class="p-blog-card__tag">カテゴリ</span>
+							</div>
+							<h3 class="p-blog-card__title">
+								ブログのタイトルが入ります。ブログのタイトルが入ります。
+							</h3>
+							<p class="p-blog-card__text">
+								ブログの抜粋が入ります。ブログの抜粋が入ります。
+							</p>
+						</a>
+						<!-- p-blog-card -->
+						<!-- p-blog-card -->
+						<a class="p-blog-card" href="./single-blog.html">
+							<div class="p-blog-card__img">
+								<img src="./assets/img/portfolio.png" alt="ブログサムネ" width="1080" height="1080" loading="lazy" />
+							</div>
+
+							<div class="p-blog-card__head">
+								<time class="p-blog-card__time" datetime="2024-08-19">2024.08.19</time>
+								<span class="p-blog-card__tag">カテゴリ</span>
+							</div>
+							<h3 class="p-blog-card__title">ブログのタイトルが入ります。</h3>
+							<p class="p-blog-card__text">
+								ブログの抜粋が入ります。ブログの抜粋が入ります。
+							</p>
+						</a>
+						<!-- p-blog-card -->
+						<!-- p-blog-card -->
+						<a class="p-blog-card" href="./single-blog.html">
+							<div class="p-blog-card__img">
+								<img src="./assets/img/portfolio.png" alt="ブログサムネ" width="1080" height="1080" loading="lazy" />
+							</div>
+
+							<div class="p-blog-card__head">
+								<time class="p-blog-card__time" datetime="2024-08-19">2024.08.19</time>
+								<span class="p-blog-card__tag">カテゴリ</span>
+							</div>
+							<h3 class="p-blog-card__title">ブログのタイトルが入ります。</h3>
+							<p class="p-blog-card__text">
+								ブログの抜粋が入ります。ブログの抜粋が入ります。ブログの抜粋が入ります。ブログの抜粋が入ります。
+							</p>
+						</a>
+						<!-- p-blog-card -->
+					</div>
+					<!-- p-blog__list -->
+
+					<!-- p-blog__btn -->
+					<div class="p-blog__btn">
+						<a href="./archive-blog.html" class="c-btn">All Articles</a>
+					</div>
+					<!-- p-blog__btn -->
+				</div>
+				<!-- p-blog -->
 			</div>
 		</section>
 		<!-- aboutme -->

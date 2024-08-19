@@ -1,0 +1,18 @@
+@use "../global" as global;
+
+.p-blog {
+  padding-top: 150px;
+}
+
+.p-blog__list {
+  margin-top: global.cal-clamp(30, 50);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: global.cal-clamp(20, 30);
+}
+
+.p-blog__btn {
+  margin-top: 2em;
+  width: fit-content;
+  margin-inline: auto;
+}
