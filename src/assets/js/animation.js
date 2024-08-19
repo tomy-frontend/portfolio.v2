@@ -190,3 +190,27 @@ document.querySelectorAll(".jsLine").forEach((line) => {
     },
   });
 });
+
+//moveアニメーション
+document.querySelectorAll(".jsMove").forEach((jsMove) => {
+  gsap.fromTo(
+    jsMove,
+    { x: 20, y: -20, rotate: 5 },
+    {
+      scrollTrigger: {
+        trigger: jsMove, // トリガーとなるのは各`.jsMove`要素自身
+        start: "top 50%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
+        end: "bottom 50%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
+        toggleActions: "play none none none", // アニメーションを1回再生して終了
+        once: true,
+        // markers: true, // デバッグ用マーカー
+        // scrub: true,
+      },
+      x: 0,
+      y: 0,
+      rotate: 0,
+      ease: "none", // アニメーションのイージングを滑らかにする
+      duration: 1, // アニメーションの持続時間を1秒に設定
+    }
+  );
+});

@@ -1400,11 +1400,24 @@ a:focus-visible {
 
 .p-workflow-card__img {
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
+	position: relative;
 	width: 100%;
 }
 
 .p-workflow-card__img img {
+	height: auto;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.p-workflow-card__img::before {
+	background: #f5f5f5;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: -10px;
+	top: -10px;
 	width: 100%;
 }
 
@@ -1840,7 +1853,7 @@ details[open] .p-faq__a {
 }
 
 .p-header__logo:hover {
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 .p-global-nav__link:hover {
