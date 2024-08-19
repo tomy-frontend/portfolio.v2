@@ -187,3 +187,35 @@ document.querySelectorAll("details").forEach((detail) => {
     }
   });
 });
+
+//js-anime-bgのアニメーション
+const container = document.querySelector(".js-anime-bg");
+
+for (var i = 0; i <= 50; i++) {
+  const blocks = document.createElement("div");
+  blocks.classList.add("block");
+  container.appendChild(blocks);
+}
+
+function animateBlocks() {
+  anime({
+    targets: ".block",
+    translateX: function () {
+      return anime.random(300, -600);
+    },
+    translateY: function () {
+      return anime.random(300, -600);
+    },
+    scale: function () {
+      return anime.random(0.5, 2);
+    },
+    backgroundColor: function () {
+      return `hsl(0, ${anime.random(0, 10)}%, ${anime.random(90, 100)}%)`;
+    },
+    duration: 15000,
+    delay: anime.stagger(12),
+    complete: animateBlocks,
+  });
+}
+
+animateBlocks();

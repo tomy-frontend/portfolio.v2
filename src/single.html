@@ -73,25 +73,14 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
       defer
     ></script>
+    <script src="./assets/js/lib/anime.min.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/animation.js" defer></script>
   </head>
   <body>
-    <!-- 背景動画 -->
-    <div class="video-background">
-      <video autoplay loop muted playsinline>
-        <source src="./assets/img/body_bg.mp4" type="video/mp4" />
-        <track
-          kind="captions"
-          src="captions_ja.vtt"
-          srclang="ja"
-          label="日本語"
-        />
-        <!-- 動画が再生できない場合のフォールバック -->
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- 背景動画 -->
+    <!-- JavaScriptアニメーション -->
+    <div class="js-anime-bg"></div>
+    <!-- JavaScriptアニメーション -->
 
     <!-- p-header -->
     <header class="p-header">
