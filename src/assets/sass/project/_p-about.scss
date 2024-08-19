@@ -28,6 +28,7 @@
   max-width: 550px;
   max-height: global.cal-clamp(550, 700);
   aspect-ratio: 9 / 16;
+  overflow: hidden;
 
   @include global.mq(md) {
     width: 50%;
@@ -51,7 +52,7 @@
     width: global.cal-clamp(130, 183);
     height: global.cal-clamp(130, 183);
     transform: translate(30%, -50%);
-    background: url(../img/icon/p-about-deco.svg);
+    background: url(../img/icon/p-about-deco-white.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -137,9 +138,9 @@
 // profile-decoの無限回転
 @keyframes rotate {
   from {
-    transform: translate(30%, -50%) rotate(0deg);
+    transform: translate(30%, -30%) rotate(0deg);
   }
   to {
-    transform: translate(30%, -50%) rotate(360deg);
+    transform: translate(30%, -30%) rotate(360deg);
   }
 }

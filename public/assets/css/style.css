@@ -1143,6 +1143,7 @@ a:focus-visible {
 	margin-inline: auto;
 	max-height: clamp(34.375rem, 3.3405172414rem + 64.6551724138vw, 43.75rem);
 	max-width: 550px;
+	overflow: hidden;
 	position: relative;
 	width: 100%;
 }
@@ -1160,7 +1161,7 @@ a:focus-visible {
 
 .p-about__img::after {
 	animation: rotate 15s linear infinite;
-	background: url(../img/icon/p-about-deco.svg);
+	background: url(../img/icon/p-about-deco-white.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -2058,11 +2059,11 @@ details summary:hover {
 @keyframes rotate {
 
 from {
-	transform: translate(30%, -50%) rotate(0deg);
+	transform: translate(30%, -30%) rotate(0deg);
 }
 
 to {
-	transform: translate(30%, -50%) rotate(360deg);
+	transform: translate(30%, -30%) rotate(360deg);
 }
 
 }
