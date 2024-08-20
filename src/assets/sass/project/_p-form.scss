@@ -10,7 +10,7 @@
   input[type="checkbox"],
   input[type="submit"] {
     &:focus-visible {
-      outline-offset: 2px;
+      outline: none;
     }
   }
 

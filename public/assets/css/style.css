@@ -1085,7 +1085,7 @@ a:focus-visible {
 
 .square {
 	height: 100%;
-	min-width: 300px;
+	min-width: 280px;
 	width: 100%;
 }
 
@@ -1996,7 +1996,7 @@ details[open] .p-faq__a {
 .p-form select:focus-visible,
 .p-form input[type=checkbox]:focus-visible,
 .p-form input[type=submit]:focus-visible {
-	outline-offset: 2px;
+	outline: none;
 }
 
 .p-form input[type=checkbox] {
