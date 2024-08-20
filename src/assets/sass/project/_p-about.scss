@@ -125,6 +125,10 @@
 
 .p-about__item {
   line-height: 2;
+
+  span {
+    display: inline-block;
+  }
 }
 
 .p-about__btn {

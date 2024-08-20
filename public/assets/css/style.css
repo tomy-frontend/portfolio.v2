@@ -1259,6 +1259,10 @@ a:focus-visible {
 	line-height: 2;
 }
 
+.p-about__item span {
+	display: inline-block;
+}
+
 .p-about__btn {
 	margin-top: 2.5em;
 }
