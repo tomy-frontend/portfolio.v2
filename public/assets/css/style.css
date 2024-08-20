@@ -442,6 +442,10 @@ body {
 	position: relative;
 }
 
+main {
+	overflow-x: hidden;
+}
+
 img {
 	height: auto;
 	max-width: 100%;
@@ -1049,7 +1053,9 @@ a:focus-visible {
 }
 
 .section {
+	display: none;
 	overflow: hidden;
+	visibility: hidden;
 }
 
 .container {
@@ -1113,7 +1119,7 @@ a:focus-visible {
 }
 
 .p-message__title {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	font-weight: 700;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
@@ -1125,6 +1131,7 @@ a:focus-visible {
 .p-message__text {
 	line-height: 2;
 	margin-top: 1.5em;
+	word-break: keep-all;
 }
 
 .p-message__text p + p {
@@ -1133,6 +1140,10 @@ a:focus-visible {
 
 .p-message__text span {
 	display: inline-block;
+}
+
+.p-message__text--bold {
+	font-weight: 600;
 }
 
 /* マーカーのスタイル */
@@ -2297,6 +2308,11 @@ details summary:hover {
 .p-footer__inner {
 	padding-bottom: 35px;
 	padding-top: 35px;
+}
+
+.section {
+	display: block;
+	visibility: visible;
 }
 
 .left {

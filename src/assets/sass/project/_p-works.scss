@@ -7,6 +7,15 @@
 // 水平スクロールセクション
 .section {
   overflow: hidden;
+
+  //スマホ時は非表示
+  display: none;
+  visibility: hidden;
+
+  @include global.mq(md) {
+    display: block;
+    visibility: visible;
+  }
 }
 
 .container {

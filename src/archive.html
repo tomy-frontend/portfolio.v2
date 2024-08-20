@@ -82,7 +82,7 @@
     <div class="js-anime-bg"></div>
     <!-- JavaScriptアニメーション -->
 
-    <!-- p-header -->
+    <!-- p-header 下層ページ用 -->
     <header id="js-header" class="p-header JsHeader">
       <div class="p-header__inner">
         <!-- p-header__logo -->
@@ -102,19 +102,19 @@
         >
           <ul class="p-global-nav__list">
             <li class="p-global-nav__item">
-              <a href="#works" class="p-global-nav__link">Works</a>
+              <a href="./archive.html" class="p-global-nav__link">Works</a>
             </li>
             <li class="p-global-nav__item">
-              <a href="#aboutme" class="p-global-nav__link">AboutMe</a>
+              <a href="./#aboutme" class="p-global-nav__link">AboutMe</a>
             </li>
             <li class="p-global-nav__item">
-              <a href="#service" class="p-global-nav__link">Service</a>
+              <a href="./archive-blog.html" class="p-global-nav__link">Blog</a>
             </li>
             <li class="p-global-nav__item">
-              <a href="#workflow" class="p-global-nav__link">WorkFlow</a>
+              <a href="./#workflow" class="p-global-nav__link">WorkFlow</a>
             </li>
             <li class="p-global-nav__item">
-              <a href="#contact" class="p-global-nav__link">Contact</a>
+              <a href="./contact.html" class="p-global-nav__link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -128,9 +128,9 @@
       </div>
       <!-- p-header__inner -->
     </header>
-    <!-- p-header -->
+    <!-- p-header 下層ページ用 -->
 
-    <!-- p-drawer -->
+    <!-- p-drawer 下層ページ用 -->
     <div class="p-drawer js-drawer">
       <nav
         id="js-drawer-content"
@@ -140,31 +140,31 @@
         <div class="p-drawer__inner">
           <ul class="p-drawer__list">
             <li class="p-drawer__item">
-              <a href="#works" class="p-drawer__link"
+              <a href="./archive.html" class="p-drawer__link"
                 ><p class="p-drawer__link-en">Works</p>
                 <p class="p-drawer__link-ja">制作実績</p></a
               >
             </li>
             <li class="p-drawer__item">
-              <a href="#aboutme" class="p-drawer__link"
+              <a href="./#aboutme" class="p-drawer__link"
                 ><p class="p-drawer__link-en">AboutMe</p>
                 <p class="p-drawer__link-ja">私について</p></a
               >
             </li>
             <li class="p-drawer__item">
-              <a href="#service" class="p-drawer__link"
-                ><p class="p-drawer__link-en">Service</p>
-                <p class="p-drawer__link-ja">提供しているサービス</p></a
+              <a href="./archive-blog.html" class="p-drawer__link"
+                ><p class="p-drawer__link-en">Blog</p>
+                <p class="p-drawer__link-ja">ブログ</p></a
               >
             </li>
             <li class="p-drawer__item">
-              <a href="#workflow" class="p-drawer__link"
+              <a href="./#workflow" class="p-drawer__link"
                 ><p class="p-drawer__link-en">WorkFlow</p>
                 <p class="p-drawer__link-ja">制作の流れ</p></a
               >
             </li>
             <li class="p-drawer__item">
-              <a href="#contact" class="p-drawer__link"
+              <a href="./contact.html" class="p-drawer__link"
                 ><p class="p-drawer__link-en">Contact</p>
                 <p class="p-drawer__link-ja">お問い合わせ</p></a
               >
@@ -214,9 +214,11 @@
         </div>
       </nav>
     </div>
-    <!-- p-drawer -->
+    <!-- p-drawer 下層ページ用 -->
+
     <!-- mask -->
     <div class="p-drawer-mask js-drawer-mask"></div>
+    <!-- mask -->
 
     <main>
       <!-- p-fv -->
@@ -227,7 +229,9 @@
         </div>
       </div>
       <!-- p-fv -->
-      <section class="p-archive l-section-padding p-section-bg">
+
+      <!-- p-archive -->
+      <section class="p-archive l-section-padding p-section-bg jsfadeIn">
         <div class="p-archive__inner l-inner">
           <!-- p-archive__content -->
           <div class="p-archive__content">
@@ -339,6 +343,8 @@
           <!-- p-archive__content -->
         </div>
       </section>
+      <!-- p-archive -->
+
       <!-- contact -->
       <section
         id="contact"
