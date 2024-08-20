@@ -1,36 +1,73 @@
-// ファーストビューのタイムラインアニメーション
-const header = document.querySelector(".JsHeader");
-const JsLead1 = document.querySelector(".JsLead1");
-const JsLead2 = document.querySelector(".JsLead2");
-const JsTitle = document.querySelector(".JsTitle");
-const tl = gsap.timeline();
+// ファーストビューのタイムラインアニメーション ページ読み込み後に実行
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".JsHeader");
+  const JsLead1 = document.querySelector(".JsLead1");
+  const JsLead2 = document.querySelector(".JsLead2");
+  const JsTitle = document.querySelector(".JsTitle");
+  const tl = gsap.timeline({ delay: 1 });
 
-tl.fromTo(
-  JsLead1,
-  1,
-  { opacity: 0, x: -30 },
-  { opacity: 1, x: 0, ease: "power2.easeInout" }
-);
-tl.fromTo(
-  JsLead2,
-  1,
-  { opacity: 0, x: -30 },
-  { opacity: 1, x: 0, ease: "power2.easeInout" }
-);
-tl.fromTo(
-  JsTitle,
-  1,
-  { opacity: 0, x: -30 },
-  { opacity: 1, x: 0, ease: "power2.easeInout" }
-);
-tl.fromTo(
-  header,
-  1,
-  { opacity: 0, y: -30 },
-  { opacity: 1, y: 0, ease: "power2.easeInout" },
-  "-=1.0"
-);
+  tl.fromTo(
+    JsLead1,
+    1,
+    { opacity: 0, x: -30 },
+    { opacity: 1, x: 0, ease: "power2.easeInout" }
+  );
+  tl.fromTo(
+    JsLead2,
+    1,
+    { opacity: 0, x: -30 },
+    { opacity: 1, x: 0, ease: "power2.easeInout" }
+  );
+  tl.fromTo(
+    JsTitle,
+    1,
+    { opacity: 0, x: -30 },
+    { opacity: 1, x: 0, ease: "power2.easeInout" }
+  );
+  tl.fromTo(
+    header,
+    1,
+    { opacity: 0, y: -30 },
+    { opacity: 1, y: 0, ease: "power2.easeInout" },
+    "-=1.0"
+  );
+});
 
+//js-anime-bgのアニメーション ページ読み込み後に実行
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".js-anime-bg");
+
+  for (var i = 0; i <= 50; i++) {
+    const blocks = document.createElement("div");
+    blocks.classList.add("block");
+    container.appendChild(blocks);
+  }
+
+  function animateBlocks() {
+    anime({
+      targets: ".block",
+      translateX: function () {
+        return anime.random(300, -600);
+      },
+      translateY: function () {
+        return anime.random(300, -600);
+      },
+      scale: function () {
+        return anime.random(0.5, 2);
+      },
+      backgroundColor: function () {
+        return `hsl(0, ${anime.random(0, 10)}%, ${anime.random(90, 100)}%)`;
+      },
+      duration: 15000,
+      delay: anime.stagger(12),
+      complete: animateBlocks,
+    });
+  }
+
+  animateBlocks();
+});
+
+// 共通アニメーション //
 // 下からフェードイン
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll(".jsfadeIn");
