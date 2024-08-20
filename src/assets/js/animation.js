@@ -176,18 +176,17 @@ document.addEventListener("DOMContentLoaded", () => {
     jsScaleElements.forEach((jsScale) => {
       gsap.fromTo(
         jsScale,
-        { scale: 1.1, opacity: 0 }, // 初期状態はやや拡大され、透明度は0
+        { scale: 1.2 }, // 初期状態はやや拡大され、透明度は0
         {
           scrollTrigger: {
             trigger: jsScale, // トリガーとなるのは各`.jsScale`要素自身
-            start: "top 90%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
+            start: "top 80%", // ビューポートの下端に要素の上端が来た時にアニメーション開始
             end: "bottom 60%", // ビューポートの中央に要素の上端が来た時にアニメーション終了
             toggleActions: "play none none none", // アニメーションを1回再生して終了
             once: true, // アニメーションを1回限り実行
             // markers: true, // デバッグ用マーカー
           },
           scale: 1, // 目標とするスケール（元のサイズに戻る）
-          opacity: 1, // 最終的な透明度は1
           ease: "power1.out", // アニメーションのイージングを滑らかにする
           duration: 2.0, // アニメーションの持続時間を2秒に設定
         }

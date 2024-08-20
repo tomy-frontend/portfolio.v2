@@ -377,6 +377,11 @@ details {
 
 summary {
   display: list-item;
+  list-style: none; /* リストスタイルを無効化 */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Safariのデフォルトのマーカーを非表示にする */
 }
 
 /*
