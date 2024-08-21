@@ -155,3 +155,38 @@ document.querySelectorAll("details").forEach((detail) => {
     }
   });
 });
+
+// p-blog-cardのカード、リストビューの切り替え
+document.addEventListener("DOMContentLoaded", function () {
+  const cardView = document.getElementById("card");
+  const listView = document.getElementById("list");
+  const blogCards = document.querySelectorAll(".p-blog-card");
+  const blogLists = [
+    document.querySelector(".p-blog__list"),
+    document.querySelector(".p-archive__container--blog"),
+  ];
+
+  // リストビューが選択されたとき
+  listView.addEventListener("change", function () {
+    blogCards.forEach(function (card) {
+      card.classList.add("list");
+    });
+    blogLists.forEach(function (list) {
+      if (list) {
+        list.classList.add("list");
+      }
+    });
+  });
+
+  // カードビューが選択されたとき
+  cardView.addEventListener("change", function () {
+    blogCards.forEach(function (card) {
+      card.classList.remove("list");
+    });
+    blogLists.forEach(function (list) {
+      if (list) {
+        list.classList.remove("list");
+      }
+    });
+  });
+});
