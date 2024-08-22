@@ -1401,9 +1401,9 @@ a:focus-visible {
 }
 
 .p-blog-card__img {
-	aspect-ratio: 1/1;
+	aspect-ratio: 16/9;
 	border-radius: 8px;
-	height: auto;
+	height: 100%;
 	outline: 1px solid #bdbdbd;
 	overflow: hidden;
 	position: relative;
