@@ -209,3 +209,41 @@
 .wpcf7-list-item {
   margin: 0 !important;
 }
+
+// エラーメッセージ
+.wpcf7 form .wpcf7-response-output {
+  margin: 1em;
+  margin-inline: auto;
+  padding: 0.3em;
+  border: 2px solid #00a0d2;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  inline-size: fit-content;
+}
+
+//エラー時
+.wpcf7 form.invalid .wpcf7-response-output {
+  border-color: global.$red;
+}
+
+// 送信完了時
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #46b450;
+}
+
+// 未入力項目のエラー、上に表示
+.wpcf7-not-valid-tip {
+  position: absolute;
+  translate: 0 2px;
+  font-size: 0.9em;
+}
+
+.p-form__field--tac .wpcf7-checkbox {
+  justify-content: flex-start;
+}
+
+// checkboxの調整用
+.flex {
+  display: flex;
+}

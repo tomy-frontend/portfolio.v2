@@ -1411,7 +1411,7 @@ a:focus-visible {
 }
 
 .p-blog-card__img img {
-	height: auto;
+	height: 100%;
 	width: 100%;
 	-o-object-fit: cover;
 	border-radius: inherit;
@@ -2053,13 +2053,38 @@ details[open] .p-faq__a {
 	object-fit: cover;
 }
 
-.entry-content button,
-.editor-styles-wrapper button {
+.entry-content .wp-block-quote,
+.editor-styles-wrapper .wp-block-quote {
+	background: #f8f8f8;
+	border-radius: 0.3em;
+	margin-top: 0.75em;
+	padding: 0.5em;
+	position: relative;
+}
+
+.entry-content .wp-block-quote::before,
+.editor-styles-wrapper .wp-block-quote::before {
+	background: url(../img/icon/icon_quote.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 22px;
+	left: -0.5%;
+	position: absolute;
+	top: 4%;
+	transform: translateY(-50%);
+	width: 22px;
+}
+
+.entry-content .wp-element-button,
+.editor-styles-wrapper .wp-element-button {
 	--background: rgba(255, 255, 255, 0.9);
 	background: var(--background);
 	border: 2px solid #1d1d1d;
 	border-radius: 1rem;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
+	color: #1d1d1d;
 	display: block;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
@@ -2073,8 +2098,8 @@ details[open] .p-faq__a {
 	user-select: none;
 }
 
-.entry-content button::after,
-.editor-styles-wrapper button::after {
+.entry-content .wp-element-button::after,
+.editor-styles-wrapper .wp-element-button::after {
 	background: url(../img/icon/arrow-right.svg);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2277,6 +2302,40 @@ details[open] .p-faq__a {
 	margin: 0 !important;
 }
 
+.wpcf7 form .wpcf7-response-output {
+	border: 2px solid #00a0d2;
+	border-radius: 5px;
+	display: inline-block;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	margin: 1em;
+	margin-inline: auto;
+	padding: 0.3em;
+	text-align: center;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+	border-color: #f00;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450;
+}
+
+.wpcf7-not-valid-tip {
+	font-size: 0.9em;
+	position: absolute;
+	translate: 0 2px;
+}
+
+.p-form__field--tac .wpcf7-checkbox {
+	justify-content: flex-start;
+}
+
+.flex {
+	display: flex;
+}
+
 .u-is-fixed {
 	overflow: hidden;
 }
@@ -2375,15 +2434,15 @@ details summary:hover {
 	opacity: 0.5;
 }
 
-.entry-content button:hover,
-.editor-styles-wrapper button:hover {
+.entry-content .wp-element-button:hover,
+.editor-styles-wrapper .wp-element-button:hover {
 	background-color: #1d1d1d;
 	box-shadow: none;
 	color: #ffffff;
 }
 
-.entry-content button:hover::after,
-.editor-styles-wrapper button:hover::after {
+.entry-content .wp-element-button:hover::after,
+.editor-styles-wrapper .wp-element-button:hover::after {
 	background: url(../img/icon/arrow-right-white.svg);
 	background-position: center;
 	background-repeat: no-repeat;
