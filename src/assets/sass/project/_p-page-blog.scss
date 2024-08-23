@@ -10,6 +10,20 @@
   }
 }
 
+.p-page-blog__inner {
+  --max-contents-size: 900px;
+  --padding-inline-sp: 30px;
+  --padding-inline-pc: 80px;
+
+  width: calc(100% - var(--padding-inline-sp) * 2);
+  margin-inline: auto;
+
+  @include global.mq(lg) {
+    width: calc(100% - var(--padding-inline-pc) * 2);
+    max-width: var(--max-contents-size);
+  }
+}
+
 .p-page-blog__title {
   margin-top: 1em;
   font-size: global.cal-clamp(28, 36);
@@ -74,7 +88,7 @@
   }
 
   h2 {
-    font-size: global.cal-clamp(33.18, 39.81);
+    font-size: global.cal-clamp(22, 24);
     font-weight: global.$fw-bold;
     line-height: 1.5;
     padding-block-end: 0.1em;
@@ -82,7 +96,7 @@
   }
 
   h3 {
-    font-size: global.cal-clamp(27.65, 33.18);
+    font-size: global.cal-clamp(18, 20);
     font-weight: global.$fw-bold;
     line-height: 1.5;
     padding-inline-start: 0.3em;
@@ -90,19 +104,19 @@
   }
 
   h4 {
-    font-size: global.cal-clamp(23.04, 27.65);
+    font-size: global.cal-clamp(16, 18);
     font-weight: global.$fw-bold;
     line-height: 1.5;
   }
 
   h5 {
-    font-size: global.cal-clamp(19.2, 23.04);
+    font-size: global.cal-clamp(14, 16);
     font-weight: global.$fw-bold;
     line-height: 1.5;
   }
 
   h6 {
-    font-size: global.cal-clamp(16, 19.2);
+    font-size: global.cal-clamp(13, 15);
     font-weight: global.$fw-bold;
     line-height: 1.5;
   }
@@ -138,7 +152,7 @@
   .wp-block-quote {
     position: relative;
     margin-top: 0.75em;
-    background: #f8f8f8;
+    background: #ececec;
     padding: 0.5em;
     border-radius: 0.3em;
 
