@@ -2066,7 +2066,7 @@ details[open] .p-faq__a {
 	background: #ececec;
 	border-radius: 0.3em;
 	margin-top: 0.75em;
-	padding: 0.5em;
+	padding: 0.7em;
 	position: relative;
 }
 
@@ -2077,12 +2077,12 @@ details[open] .p-faq__a {
 	background-repeat: no-repeat;
 	background-size: cover;
 	content: "";
-	height: 22px;
+	height: 20px;
 	left: -0.5%;
 	position: absolute;
-	top: 4%;
+	top: 2%;
 	transform: translateY(-50%);
-	width: 22px;
+	width: 20px;
 }
 
 .entry-content .wp-element-button,

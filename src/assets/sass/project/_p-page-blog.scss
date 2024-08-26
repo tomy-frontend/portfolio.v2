@@ -153,16 +153,16 @@
     position: relative;
     margin-top: 0.75em;
     background: #ececec;
-    padding: 0.5em;
+    padding: 0.7em;
     border-radius: 0.3em;
 
     &::before {
       position: absolute;
       content: "";
-      top: 4%;
+      top: 2%;
       left: -0.5%;
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
       transform: translateY(-50%);
       background: url(../img/icon/icon_quote.svg);
       background-position: center;
