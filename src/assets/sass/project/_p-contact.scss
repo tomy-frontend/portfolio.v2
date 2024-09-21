@@ -16,3 +16,35 @@
   line-height: 1.8;
   word-break: keep-all;
 }
+
+.p-page-contact {
+  .entry-content,
+  .editor-styles-wrapper {
+    margin-top: 0;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol,
+    dl,
+    dt,
+    p,
+    div,
+    span,
+    img,
+    a,
+    table,
+    tr,
+    th,
+    td,
+    small,
+    button,
+    time,
+    figure {
+      margin-top: 0;
+    }
+  }
+}

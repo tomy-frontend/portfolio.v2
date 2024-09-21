@@ -1583,6 +1583,58 @@ a:focus-visible {
 	word-break: keep-all;
 }
 
+.p-page-contact .entry-content,
+.p-page-contact .editor-styles-wrapper {
+	margin-top: 0;
+}
+
+.p-page-contact .entry-content h2,
+.p-page-contact .entry-content h3,
+.p-page-contact .entry-content h4,
+.p-page-contact .entry-content h5,
+.p-page-contact .entry-content h6,
+.p-page-contact .entry-content ul,
+.p-page-contact .entry-content ol,
+.p-page-contact .entry-content dl,
+.p-page-contact .entry-content dt,
+.p-page-contact .entry-content p,
+.p-page-contact .entry-content div,
+.p-page-contact .entry-content span,
+.p-page-contact .entry-content img,
+.p-page-contact .entry-content a,
+.p-page-contact .entry-content table,
+.p-page-contact .entry-content tr,
+.p-page-contact .entry-content th,
+.p-page-contact .entry-content td,
+.p-page-contact .entry-content small,
+.p-page-contact .entry-content button,
+.p-page-contact .entry-content time,
+.p-page-contact .entry-content figure,
+.p-page-contact .editor-styles-wrapper h2,
+.p-page-contact .editor-styles-wrapper h3,
+.p-page-contact .editor-styles-wrapper h4,
+.p-page-contact .editor-styles-wrapper h5,
+.p-page-contact .editor-styles-wrapper h6,
+.p-page-contact .editor-styles-wrapper ul,
+.p-page-contact .editor-styles-wrapper ol,
+.p-page-contact .editor-styles-wrapper dl,
+.p-page-contact .editor-styles-wrapper dt,
+.p-page-contact .editor-styles-wrapper p,
+.p-page-contact .editor-styles-wrapper div,
+.p-page-contact .editor-styles-wrapper span,
+.p-page-contact .editor-styles-wrapper img,
+.p-page-contact .editor-styles-wrapper a,
+.p-page-contact .editor-styles-wrapper table,
+.p-page-contact .editor-styles-wrapper tr,
+.p-page-contact .editor-styles-wrapper th,
+.p-page-contact .editor-styles-wrapper td,
+.p-page-contact .editor-styles-wrapper small,
+.p-page-contact .editor-styles-wrapper button,
+.p-page-contact .editor-styles-wrapper time,
+.p-page-contact .editor-styles-wrapper figure {
+	margin-top: 0;
+}
+
 .p-workflow__text {
 	margin-top: 35px;
 }
@@ -2267,6 +2319,20 @@ details[open] .p-faq__a {
 	justify-content: center;
 }
 
+.p-form__field--confirmation {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	justify-content: center;
+	margin-inline: auto;
+}
+
+.p-form__field-item--confirmation {
+	padding-block: 1em;
+	padding-left: 0.5em;
+	padding-right: 1em;
+}
+
 .p-form__field input[type=checkbox],
 .p-form__field--tac input[type=checkbox] {
 	margin-right: 8px;
@@ -2290,14 +2356,23 @@ details[open] .p-faq__a {
 	word-break: keep-all;
 }
 
-.wpcf7-submit {
+.wpcf7-submit,
+.wpcf7-previous {
 	border: 2px solid #1d1d1d;
 	border-radius: 1em;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
+	display: inline-block;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
-	padding: 9px 50px 9px 50px;
+	letter-spacing: 0.1em;
+	min-inline-size: 175px;
+	padding: 9px 50px;
 	transition: all 0.5s ease;
+}
+
+.wpcf7-previous {
+	background-color: #1d1d1d;
+	color: #ffffff;
 }
 
 .wpcf7-spinner {
@@ -2457,10 +2532,16 @@ details summary:hover {
 	transform: rotate(-45deg);
 }
 
-.wpcf7-submit:hover {
+.wpcf7-submit:hover,
+.wpcf7-previous:hover {
 	background-color: #1d1d1d;
 	box-shadow: none;
 	color: #ffffff;
+}
+
+.wpcf7-previous:hover {
+	background-color: #ffffff;
+	color: #1d1d1d;
 }
 
 }
@@ -2598,6 +2679,10 @@ details summary:hover {
 
 .p-form__field-item {
 	width: 70%;
+}
+
+.p-form__field--confirmation {
+	flex-direction: row;
 }
 
 .u-hidden-pc {

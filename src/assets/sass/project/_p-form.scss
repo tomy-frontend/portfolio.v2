@@ -126,9 +126,6 @@
       font-size: global.rem(14);
     }
   }
-
-  // input:-internal-autofill-selected {
-  // }
 }
 
 // checkboxとtextareaのborder打ち消し用
@@ -152,6 +149,29 @@
   .wpcf7-checkbox {
     justify-content: center;
   }
+}
+
+// 確認画面のスタイル
+.p-form__field--confirmation {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  justify-content: center;
+  gap: 0.5em;
+
+  @include global.mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-form__field-item--confirmation {
+  padding-block: 1em;
+  padding-left: 0.5em;
+  padding-right: 1em;
+
+  // @include global.mq(md) {
+  //   padding-block: 0;
+  // }
 }
 
 // checkboxのmargin調整用
@@ -182,11 +202,15 @@
 }
 
 // submitボタンのスタイル
-.wpcf7-submit {
+.wpcf7-submit,
+.wpcf7-previous {
+  display: inline-block;
   inline-size: fit-content;
+  min-inline-size: 175px;
+  letter-spacing: 0.1em;
   border-radius: 1em;
   border: 2px solid global.$text-color-black;
-  padding: 9px 50px 9px 50px;
+  padding: 9px 50px;
   box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
   transition: global.$transition-default;
 
@@ -195,6 +219,19 @@
       color: global.$text-color-white;
       background-color: global.$text-color-black;
       box-shadow: none;
+    }
+  }
+}
+
+// 戻るボタン
+.wpcf7-previous {
+  background-color: global.$text-color-black;
+  color: global.$text-color-white;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: global.$text-color-black;
+      background-color: global.$text-color-white;
     }
   }
 }
