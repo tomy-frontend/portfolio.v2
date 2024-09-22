@@ -2333,6 +2333,12 @@ details[open] .p-faq__a {
 	padding-right: 1em;
 }
 
+.p-form__field-item--confirmation-text-area {
+	border: 1px solid #bdbdbd;
+	border-radius: 12px;
+	padding: 1em;
+}
+
 .p-form__field input[type=checkbox],
 .p-form__field--tac input[type=checkbox] {
 	margin-right: 8px;
@@ -2386,15 +2392,8 @@ details[open] .p-faq__a {
 }
 
 .wpcf7 form .wpcf7-response-output {
-	border: 2px solid #00a0d2;
-	border-radius: 5px;
-	display: inline-block;
-	inline-size: -moz-fit-content;
-	inline-size: fit-content;
-	margin: 1em;
-	margin-inline: auto;
-	padding: 0.3em;
-	text-align: center;
+	display: none;
+	visibility: hidden;
 }
 
 .wpcf7 form.invalid .wpcf7-response-output {

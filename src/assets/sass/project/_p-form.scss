@@ -168,10 +168,12 @@
   padding-block: 1em;
   padding-left: 0.5em;
   padding-right: 1em;
+}
 
-  // @include global.mq(md) {
-  //   padding-block: 0;
-  // }
+.p-form__field-item--confirmation-text-area {
+  padding: 1em;
+  border-radius: 12px;
+  border: 1px solid global.$gray;
 }
 
 // checkboxのmargin調整用
@@ -249,14 +251,16 @@
 
 // エラーメッセージ
 .wpcf7 form .wpcf7-response-output {
-  margin: 1em;
-  margin-inline: auto;
-  padding: 0.3em;
-  border: 2px solid #00a0d2;
-  border-radius: 5px;
-  text-align: center;
-  display: inline-block;
-  inline-size: fit-content;
+  visibility: hidden;
+  display: none;
+  // margin: 1em;
+  // margin-inline: auto;
+  // padding: 0.3em;
+  // border: 2px solid #00a0d2;
+  // border-radius: 5px;
+  // text-align: center;
+  // display: inline-block;
+  // inline-size: fit-content;
 }
 
 //エラー時
