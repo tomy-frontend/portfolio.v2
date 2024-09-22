@@ -191,53 +191,94 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// contact-form7のバリデーションチェック
-document.addEventListener("DOMContentLoaded", function () {
-  const submitButton = document.querySelector('input[type="submit"]');
-  submitButton.disabled = true;
+// ContactForm7のバリデーションチェック
+const form = document.querySelector(".wpcf7-form");
+let required = [];
+let submit;
 
-  // ステップごとのフォーム要素を取得
-  const steps = document.querySelectorAll(".your-step-class"); // ステップのクラス名を指定
-  let currentStepIndex = 0;
-
-  function checkInputs() {
-    let isValid = true;
-
-    // 現在のステップの必須項目を取得
-    const requiredInputs =
-      steps[currentStepIndex].querySelectorAll("[required]");
-
-    requiredInputs.forEach(function (input) {
-      if (input.tagName === "SELECT" && input.value === "") {
-        isValid = false;
-      } else if (input.value.trim() === "") {
-        isValid = false;
-      }
-    });
-
-    // submitボタンの有効・無効を設定
-    submitButton.disabled = !isValid;
+function initializeForm() {
+  if (!form) {
+    return;
   }
 
-  // 各ステップの必須項目にイベントリスナーを設定
-  steps.forEach(function (step) {
-    const requiredInputs = step.querySelectorAll("[required]");
-    requiredInputs.forEach(function (input) {
-      input.addEventListener("input", checkInputs);
-      input.addEventListener("change", checkInputs);
-    });
-  });
+  required = Array.from(
+    form.querySelectorAll(
+      '.wpcf7-validates-as-required, .wpcf7-checkbox[aria-required="true"]'
+    )
+  );
+  submit = form.querySelector(".wpcf7-submit");
+}
 
-  // ステップの切り替えロジックを追加
-  const nextButtons = document.querySelectorAll(".next-button-class"); // 次のボタンのクラス名を指定
-  nextButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      if (currentStepIndex < steps.length - 1) {
-        steps[currentStepIndex].style.display = "none"; // 現在のステップを非表示
-        currentStepIndex++;
-        steps[currentStepIndex].style.display = "block"; // 次のステップを表示
-        checkInputs(); // 次のステップのバリデーションを行う
+function isFieldFilled(el) {
+  if (!el) {
+    return false;
+  }
+
+  let filled = false;
+
+  if (el.classList.contains("wpcf7-checkbox")) {
+    const checkboxes = el.querySelectorAll('input[type="checkbox"]');
+    filled = Array.from(checkboxes).some((cb) => cb.checked);
+  } else if (el.type === "checkbox") {
+    filled = el.checked;
+  } else if (el.tagName === "SELECT") {
+    filled = el.value !== "" && el.value !== "選択してください";
+  } else if (el.type === "file") {
+    filled = el.files && el.files.length > 0;
+  } else {
+    filled = el.value && el.value.trim() !== "";
+  }
+
+  // メールアドレスのバリデーション
+  if (el.type === "email") {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    filled = emailPattern.test(el.value);
+  }
+
+  return filled;
+}
+
+function checkRequiredFields() {
+  const allFilled = required.every(isFieldFilled);
+  return allFilled;
+}
+
+function updateSubmitButton() {
+  if (submit) {
+    const shouldBeEnabled = checkRequiredFields();
+    submit.disabled = !shouldBeEnabled;
+  }
+}
+
+function setupEventListeners() {
+  if (required.length > 0 && submit) {
+    submit.disabled = true;
+
+    required.forEach((el) => {
+      if (el.classList.contains("wpcf7-checkbox")) {
+        const checkboxes = el.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", updateSubmitButton);
+        });
+      } else {
+        el.addEventListener("input", updateSubmitButton);
+        el.addEventListener("change", updateSubmitButton);
       }
     });
-  });
+
+    form.addEventListener("submit", (e) => {
+      if (!checkRequiredFields()) {
+        e.preventDefault();
+        alert("すべての必須項目を入力してください。");
+      }
+    });
+
+    updateSubmitButton();
+  }
+}
+
+// 初期化とイベントリスナーの設定
+window.addEventListener("load", () => {
+  initializeForm();
+  setupEventListeners();
 });
