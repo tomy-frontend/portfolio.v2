@@ -1393,6 +1393,7 @@ a:focus-visible {
 }
 
 .p-blog-card {
+	border-bottom: 1px solid transparent;
 	display: grid;
 	gap: 0.75em;
 	grid-row: span 4;
@@ -1495,10 +1496,15 @@ a:focus-visible {
 	gap: 0.5em;
 }
 
+.p-blog-card {
+	transition: border-color 0s, padding-block 0.3s ease, padding-inline 0.3s ease;
+}
+
 .p-blog-card.list {
-	border-bottom: 1px solid #bdbdbd;
+	border-color: #bdbdbd;
 	padding-block: 0.75em;
 	padding-inline: 0.5em;
+	transition: all 0.3s ease;
 }
 
 .p-blog-card.list .p-blog-card__img {
@@ -2372,13 +2378,24 @@ details[open] .p-faq__a {
 	inline-size: fit-content;
 	letter-spacing: 0.1em;
 	min-inline-size: 175px;
-	padding: 9px 50px;
+	padding: 0.75em 2em;
 	transition: all 0.5s ease;
 }
 
 .wpcf7-previous {
 	background-color: #1d1d1d;
 	color: #ffffff;
+}
+
+.wpcf7-submit:disabled {
+	background: #bdbdbd;
+	border: none;
+	box-shadow: none;
+	opacity: 0.5;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: not-allowed;
+	user-select: none;
 }
 
 .wpcf7-spinner {
@@ -2540,6 +2557,11 @@ details summary:hover {
 
 .wpcf7-previous:hover {
 	background-color: #ffffff;
+	color: #1d1d1d;
+}
+
+.wpcf7-submit:disabled:hover {
+	background: #bdbdbd;
 	color: #1d1d1d;
 }
 

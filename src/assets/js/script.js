@@ -190,3 +190,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// contact-form7のバリデーションチェック
+document.addEventListener("DOMContentLoaded", function () {
+  const submitButton = document.querySelector('input[type="submit"]');
+  submitButton.disabled = true;
+
+  // ステップごとのフォーム要素を取得
+  const steps = document.querySelectorAll(".your-step-class"); // ステップのクラス名を指定
+  let currentStepIndex = 0;
+
+  function checkInputs() {
+    let isValid = true;
+
+    // 現在のステップの必須項目を取得
+    const requiredInputs =
+      steps[currentStepIndex].querySelectorAll("[required]");
+
+    requiredInputs.forEach(function (input) {
+      if (input.tagName === "SELECT" && input.value === "") {
+        isValid = false;
+      } else if (input.value.trim() === "") {
+        isValid = false;
+      }
+    });
+
+    // submitボタンの有効・無効を設定
+    submitButton.disabled = !isValid;
+  }
+
+  // 各ステップの必須項目にイベントリスナーを設定
+  steps.forEach(function (step) {
+    const requiredInputs = step.querySelectorAll("[required]");
+    requiredInputs.forEach(function (input) {
+      input.addEventListener("input", checkInputs);
+      input.addEventListener("change", checkInputs);
+    });
+  });
+
+  // ステップの切り替えロジックを追加
+  const nextButtons = document.querySelectorAll(".next-button-class"); // 次のボタンのクラス名を指定
+  nextButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      if (currentStepIndex < steps.length - 1) {
+        steps[currentStepIndex].style.display = "none"; // 現在のステップを非表示
+        currentStepIndex++;
+        steps[currentStepIndex].style.display = "block"; // 次のステップを表示
+        checkInputs(); // 次のステップのバリデーションを行う
+      }
+    });
+  });
+});

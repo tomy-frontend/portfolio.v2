@@ -5,6 +5,7 @@
   grid-template-rows: subgrid;
   grid-row: span 4;
   gap: 0.75em;
+  border-bottom: 1px solid transparent;
   transition: global.$transition-default;
 
   @media (any-hover: hover) {
@@ -120,10 +121,13 @@
 
 // .listが付与された時のスタイル
 .p-blog-card {
+  transition: border-color 0s, padding-block 0.3s ease, padding-inline 0.3s ease;
+
   &.list {
     padding-block: 0.75em;
     padding-inline: 0.5em;
-    border-bottom: 1px solid global.$gray;
+    border-color: global.$gray;
+    transition: all 0.3s ease;
 
     @media (any-hover: hover) {
       &:hover {
