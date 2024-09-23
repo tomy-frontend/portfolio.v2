@@ -2431,6 +2431,9 @@ details[open] .p-faq__a {
 
 .wpcf7-not-valid-tip {
 	font-size: 0.9em;
+	inline-size: -moz-fit-content;
+	inline-size: fit-content;
+	min-inline-size: 120px;
 	position: absolute;
 	translate: 0 2px;
 }

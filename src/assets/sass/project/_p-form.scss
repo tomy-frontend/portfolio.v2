@@ -298,6 +298,8 @@
 // 未入力項目のエラー、上に表示
 .wpcf7-not-valid-tip {
   position: absolute;
+  inline-size: fit-content;
+  min-inline-size: 120px;
   translate: 0 2px;
   font-size: 0.9em;
 }
