@@ -2206,6 +2206,7 @@ details[open] .p-faq__a {
 .p-form select:focus-visible,
 .p-form input[type=checkbox]:focus-visible,
 .p-form input[type=submit]:focus-visible {
+	background-color: rgba(255, 99, 71, 0.1); /* 薄い赤色 */
 	outline: none;
 }
 
@@ -2261,6 +2262,7 @@ details[open] .p-faq__a {
 
 .p-form__field-label__emphasize {
 	color: #f00;
+	font-size: 0.8125rem;
 	margin-left: 0.125em;
 }
 
@@ -2326,8 +2328,9 @@ details[open] .p-faq__a {
 }
 
 .p-form__field--confirmation {
+	align-items: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column-reverse;
 	gap: 0.5em;
 	justify-content: center;
 	margin-inline: auto;
@@ -2371,20 +2374,22 @@ details[open] .p-faq__a {
 .wpcf7-submit,
 .wpcf7-previous {
 	border: 2px solid #1d1d1d;
-	border-radius: 1em;
+	border-radius: 12px;
 	box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
 	display: inline-block;
+	font-size: 1.125rem;
 	inline-size: -moz-fit-content;
 	inline-size: fit-content;
 	letter-spacing: 0.1em;
-	min-inline-size: 175px;
-	padding: 0.75em 2em;
+	padding: 0.75em 3.5em;
 	transition: all 0.5s ease;
 }
 
 .wpcf7-previous {
 	background-color: #1d1d1d;
 	color: #ffffff;
+	font-size: 0.9375rem;
+	padding: 0.5em 2.5em;
 }
 
 .wpcf7-submit:disabled {
@@ -2700,10 +2705,6 @@ details summary:hover {
 
 .p-form__field-item {
 	width: 70%;
-}
-
-.p-form__field--confirmation {
-	flex-direction: row;
 }
 
 .u-hidden-pc {

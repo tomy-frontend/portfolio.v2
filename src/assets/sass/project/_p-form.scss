@@ -11,6 +11,7 @@
   input[type="submit"] {
     &:focus-visible {
       outline: none;
+      background-color: rgba(255, 99, 71, 0.1); /* 薄い赤色 */
     }
   }
 
@@ -76,8 +77,10 @@
   }
 }
 
+// 必須項目ラベル
 .p-form__field-label__emphasize {
   color: global.$red;
+  font-size: global.rem(13);
   margin-left: 0.125em;
 }
 
@@ -154,14 +157,11 @@
 // 確認画面のスタイル
 .p-form__field--confirmation {
   display: flex;
-  flex-direction: column;
-  margin-inline: auto;
+  flex-direction: column-reverse;
   justify-content: center;
+  align-items: center;
+  margin-inline: auto;
   gap: 0.5em;
-
-  @include global.mq(md) {
-    flex-direction: row;
-  }
 }
 
 .p-form__field-item--confirmation {
@@ -203,16 +203,16 @@
   word-break: keep-all;
 }
 
-// submitボタンのスタイル
+// submitボタンの共通スタイル
 .wpcf7-submit,
 .wpcf7-previous {
   display: inline-block;
   inline-size: fit-content;
-  min-inline-size: 175px;
+  font-size: global.rem(18);
   letter-spacing: 0.1em;
-  border-radius: 1em;
+  border-radius: 12px;
   border: 2px solid global.$text-color-black;
-  padding: 0.75em 2em;
+  padding: 0.75em 3.5em;
   box-shadow: 1px 1px 5.6px 1px rgba(0, 0, 0, 0.1);
   transition: global.$transition-default;
 
@@ -227,8 +227,10 @@
 
 // 戻るボタン
 .wpcf7-previous {
+  font-size: global.rem(15);
   background-color: global.$text-color-black;
   color: global.$text-color-white;
+  padding: 0.5em 2.5em;
 
   @media (any-hover: hover) {
     &:hover {
