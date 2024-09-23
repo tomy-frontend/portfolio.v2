@@ -304,6 +304,10 @@
   font-size: 0.9em;
 }
 
+.wpcf7-spinner:before {
+  display: none;
+}
+
 .p-form__field--tac .wpcf7-checkbox {
   justify-content: flex-start;
 }
