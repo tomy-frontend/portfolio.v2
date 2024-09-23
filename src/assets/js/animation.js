@@ -1,3 +1,9 @@
+import anime from "animejs";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 // ファーストビューのタイムラインアニメーション ページ読み込み後に実行
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".JsHeader");

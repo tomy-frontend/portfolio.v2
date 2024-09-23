@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 // p-worksの水平スクロール
 // 画面サイズが768px以上かどうかをチェック
 const mediaQuery = window.matchMedia("(min-width: 768px)");
