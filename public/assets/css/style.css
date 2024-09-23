@@ -2345,6 +2345,9 @@ details[open] .p-faq__a {
 .p-form__field-item--confirmation-text-area {
 	border: 1px solid #bdbdbd;
 	border-radius: 12px;
+	height: 100%;
+	line-height: 1.5em;
+	min-height: 10em;
 	padding: 1em;
 }
 
@@ -2394,7 +2397,7 @@ details[open] .p-faq__a {
 
 .wpcf7-submit:disabled {
 	background: #bdbdbd;
-	border: none;
+	border-color: transparent;
 	box-shadow: none;
 	opacity: 0.5;
 	-webkit-user-select: none;
