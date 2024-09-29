@@ -77,6 +77,21 @@
 .p-blog-card__title {
   font-size: global.cal-clamp(18, 20);
   font-weight: global.$fw-medium;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* 2行まで表示 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.p-blog-card__text {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3; /* 3行まで表示 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 //カードビューとリストビューの切り替え

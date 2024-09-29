@@ -73,6 +73,12 @@
 
 .p-portfolio-card__title {
   font-size: global.cal-clamp(18, 20);
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* 2行まで表示 */
+  -webkit-box-orient: vertical;
+  white-space: normal;
 }
 
 .p-portfolio-card__category {
