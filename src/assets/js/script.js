@@ -191,6 +191,68 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// archive.phpのタグの非同期切り替え
+document.addEventListener("DOMContentLoaded", function () {
+  const tags = document.querySelectorAll(".p-portfolio-card-tag");
+  const posts = document.querySelectorAll(".p-blog-card");
+
+  tags.forEach((tag) => {
+    tag.addEventListener("click", function () {
+      // すべてのタグから "is-checked" クラスを削除
+      tags.forEach((tag) => tag.classList.remove("is-checked"));
+
+      // クリックされたタグに "is-checked" クラスを追加
+      this.classList.add("is-checked");
+
+      const filter = this.getAttribute("data-filter");
+
+      posts.forEach((post) => {
+        if (filter === "all") {
+          post.style.display = "grid";
+        } else {
+          const categories = post.getAttribute("data-category").split(" ");
+          if (categories.includes(filter)) {
+            post.style.display = "grid";
+          } else {
+            post.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+});
+
+// archive-works.phpのタグの非同期切り替え
+document.addEventListener("DOMContentLoaded", function () {
+  const tags = document.querySelectorAll(".p-portfolio-card-tag");
+  const posts = document.querySelectorAll(".p-portfolio-card");
+
+  tags.forEach((tag) => {
+    tag.addEventListener("click", function () {
+      // すべてのタグから "is-checked" クラスを削除
+      tags.forEach((tag) => tag.classList.remove("is-checked"));
+
+      // クリックされたタグに "is-checked" クラスを追加
+      this.classList.add("is-checked");
+
+      const filter = this.getAttribute("data-filter");
+
+      posts.forEach((post) => {
+        if (filter === "all") {
+          post.style.display = "grid";
+        } else {
+          const categories = post.getAttribute("data-category").split(" ");
+          if (categories.includes(filter)) {
+            post.style.display = "grid";
+          } else {
+            post.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+});
+
 // ContactForm7のバリデーションチェック
 const form = document.querySelector(".wpcf7-form");
 let required = [];
