@@ -1,14 +1,17 @@
 @use "../global" as global;
 
 .l-inner {
-  --padding-inline-sp: 20px;
-  --padding-inline-pc: 60px;
+  --padding-inline: 20px;
+  --max-contents-width: 1200px;
 
-  width: calc(100% - var(--padding-inline-sp) * 2);
+  width: min(calc(100% - var(--padding-inline) * 2), var(--max-contents-width));
   margin-inline: auto;
 
+  @include global.mq(md) {
+    --padding-inline: 30px;
+  }
+
   @include global.mq(lg) {
-    width: calc(100% - var(--padding-inline-pc) * 2);
-    max-width: global.$pc-contents-width; //メインコンテンツの最大幅
+    --padding-inline: 60px;
   }
 }
